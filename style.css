@@ -1,0 +1,613 @@
+/* Importação das fontes */
+@import url('https://fonts.cdnfonts.com/css/soulcraft');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800;900&display=swap');
+
+/* ===== VARIÁVEIS CSS - PALETA DE CORES ===== */
+:root {
+  /* Cores principais do Flamengo */
+  --cor-vermelho-principal: #C60C30;
+  --cor-vermelho-escuro: #A00A28;
+  --cor-preto: #000000;
+  --cor-branco: #FFFFFF;
+  
+  /* Cores de apoio */
+  --cor-cinza-claro: #F5F5F5;
+  --cor-cinza-medio: #CCCCCC;
+  --cor-cinza-escuro: #333333;
+  --cor-cinza-texto: #666666;
+  
+  /* Sombras */
+  --sombra-card: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --sombra-hover: 0 8px 16px rgba(0, 0, 0, 0.15);
+  
+  /* Espaçamentos */
+  --espacamento-xs: 0.5rem;
+  --espacamento-sm: 1rem;
+  --espacamento-md: 2rem;
+  --espacamento-lg: 3rem;
+  --espacamento-xl: 4rem;
+}
+
+/* ===== RESET E CONFIGURAÇÕES GERAIS ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--cor-cinza-escuro);
+  background-color: var(--cor-branco);
+}
+
+/* ===== TIPOGRAFIA ===== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Soulcraft', sans-serif;
+  font-weight: bold;
+  color: var(--cor-preto);
+  margin-bottom: var(--espacamento-sm);
+}
+
+h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+  margin-bottom: var(--espacamento-sm);
+  line-height: 1.8;
+}
+
+/* Pesos específicos para textos corridos */
+.text-medium {
+  font-weight: 500;
+}
+
+.text-semibold {
+  font-weight: 600;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-extrabold {
+  font-weight: 800;
+}
+
+.text-black {
+  font-weight: 900;
+}
+
+/* Aplicar Barlow em elementos de texto corrido */
+span, div, label, input, textarea, select {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+}
+
+/* Botões com peso específico */
+button {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+}
+
+/* ===== HERO BANNER ===== */
+.hero-banner {
+  background: linear-gradient(135deg, var(--cor-vermelho-principal), var(--cor-vermelho-escuro));
+  color: var(--cor-branco);
+  padding: var(--espacamento-xl) 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('path/to/flamengo-pattern.png') repeat;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.hero-banner .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-banner h1 {
+  color: var(--cor-branco);
+  font-size: 4rem;
+  margin-bottom: var(--espacamento-md);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-banner p {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-bottom: var(--espacamento-lg);
+  opacity: 0.9;
+}
+
+/* ===== SEÇÕES PRINCIPAIS ===== */
+.section-flamengo {
+  padding: var(--espacamento-xl) 0;
+  background-color: var(--cor-cinza-claro);
+}
+
+.section-flamengo.dark {
+  background-color: var(--cor-preto);
+  color: var(--cor-branco);
+}
+
+.section-flamengo.dark h2,
+.section-flamengo.dark h3 {
+  color: var(--cor-branco);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: var(--espacamento-lg);
+}
+
+.section-title h2 {
+  color: var(--cor-vermelho-principal);
+  position: relative;
+  padding-bottom: var(--espacamento-sm);
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--cor-vermelho-principal);
+}
+
+/* ===== CARDS DE PARTIDAS ===== */
+.partidas-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--espacamento-md);
+  margin-top: var(--espacamento-lg);
+}
+
+.partida-card {
+  background: var(--cor-branco);
+  border-radius: 10px;
+  padding: var(--espacamento-md);
+  box-shadow: var(--sombra-card);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  border: 2px solid transparent;
+}
+
+.partida-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--sombra-hover);
+  border-color: var(--cor-vermelho-principal);
+}
+
+.partida-card.destaque {
+  background: var(--cor-vermelho-principal);
+  color: var(--cor-branco);
+}
+
+.partida-card.destaque h4 {
+  color: var(--cor-branco);
+}
+
+.partida-data {
+  font-family: 'Barlow', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--cor-vermelho-principal);
+  margin-bottom: var(--espacamento-xs);
+}
+
+.partida-card.destaque .partida-data {
+  color: var(--cor-branco);
+}
+
+.partida-mes {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--espacamento-sm);
+}
+
+.partida-info {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+  margin-bottom: var(--espacamento-md);
+}
+
+.partida-btn {
+  background-color: var(--cor-vermelho-principal);
+  color: var(--cor-branco);
+  border: none;
+  padding: var(--espacamento-xs) var(--espacamento-md);
+  border-radius: 25px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.partida-btn:hover {
+  background-color: var(--cor-vermelho-escuro);
+  transform: scale(1.05);
+}
+
+.partida-card.destaque .partida-btn {
+  background-color: var(--cor-branco);
+  color: var(--cor-vermelho-principal);
+}
+
+/* ===== SEÇÃO TURISMO ===== */
+.turismo-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('path/to/turismo-bg.jpg') center/cover;
+  color: var(--cor-branco);
+  padding: var(--espacamento-xl) 0;
+}
+
+.turismo-content {
+  max-width: 600px;
+}
+
+.turismo-section h2 {
+  color: var(--cor-branco);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.turismo-section p {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-bottom: var(--espacamento-lg);
+}
+
+/* ===== SEÇÃO MARACANÃ ===== */
+.maracana-section {
+  background-color: var(--cor-preto);
+  color: var(--cor-branco);
+  padding: var(--espacamento-xl) 0;
+}
+
+.maracana-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--espacamento-lg);
+  align-items: center;
+}
+
+.maracana-text h2 {
+  color: var(--cor-branco);
+  font-size: 3rem;
+  margin-bottom: var(--espacamento-md);
+}
+
+.maracana-text h2 span {
+  color: var(--cor-vermelho-principal);
+}
+
+.maracana-image {
+  text-align: center;
+}
+
+.maracana-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: var(--sombra-card);
+}
+
+/* ===== PRODUTOS/OFERTAS ===== */
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--espacamento-md);
+  margin-top: var(--espacamento-lg);
+}
+
+.produto-card {
+  background: var(--cor-branco);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--sombra-card);
+  transition: transform 0.3s ease;
+}
+
+.produto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--sombra-hover);
+}
+
+.produto-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.produto-content {
+  padding: var(--espacamento-md);
+}
+
+.produto-title {
+  font-size: 1.5rem;
+  margin-bottom: var(--espacamento-sm);
+  color: var(--cor-preto);
+}
+
+.produto-description {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+  color: var(--cor-cinza-texto);
+  margin-bottom: var(--espacamento-md);
+}
+
+/* ===== FORMULÁRIOS ===== */
+.form-section {
+  background-color: var(--cor-cinza-claro);
+  padding: var(--espacamento-xl) 0;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: var(--espacamento-md);
+}
+
+.form-control {
+  width: 100%;
+  padding: var(--espacamento-sm);
+  border: 2px solid var(--cor-cinza-medio);
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--cor-vermelho-principal);
+}
+
+.btn-primary {
+  background-color: var(--cor-vermelho-principal);
+  color: var(--cor-branco);
+  border: none;
+  padding: var(--espacamento-sm) var(--espacamento-lg);
+  border-radius: 25px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-primary:hover {
+  background-color: var(--cor-vermelho-escuro);
+  transform: scale(1.05);
+}
+
+/* ===== PERGUNTAS FREQUENTES ===== */
+.faq-section {
+  background-color: var(--cor-preto);
+  color: var(--cor-branco);
+  padding: var(--espacamento-xl) 0;
+}
+
+.faq-item {
+  margin-bottom: var(--espacamento-md);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.faq-question {
+  padding: var(--espacamento-md);
+  cursor: pointer;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.faq-answer {
+  padding: 0 var(--espacamento-md) var(--espacamento-md);
+  display: none;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+  color: var(--cor-cinza-medio);
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+/* ===== RESPONSIVIDADE ===== */
+
+/* Tablet */
+@media (max-width: 768px) {
+  :root {
+    --espacamento-xl: 2rem;
+    --espacamento-lg: 2rem;
+  }
+  
+  .hero-banner h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  .partidas-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--espacamento-sm);
+  }
+  
+  .maracana-content {
+    grid-template-columns: 1fr;
+    gap: var(--espacamento-md);
+  }
+  
+  .produtos-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .maracana-text h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  :root {
+    --espacamento-xl: 1.5rem;
+    --espacamento-lg: 1.5rem;
+    --espacamento-md: 1rem;
+  }
+  
+  .hero-banner h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  .partidas-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .produtos-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .container {
+    padding: 0 var(--espacamento-sm);
+  }
+  
+  .turismo-section,
+  .maracana-section,
+  .section-flamengo {
+    padding: var(--espacamento-lg) 0;
+  }
+  
+  .maracana-text h2 {
+    font-size: 1.5rem;
+  }
+  
+  .section-title h2::after {
+    width: 60px;
+  }
+}
+
+/* ===== ANIMAÇÕES ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* ===== UTILIDADES ===== */
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.mb-0 { margin-bottom: 0 !important; }
+.mb-1 { margin-bottom: var(--espacamento-xs) !important; }
+.mb-2 { margin-bottom: var(--espacamento-sm) !important; }
+.mb-3 { margin-bottom: var(--espacamento-md) !important; }
+.mb-4 { margin-bottom: var(--espacamento-lg) !important; }
+.mb-5 { margin-bottom: var(--espacamento-xl) !important; }
+
+.mt-0 { margin-top: 0 !important; }
+.mt-1 { margin-top: var(--espacamento-xs) !important; }
+.mt-2 { margin-top: var(--espacamento-sm) !important; }
+.mt-3 { margin-top: var(--espacamento-md) !important; }
+.mt-4 { margin-top: var(--espacamento-lg) !important; }
+.mt-5 { margin-top: var(--espacamento-xl) !important; }
+
+.d-none { display: none !important; }
+.d-block { display: block !important; }
+.d-flex { display: flex !important; }
+.d-grid { display: grid !important; }
+
+.justify-content-center { justify-content: center !important; }
+.align-items-center { align-items: center !important; }
+.text-white { color: var(--cor-branco) !important; }
+.text-red { color: var(--cor-vermelho-principal) !important; }
+.bg-red { background-color: var(--cor-vermelho-principal) !important; }
+.bg-black { background-color: var(--cor-preto) !important; }
+.bg-white { background-color: var(--cor-branco) !important; } 
