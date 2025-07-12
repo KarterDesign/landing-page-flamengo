@@ -47,6 +47,230 @@ body {
   background-color: var(--cor-branco);
 }
 
+/* ===== HEADER ===== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--cor-preto);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid var(--cor-vermelho-principal);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--espacamento-sm) 0;
+}
+
+/* ===== LOGO E TEXTO ===== */
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--espacamento-sm);
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logo-text {
+  font-family: 'Soulcraft', sans-serif;
+  font-size: 11px;
+  color: var(--cor-branco);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ===== NAVEGAÇÃO DESKTOP ===== */
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: var(--espacamento-lg);
+}
+
+.nav-links li a {
+  font-family: 'Soulcraft', sans-serif;
+  color: var(--cor-branco);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: var(--espacamento-xs) var(--espacamento-sm);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-links li a:hover {
+  color: var(--cor-vermelho-principal);
+  background-color: rgba(198, 12, 48, 0.1);
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--cor-vermelho-principal);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* ===== MENU MOBILE TOGGLE ===== */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: var(--espacamento-xs);
+  background: none;
+  border: none;
+  position: relative;
+  z-index: 1001;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--cor-branco);
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* ===== MENU MOBILE ===== */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--cor-preto);
+  z-index: 999;
+  transition: left 0.3s ease;
+  padding: var(--espacamento-xl) var(--espacamento-md);
+  padding-top: 100px; /* Espaço para o header */
+}
+
+.mobile-menu.open {
+  left: 0;
+}
+
+.mobile-nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-nav-links li {
+  margin: var(--espacamento-md) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: var(--espacamento-md);
+}
+
+.mobile-nav-links li:last-child {
+  border-bottom: none;
+}
+
+.mobile-nav-links a {
+  font-family: 'Soulcraft', sans-serif;
+  color: var(--cor-branco);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  padding: var(--espacamento-sm) 0;
+  transition: all 0.3s ease;
+}
+
+.mobile-nav-links a:hover {
+  color: var(--cor-vermelho-principal);
+  padding-left: var(--espacamento-sm);
+}
+
+/* ===== RESPONSIVIDADE DO HEADER ===== */
+@media (max-width: 768px) {
+  .header-nav {
+    display: none;
+  }
+  
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .logo-text {
+    font-size: 0.6rem;
+  }
+  
+  .logo-img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .header-content {
+    padding: var(--espacamento-xs) 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo-text {
+    font-size: 0.6rem;
+  }
+  
+  .logo-img {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .container {
+    padding: 0 var(--espacamento-sm);
+  }
+}
+
+body {
+  padding-top: 80px; /* Espaço para o header fixo */
+}
+
 /* ===== TIPOGRAFIA ===== */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Soulcraft', sans-serif;
@@ -576,6 +800,142 @@ button {
   animation: fadeInUp 0.6s ease-out;
 }
 
+/* ===== NOTIFICAÇÕES ===== */
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: var(--espacamento-sm) var(--espacamento-md);
+  border-radius: 5px;
+  box-shadow: var(--sombra-hover);
+  z-index: 1000;
+  max-width: 400px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.notification-info {
+  background-color: #3498db;
+  color: var(--cor-branco);
+}
+
+.notification-success {
+  background-color: #2ecc71;
+  color: var(--cor-branco);
+}
+
+.notification-error {
+  background-color: #e74c3c;
+  color: var(--cor-branco);
+}
+
+.notification-warning {
+  background-color: #f39c12;
+  color: var(--cor-branco);
+}
+
+.notification-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notification-close {
+  background: none;
+  border: none;
+  color: var(--cor-branco);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  margin-left: var(--espacamento-sm);
+}
+
+.notification-close:hover {
+  opacity: 0.8;
+}
+
+/* ===== VALIDAÇÃO DE FORMULÁRIOS ===== */
+.form-control.error {
+  border-color: #e74c3c;
+  background-color: #fdf2f2;
+}
+
+.form-control.success {
+  border-color: #2ecc71;
+  background-color: #f2fdf2;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.8rem;
+  margin-top: var(--espacamento-xs);
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+}
+
+/* ===== LOADING STATES ===== */
+.btn-primary.loading,
+.partida-btn.loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-primary.loading:hover,
+.partida-btn.loading:hover {
+  transform: none;
+}
+
+/* ===== COUNTDOWN TIMER ===== */
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: var(--espacamento-md);
+  margin: var(--espacamento-md) 0;
+}
+
+.countdown-item {
+  text-align: center;
+  padding: var(--espacamento-sm);
+  background-color: var(--cor-vermelho-principal);
+  color: var(--cor-branco);
+  border-radius: 5px;
+  min-width: 60px;
+}
+
+.countdown-number {
+  display: block;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.countdown-label {
+  display: block;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin-top: var(--espacamento-xs);
+}
+
+/* ===== LAZY LOADING ===== */
+img.lazy {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+img.lazy.loaded {
+  opacity: 1;
+}
+
+/* ===== HEADER SCROLLED ===== */
+.header.scrolled {
+  background-color: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
 /* ===== UTILIDADES ===== */
 .text-center {
   text-align: center;
@@ -611,3 +971,758 @@ button {
 .bg-red { background-color: var(--cor-vermelho-principal) !important; }
 .bg-black { background-color: var(--cor-preto) !important; }
 .bg-white { background-color: var(--cor-branco) !important; } 
+
+/* Seção Você Aonde o Flamengo Estiver */
+.voce-aonde-flamengo {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-container {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(198,12,48,0.3) 100%);
+}
+
+.banner-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300"><defs><pattern id="flames" patternUnits="userSpaceOnUse" width="40" height="40"><path d="M20 0C25 10 30 20 35 30C30 35 25 40 20 40C15 40 10 35 5 30C10 20 15 10 20 0Z" fill="rgba(198,12,48,0.1)"/></pattern></defs><rect width="1200" height="300" fill="url(%23flames)"/></svg>') center/cover;
+    opacity: 0.3;
+}
+
+.banner-content {
+    text-align: left;
+    z-index: 2;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.banner-content h1 {
+    font-family: 'Soulcraft', sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    color: #FFFFFF;
+    margin: 0;
+    line-height: 1.1;
+    letter-spacing: 2px;
+}
+
+.matches-slider-container {
+    padding: 40px 0;
+    position: relative;
+}
+
+.matches-slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 0 20px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.matches-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.match-card {
+    flex: 0 0 280px;
+    background: #2a2a2a;
+    border-radius: 15px;
+    padding: 20px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.match-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(198,12,48,0.1) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.match-card:hover::before {
+    opacity: 1;
+}
+
+.match-card:hover {
+    transform: translateY(-5px);
+    border-color: #C60C30;
+    box-shadow: 0 10px 25px rgba(198,12,48,0.3);
+}
+
+.match-card.featured {
+    background: #C60C30;
+    border-color: #ff4d6d;
+}
+
+.match-card.featured::before {
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%);
+}
+
+.match-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.team-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+}
+
+.match-date-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.match-day {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #FFFFFF;
+}
+
+.match-month {
+    font-size: 0.8rem;
+    color: #cccccc;
+    font-weight: 600;
+}
+
+.match-time {
+    font-size: 0.9rem;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.match-stadium {
+    font-size: 0.8rem;
+    color: #cccccc;
+}
+
+.match-teams {
+    margin-bottom: 25px;
+}
+
+.match-date-large {
+    font-size: 2.2
+    rem;
+    font-weight: 900;
+    color: #FFFFFF;
+    line-height: 1;
+    margin-bottom: 10px;
+    font-family: 'Soulcraft', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.teams-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.team-name {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+}
+
+.team-opponent {
+    font-size: 0.9rem;
+    color: #cccccc;
+    font-weight: 600;
+}
+
+.match-cta {
+    width: 100%;
+    padding: 12px 20px;
+    background: rgba(0,0,0,0.8);
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.match-cta:hover {
+    background: #FFFFFF;
+    color: #000000;
+    transform: translateY(-2px);
+}
+
+.match-card.featured .match-cta {
+    background: rgba(0,0,0,0.9);
+    border-color: #FFFFFF;
+}
+
+.match-card.featured .match-cta:hover {
+    background: #FFFFFF;
+    color: #C60C30;
+}
+
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    pointer-events: none;
+}
+
+.slider-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(198,12,48,0.9);
+    border: none;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: all;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.slider-btn:hover {
+    background: #C60C30;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(198,12,48,0.4);
+}
+
+.slider-btn:active {
+    transform: scale(0.95);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .banner-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .matches-slider {
+        padding: 0 10px;
+    }
+    
+    .match-card {
+        flex: 0 0 250px;
+    }
+    
+    .slider-controls {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-container {
+        height: 250px;
+    }
+    
+    .banner-content h1 {
+        font-size: 2rem;
+    }
+    
+    .match-card {
+        flex: 0 0 220px;
+        padding: 15px;
+    }
+    
+    .match-date-large {
+        font-size: 2.1rem;
+    }
+} 
+
+/* Estilos adicionais para o slider */
+.matches-slider.active {
+    cursor: grabbing;
+}
+
+.matches-slider:not(.active) {
+    cursor: grab;
+}
+
+.match-card {
+    user-select: none;
+    cursor: pointer;
+}
+
+.match-card:active {
+    transform: scale(0.98);
+}
+
+/* Indicadores de scroll */
+.matches-slider-container::before,
+.matches-slider-container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.8), transparent);
+    pointer-events: none;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.matches-slider-container::before {
+    left: 0;
+}
+
+.matches-slider-container::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(0,0,0,0.8), transparent);
+}
+
+.matches-slider-container:hover::before,
+.matches-slider-container:hover::after {
+    opacity: 1;
+}
+
+/* Animações de entrada */
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.match-card {
+    animation: slideInFromRight 0.6s ease-out;
+}
+
+.match-card:nth-child(1) { animation-delay: 0.1s; }
+.match-card:nth-child(2) { animation-delay: 0.2s; }
+.match-card:nth-child(3) { animation-delay: 0.3s; }
+.match-card:nth-child(4) { animation-delay: 0.4s; }
+.match-card:nth-child(5) { animation-delay: 0.5s; }
+
+/* Melhorias no banner */
+.banner-container {
+    background-image: 
+        linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(198,12,48,0.4) 100%),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300"><defs><radialGradient id="flame" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:rgba(198,12,48,0.3);stop-opacity:1" /><stop offset="100%" style="stop-color:rgba(0,0,0,0);stop-opacity:1" /></radialGradient></defs><rect width="1200" height="300" fill="url(%23flame)"/></svg>');
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-content h1 {
+    text-transform: uppercase;
+
+}
+
+/* Responsividade aprimorada */
+@media (max-width: 1024px) {
+    .matches-slider-container::before,
+    .matches-slider-container::after {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-content h1 {
+
+        color: #FFFFFF;
+    }
+} 
+
+/* ===== SEÇÃO AGÊNCIA OFICIAL DA NAÇÃO ===== */
+.agencia-oficial-secao {
+  padding: var(--espacamento-xl) 0;
+  background-color: var(--cor-cinza-claro);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                    url('https://via.placeholder.com/1920x600/C60C30/FFFFFF?text=Agência+Oficial+da+Nação');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+
+.agencia-oficial-secao::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(198, 12, 48, 0.9) 0%, 
+    rgba(0, 0, 0, 0.7) 100%);
+  z-index: 1;
+}
+
+.agencia-oficial-secao .container {
+  position: relative;
+  z-index: 2;
+}
+
+.agencia-content {
+  padding: var(--espacamento-lg);
+  max-width: 600px;
+}
+
+.agencia-title {
+  font-family: 'Soulcraft', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--cor-branco);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  margin-bottom: var(--espacamento-md);
+  text-align: left;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.agencia-description {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--cor-branco);
+  line-height: 1.6;
+  text-align: left;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin-bottom: 0;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .agencia-oficial-secao {
+    background-attachment: scroll;
+  }
+  
+  .agencia-title {
+    font-size: 3rem;
+  }
+  
+  .agencia-description {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .agencia-oficial-secao {
+    padding: var(--espacamento-lg) 0;
+  }
+  
+  .agencia-content {
+    padding: var(--espacamento-md);
+    text-align: center;
+  }
+  
+  .agencia-title {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  
+  .agencia-description {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .agencia-title {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  
+  .agencia-description {
+    font-size: 0.95rem;
+  }
+  
+  .agencia-content {
+    padding: var(--espacamento-sm);
+  }
+} 
+
+/* ===== SEÇÃO O MARACA É NOSSO ===== */
+.maraca-secao {
+  position: relative;
+  padding: 80px 0;
+  background: #fafafa;
+  overflow: hidden;
+}
+
+.maraca-secao::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://via.placeholder.com/1920x800/000000/333333?text=MARACANÃ') center/cover;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.maraca-secao .container {
+  position: relative;
+  z-index: 2;
+}
+
+.maraca-content {
+  padding: var(--espacamento-lg) 0;
+  color: var(--cor-branco);
+}
+
+.maraca-title {
+  font-family: 'Soulcraft', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: var(--espacamento-md);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.maraca-title .text-red {
+  font-family: 'Soulcraft', sans-serif;
+  font-size: 3.5rem;
+  color: var(--cor-vermelho-principal);
+  display: block;
+  text-shadow: 2px 2px 4px rgba(198, 12, 48, 0.3);
+}
+
+.maraca-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: var(--espacamento-lg);
+  color: var(--cor-cinza-escuro);
+  max-width: 500px;
+}
+
+.maraca-cta {
+  background: linear-gradient(135deg, var(--cor-vermelho-principal) 0%, var(--cor-vermelho-escuro) 100%);
+  color: var(--cor-branco);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(198, 12, 48, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.maraca-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.maraca-cta:hover::before {
+  left: 100%;
+}
+
+.maraca-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(198, 12, 48, 0.4);
+}
+
+.maraca-cta:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(198, 12, 48, 0.3);
+}
+
+.maraca-image {
+  position: relative;
+  height: 400px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--cor-vermelho-principal) 0%, var(--cor-vermelho-escuro) 100%);
+  background-image: url('https://via.placeholder.com/600x400/C60C30/FFFFFF?text=MARACANÃ');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.maraca-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(198, 12, 48, 0.3) 0%, rgba(0, 0, 0, 0.2) 100%);
+  z-index: 1;
+}
+
+.maraca-image::after {
+  content: 'MARACANÃ';
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  color: var(--cor-branco);
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 2;
+}
+
+/* ===== RESPONSIVIDADE DA SEÇÃO MARACA ===== */
+@media (max-width: 1024px) {
+  .maraca-secao {
+    padding: 60px 0;
+  }
+  
+  .maraca-title {
+    font-size: 3rem;
+  }
+  
+  .maraca-description {
+    font-size: 1rem;
+  }
+  
+  .maraca-image {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .maraca-secao {
+    padding: 40px 0;
+  }
+  
+  .maraca-content {
+    text-align: center;
+    padding: var(--espacamento-md) 0;
+  }
+  
+  .maraca-title {
+    font-size: 2.5rem;
+    margin-bottom: var(--espacamento-sm);
+  }
+  
+  .maraca-description {
+    font-size: 0.95rem;
+    margin: 0 auto var(--espacamento-md) auto;
+  }
+  
+  .maraca-image {
+    height: 300px;
+    margin-top: var(--espacamento-md);
+  }
+  
+  .maraca-cta {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .maraca-title {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  
+  .maraca-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .maraca-image {
+    height: 250px;
+  }
+  
+  .maraca-cta {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.8rem;
+    border-radius: 40px;
+  }
+  
+  .maraca-content {
+    padding: var(--espacamento-sm) 0;
+  }
+}
+
+/* ===== ANIMAÇÕES PARA A SEÇÃO MARACA ===== */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.maraca-content {
+  animation: fadeInLeft 0.8s ease-out;
+}
+
+.maraca-image {
+  animation: fadeInRight 0.8s ease-out;
+}
+
+/* ===== EFEITOS DE HOVER PARA A SEÇÃO MARACA ===== */
+.maraca-image:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+.maraca-image:hover::before {
+  background: linear-gradient(45deg, rgba(198, 12, 48, 0.4) 0%, rgba(0, 0, 0, 0.3) 100%);
+} 

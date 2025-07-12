@@ -23,6 +23,7 @@ O projeto foi baseado no design oficial do Flamengo, mantendo a identidade visua
 ## 🎯 Funcionalidades
 
 ### ✅ Seções Implementadas
+- **Header Sticky**: Navegação fixa com logo e menu responsivo
 - **Hero Banner**: Seção principal com call-to-action
 - **Próximas Partidas**: Grid de cards com partidas em destaque
 - **Turismo**: Seção promocional com background
@@ -36,6 +37,18 @@ O projeto foi baseado no design oficial do Flamengo, mantendo a identidade visua
 - **Performance**: Otimizado para carregamento rápido
 - **Animações**: Transições suaves e hover effects
 - **Cross-browser**: Compatível com navegadores modernos
+
+### 🎯 Funcionalidades JavaScript
+- **FAQ Accordion**: Sistema interativo com animações
+- **Smooth Scroll**: Navegação suave entre seções
+- **Validação de Formulários**: Validação em tempo real
+- **Sistema de Notificações**: Feedback visual para usuário
+- **Loading States**: Estados de carregamento em botões
+- **Scroll Animations**: Animações ao rolar a página
+- **Menu Mobile**: Menu responsivo para dispositivos móveis
+- **Countdown Timer**: Timer de contagem regressiva
+- **Lazy Loading**: Carregamento otimizado de imagens
+- **Eventos de Teclado**: Suporte para navegação via teclado
 
 ## 🎨 Paleta de Cores
 
@@ -98,6 +111,8 @@ O projeto foi baseado no design oficial do Flamengo, mantendo a identidade visua
 landing-page-flamengo/
 ├── index.html          # Arquivo principal HTML
 ├── style.css           # Estilos CSS customizados
+├── script.js           # Funcionalidades JavaScript
+├── .gitignore          # Arquivos ignorados pelo Git
 └── README.md          # Documentação do projeto
 ```
 
