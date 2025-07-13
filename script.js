@@ -27,6 +27,7 @@ function initializeApp() {
     initCountdownTimer();
     initImageLazyLoading();
     initMatchesSlider(); // Adicionado para o slider de partidas
+    initPacotesModal(); // Adicionado para o modal dos pacotes
     
     console.log('✅ Landing Page Flamengo inicializada com sucesso!');
 }
@@ -640,13 +641,180 @@ function formatDateBR(date) {
 }
 
 /**
- * Formata moeda brasileira
+ * Formata valores monetários para o padrão brasileiro
  */
 function formatCurrency(value) {
     return new Intl.NumberFormat('pt-BR', {
         style: 'currency',
         currency: 'BRL'
     }).format(value);
+}
+
+// ===== MODAL DOS PACOTES =====
+/**
+ * Dados dos pacotes disponíveis
+ */
+const pacotesData = {
+    'oeste-inferior': {
+        title: 'PACOTE OESTE INFERIOR',
+        banner: 'https://images.unsplash.com/photo-1577223625816-7546f13df25d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80',
+        description: 'Desfrute de uma experiência única no setor Oeste Inferior do Maracanã. Tenha acesso privilegiado ao estádio mais icônico do Brasil, com vista incrível do campo e toda a estrutura necessária para viver momentos inesquecíveis.',
+        features: [
+            'Ingresso setor Oeste Inferior',
+            'Transfer oficial do Flamengo',
+            'Embarque na Gávea',
+            'Guia credenciado',
+            'Seguro viagem',
+            'Kit torcedor oficial',
+            'Lanche no trajeto',
+            'Suporte 24h'
+        ]
+    },
+    'espaco-fla': {
+        title: 'PACOTE ESPAÇO FLA+',
+        banner: 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80',
+        description: 'Viva a experiência premium no Espaço FLA+, área exclusiva para sócios-torcedores e convidados especiais. Desfrute de conforto máximo, gastronomia diferenciada e uma vista privilegiada do Maracanã.',
+        features: [
+            'Acesso ao Espaço FLA+',
+            'Buffet premium incluído',
+            'Bebidas liberadas',
+            'Transfer executivo',
+            'Estacionamento exclusivo',
+            'Recepção VIP',
+            'Brinde oficial do Flamengo',
+            'Atendimento personalizado'
+        ]
+    },
+    'camarote': {
+        title: 'PACOTE CAMAROTE',
+        banner: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80',
+        description: 'O máximo em experiência e exclusividade no Camarote ABSOLUT Sport. Ambiente climatizado, vista panorâmica privilegiada e serviços de primeira classe para você torcer com todo o conforto que merece.',
+        features: [
+            'Camarote ABSOLUT Sport',
+            'Ambiente climatizado',
+            'Vista panorâmica privilegiada',
+            'Open bar premium',
+            'Gastronomia gourmet',
+            'Valet parking',
+            'Acesso a área VIP',
+            'Concierge exclusivo',
+            'Brinde de cortesia'
+        ]
+    }
+};
+
+/**
+ * Inicializa o modal dos pacotes
+ */
+function initPacotesModal() {
+    const pacoteCards = document.querySelectorAll('.pacote-card');
+    const modal = document.getElementById('pacoteModal');
+    const closeBtn = modal.querySelector('.modal-close');
+    const modalCta = modal.querySelector('.modal-cta');
+    
+    // Event listeners para os cards
+    pacoteCards.forEach(card => {
+        card.addEventListener('click', function() {
+            const pacoteId = this.getAttribute('data-pacote');
+            openPacoteModal(pacoteId);
+        });
+        
+        // Adicionar suporte a teclado
+        card.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                const pacoteId = this.getAttribute('data-pacote');
+                openPacoteModal(pacoteId);
+            }
+        });
+    });
+    
+    // Event listener para fechar modal
+    closeBtn.addEventListener('click', closePacoteModal);
+    
+    // Fechar modal ao clicar no overlay
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            closePacoteModal();
+        }
+    });
+    
+    // Fechar modal com ESC
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closePacoteModal();
+        }
+    });
+    
+    // Event listener para o botão CTA
+    modalCta.addEventListener('click', function() {
+        // Aqui você pode adicionar a lógica para o processo de compra
+        showNotification('Redirecionando para checkout...', 'info');
+        setTimeout(() => {
+            closePacoteModal();
+        }, 2000);
+    });
+}
+
+/**
+ * Abre o modal com as informações do pacote
+ */
+function openPacoteModal(pacoteId) {
+    const modal = document.getElementById('pacoteModal');
+    const pacoteData = pacotesData[pacoteId];
+    
+    if (!pacoteData) {
+        console.error('Pacote não encontrado:', pacoteId);
+        return;
+    }
+    
+    // Preencher conteúdo do modal
+    document.getElementById('modalTitle').textContent = pacoteData.title;
+    document.getElementById('modalDescription').textContent = pacoteData.description;
+    document.getElementById('modalBanner').src = pacoteData.banner;
+    document.getElementById('modalBanner').alt = pacoteData.title;
+    
+    // Preencher features
+    const featuresList = document.getElementById('modalFeatures');
+    featuresList.innerHTML = '';
+    pacoteData.features.forEach(feature => {
+        const li = document.createElement('li');
+        li.textContent = feature;
+        featuresList.appendChild(li);
+    });
+    
+    // Abrir modal
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevenir scroll da página
+    
+    // Focar no botão de fechar para acessibilidade
+    modal.querySelector('.modal-close').focus();
+}
+
+/**
+ * Fecha o modal dos pacotes
+ */
+function closePacoteModal() {
+    const modal = document.getElementById('pacoteModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = ''; // Restaurar scroll da página
+}
+
+/**
+ * Adiciona efeito de hover aos cards dos pacotes
+ */
+function addPacoteHoverEffects() {
+    const pacoteCards = document.querySelectorAll('.pacote-card');
+    
+    pacoteCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
 }
 
 // ===== EVENTOS GLOBAIS =====

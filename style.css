@@ -9,17 +9,17 @@
   --cor-vermelho-escuro: #A00A28;
   --cor-preto: #000000;
   --cor-branco: #FFFFFF;
-  
+
   /* Cores de apoio */
   --cor-cinza-claro: #F5F5F5;
   --cor-cinza-medio: #CCCCCC;
   --cor-cinza-escuro: #333333;
   --cor-cinza-texto: #666666;
-  
+
   /* Sombras */
   --sombra-card: 0 4px 8px rgba(0, 0, 0, 0.1);
   --sombra-hover: 0 8px 16px rgba(0, 0, 0, 0.15);
-  
+
   /* Espaçamentos */
   --espacamento-xs: 0.5rem;
   --espacamento-sm: 1rem;
@@ -187,7 +187,8 @@ body {
   z-index: 999;
   transition: left 0.3s ease;
   padding: var(--espacamento-xl) var(--espacamento-md);
-  padding-top: 100px; /* Espaço para o header */
+  padding-top: 100px;
+  /* Espaço para o header */
 }
 
 .mobile-menu.open {
@@ -233,20 +234,20 @@ body {
   .header-nav {
     display: none;
   }
-  
+
   .menu-toggle {
     display: flex;
   }
-  
+
   .logo-text {
     font-size: 0.6rem;
   }
-  
+
   .logo-img {
     width: 40px;
     height: 40px;
   }
-  
+
   .header-content {
     padding: var(--espacamento-xs) 0;
   }
@@ -256,23 +257,29 @@ body {
   .logo-text {
     font-size: 0.6rem;
   }
-  
+
   .logo-img {
     width: 35px;
     height: 35px;
   }
-  
+
   .container {
     padding: 0 var(--espacamento-sm);
   }
 }
 
 body {
-  padding-top: 80px; /* Espaço para o header fixo */
+  padding-top: 80px;
+  /* Espaço para o header fixo */
 }
 
 /* ===== TIPOGRAFIA ===== */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Soulcraft', sans-serif;
   font-weight: bold;
   color: var(--cor-preto);
@@ -329,7 +336,12 @@ p {
 }
 
 /* Aplicar Barlow em elementos de texto corrido */
-span, div, label, input, textarea, select {
+span,
+div,
+label,
+input,
+textarea,
+select {
   font-family: 'Barlow', sans-serif;
   font-weight: 500;
 }
@@ -399,12 +411,14 @@ button {
 }
 
 .section-title {
-  text-align: center;
+  text-align: left;
   margin-bottom: var(--espacamento-lg);
 }
 
 .section-title h2 {
-  color: var(--cor-vermelho-principal);
+  color: #000000;
+  font-family: 'Barlow', sans-serif;
+  font-size: 35px;
   position: relative;
   padding-bottom: var(--espacamento-sm);
 }
@@ -413,11 +427,10 @@ button {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   width: 80px;
   height: 3px;
-  background-color: var(--cor-vermelho-principal);
+  background-color: #000000;
 }
 
 /* ===== CARDS DE PARTIDAS ===== */
@@ -713,29 +726,29 @@ button {
     --espacamento-xl: 2rem;
     --espacamento-lg: 2rem;
   }
-  
+
   .hero-banner h1 {
     font-size: 2.5rem;
   }
-  
+
   h2 {
     font-size: 2rem;
   }
-  
+
   .partidas-container {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: var(--espacamento-sm);
   }
-  
+
   .maracana-content {
     grid-template-columns: 1fr;
     gap: var(--espacamento-md);
   }
-  
+
   .produtos-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
-  
+
   .maracana-text h2 {
     font-size: 2rem;
   }
@@ -748,37 +761,37 @@ button {
     --espacamento-lg: 1.5rem;
     --espacamento-md: 1rem;
   }
-  
+
   .hero-banner h1 {
     font-size: 2rem;
   }
-  
+
   h2 {
     font-size: 1.8rem;
   }
-  
+
   .partidas-container {
     grid-template-columns: 1fr;
   }
-  
+
   .produtos-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .container {
     padding: 0 var(--espacamento-sm);
   }
-  
+
   .turismo-section,
   .maracana-section,
   .section-flamengo {
     padding: var(--espacamento-lg) 0;
   }
-  
+
   .maracana-text h2 {
     font-size: 1.5rem;
   }
-  
+
   .section-title h2::after {
     width: 60px;
   }
@@ -790,6 +803,7 @@ button {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -945,432 +959,522 @@ img.lazy.loaded {
   text-transform: uppercase;
 }
 
-.mb-0 { margin-bottom: 0 !important; }
-.mb-1 { margin-bottom: var(--espacamento-xs) !important; }
-.mb-2 { margin-bottom: var(--espacamento-sm) !important; }
-.mb-3 { margin-bottom: var(--espacamento-md) !important; }
-.mb-4 { margin-bottom: var(--espacamento-lg) !important; }
-.mb-5 { margin-bottom: var(--espacamento-xl) !important; }
+.mb-0 {
+  margin-bottom: 0 !important;
+}
 
-.mt-0 { margin-top: 0 !important; }
-.mt-1 { margin-top: var(--espacamento-xs) !important; }
-.mt-2 { margin-top: var(--espacamento-sm) !important; }
-.mt-3 { margin-top: var(--espacamento-md) !important; }
-.mt-4 { margin-top: var(--espacamento-lg) !important; }
-.mt-5 { margin-top: var(--espacamento-xl) !important; }
+.mb-1 {
+  margin-bottom: var(--espacamento-xs) !important;
+}
 
-.d-none { display: none !important; }
-.d-block { display: block !important; }
-.d-flex { display: flex !important; }
-.d-grid { display: grid !important; }
+.mb-2 {
+  margin-bottom: var(--espacamento-sm) !important;
+}
 
-.justify-content-center { justify-content: center !important; }
-.align-items-center { align-items: center !important; }
-.text-white { color: var(--cor-branco) !important; }
-.text-red { color: var(--cor-vermelho-principal) !important; }
-.bg-red { background-color: var(--cor-vermelho-principal) !important; }
-.bg-black { background-color: var(--cor-preto) !important; }
-.bg-white { background-color: var(--cor-branco) !important; } 
+.mb-3 {
+  margin-bottom: var(--espacamento-md) !important;
+}
+
+.mb-4 {
+  margin-bottom: var(--espacamento-lg) !important;
+}
+
+.mb-5 {
+  margin-bottom: var(--espacamento-xl) !important;
+}
+
+.mt-0 {
+  margin-top: 0 !important;
+}
+
+.mt-1 {
+  margin-top: var(--espacamento-xs) !important;
+}
+
+.mt-2 {
+  margin-top: var(--espacamento-sm) !important;
+}
+
+.mt-3 {
+  margin-top: var(--espacamento-md) !important;
+}
+
+.mt-4 {
+  margin-top: var(--espacamento-lg) !important;
+}
+
+.mt-5 {
+  margin-top: var(--espacamento-xl) !important;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.d-grid {
+  display: grid !important;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+.text-white {
+  color: var(--cor-branco) !important;
+}
+
+.text-red {
+  color: var(--cor-vermelho-principal) !important;
+}
+
+.bg-red {
+  background-color: var(--cor-vermelho-principal) !important;
+}
+
+.bg-black {
+  background-color: var(--cor-preto) !important;
+}
+
+.bg-white {
+  background-color: var(--cor-branco) !important;
+}
 
 /* Seção Você Aonde o Flamengo Estiver */
 .voce-aonde-flamengo {
-    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .banner-container {
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(198,12,48,0.3) 100%);
+  height: 300px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: url('img/torcedor-flameng-absolut-sport-agencia-oficial.jpg') center/cover;
 }
 
 .banner-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300"><defs><pattern id="flames" patternUnits="userSpaceOnUse" width="40" height="40"><path d="M20 0C25 10 30 20 35 30C30 35 25 40 20 40C15 40 10 35 5 30C10 20 15 10 20 0Z" fill="rgba(198,12,48,0.1)"/></pattern></defs><rect width="1200" height="300" fill="url(%23flames)"/></svg>') center/cover;
-    opacity: 0.3;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.2;
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .banner-container {
+    align-items: flex-end;
+    background: url('img/torcedor-flameng-absolut-sport-agencia-oficial-mobile.jpg') center/cover;
+
+  }
+
+  .banner-content h1 {
+    color: #FFFFFF;
+    padding-bottom: 30px;
+  }
+
+
 }
 
 .banner-content {
-    text-align: left;
-    z-index: 2;
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  text-align: left;
+  z-index: 2;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .banner-content h1 {
-    font-family: 'Soulcraft', sans-serif;
-    font-size: 4rem;
-    font-weight: 900;
-    color: #FFFFFF;
-    margin: 0;
-    line-height: 1.1;
-    letter-spacing: 2px;
+  font-family: 'Soulcraft', sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+  color: #FFFFFF;
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: 2px;
 }
 
 .matches-slider-container {
-    padding: 40px 0;
-    position: relative;
+  padding: 40px 0;
+  position: relative;
 }
 
 .matches-slider {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding: 0 20px;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 0 20px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .matches-slider::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .match-card {
-    flex: 0 0 280px;
-    background: #2a2a2a;
-    border-radius: 15px;
-    padding: 20px;
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
+  flex: 0 0 280px;
+  background: #2a2a2a;
+  border-radius: 15px;
+  padding: 20px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .match-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(198,12,48,0.1) 0%, transparent 50%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(198, 12, 48, 0.1) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .match-card:hover::before {
-    opacity: 1;
+  opacity: 1;
 }
 
 .match-card:hover {
-    transform: translateY(-5px);
-    border-color: #C60C30;
-    box-shadow: 0 10px 25px rgba(198,12,48,0.3);
+  transform: translateY(-5px);
+  border-color: #C60C30;
+  box-shadow: 0 10px 25px rgba(198, 12, 48, 0.3);
 }
 
 .match-card.featured {
-    background: #C60C30;
-    border-color: #ff4d6d;
+  background: #C60C30;
+  border-color: #ff4d6d;
 }
 
 .match-card.featured::before {
-    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
 }
 
 .match-header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
 }
 
 .team-logo {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 2px solid #FFFFFF;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
 }
 
 .match-date-info {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .match-day {
-    font-size: 1.2rem;
-    font-weight: 900;
-    color: #FFFFFF;
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #FFFFFF;
 }
 
 .match-month {
-    font-size: 0.8rem;
-    color: #cccccc;
-    font-weight: 600;
+  font-size: 0.8rem;
+  color: #cccccc;
+  font-weight: 600;
 }
 
 .match-time {
-    font-size: 0.9rem;
-    color: #FFFFFF;
-    font-weight: 700;
+  font-size: 0.9rem;
+  color: #FFFFFF;
+  font-weight: 700;
 }
 
 .match-stadium {
-    font-size: 0.8rem;
-    color: #cccccc;
+  font-size: 0.8rem;
+  color: #cccccc;
 }
 
 .match-teams {
-    margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .match-date-large {
-    font-size: 2.2
-    rem;
-    font-weight: 900;
-    color: #FFFFFF;
-    line-height: 1;
-    margin-bottom: 10px;
-    font-family: 'Soulcraft', sans-serif;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  font-size: 2.2 rem;
+  font-weight: 900;
+  color: #FFFFFF;
+  line-height: 1;
+  margin-bottom: 10px;
+  font-family: 'Soulcraft', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .teams-info {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .team-name {
-    font-size: 1.1rem;
-    font-weight: 800;
-    color: #FFFFFF;
-    letter-spacing: 1px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: 1px;
 }
 
 .team-opponent {
-    font-size: 0.9rem;
-    color: #cccccc;
-    font-weight: 600;
+  font-size: 0.9rem;
+  color: #cccccc;
+  font-weight: 600;
 }
 
 .match-cta {
-    width: 100%;
-    padding: 12px 20px;
-    background: rgba(0,0,0,0.8);
-    color: #FFFFFF;
-    border: 2px solid #FFFFFF;
-    border-radius: 25px;
-    font-weight: 700;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  width: 100%;
+  padding: 12px 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .match-cta:hover {
-    background: #FFFFFF;
-    color: #000000;
-    transform: translateY(-2px);
+  background: #FFFFFF;
+  color: #000000;
+  transform: translateY(-2px);
 }
 
 .match-card.featured .match-cta {
-    background: rgba(0,0,0,0.9);
-    border-color: #FFFFFF;
+  background: rgba(0, 0, 0, 0.9);
+  border-color: #FFFFFF;
 }
 
 .match-card.featured .match-cta:hover {
-    background: #FFFFFF;
-    color: #C60C30;
+  background: #FFFFFF;
+  color: #C60C30;
 }
 
 .slider-controls {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 10px;
-    pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  pointer-events: none;
 }
 
 .slider-btn {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: rgba(198,12,48,0.9);
-    border: none;
-    color: #FFFFFF;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: all;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(198, 12, 48, 0.9);
+  border: none;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: all;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .slider-btn:hover {
-    background: #C60C30;
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(198,12,48,0.4);
+  background: #C60C30;
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(198, 12, 48, 0.4);
 }
 
 .slider-btn:active {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .banner-content h1 {
-        font-size: 2.5rem;
-    }
-    
-    .matches-slider {
-        padding: 0 10px;
-    }
-    
-    .match-card {
-        flex: 0 0 250px;
-    }
-    
-    .slider-controls {
-        display: none;
-    }
+  .banner-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .matches-slider {
+    padding: 0 10px;
+  }
+
+  .match-card {
+    flex: 0 0 250px;
+  }
+
+  .slider-controls {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
-    .banner-container {
-        height: 250px;
-    }
-    
-    .banner-content h1 {
-        font-size: 2rem;
-    }
-    
-    .match-card {
-        flex: 0 0 220px;
-        padding: 15px;
-    }
-    
-    .match-date-large {
-        font-size: 2.1rem;
-    }
-} 
+  .banner-container {
+    height: 250px;
+  }
+
+  .banner-content h1 {
+    font-size: 2rem;
+  }
+
+  .match-card {
+    flex: 0 0 220px;
+    padding: 15px;
+  }
+
+  .match-date-large {
+    font-size: 2.1rem;
+  }
+}
 
 /* Estilos adicionais para o slider */
 .matches-slider.active {
-    cursor: grabbing;
+  cursor: grabbing;
 }
 
 .matches-slider:not(.active) {
-    cursor: grab;
+  cursor: grab;
 }
 
 .match-card {
-    user-select: none;
-    cursor: pointer;
+  user-select: none;
+  cursor: pointer;
 }
 
 .match-card:active {
-    transform: scale(0.98);
+  transform: scale(0.98);
 }
 
 /* Indicadores de scroll */
 .matches-slider-container::before,
 .matches-slider-container::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 30px;
-    height: 100%;
-    background: linear-gradient(to right, rgba(0,0,0,0.8), transparent);
-    pointer-events: none;
-    z-index: 10;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .matches-slider-container::before {
-    left: 0;
+  left: 0;
 }
 
 .matches-slider-container::after {
-    right: 0;
-    background: linear-gradient(to left, rgba(0,0,0,0.8), transparent);
+  right: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.8), transparent);
 }
 
 .matches-slider-container:hover::before,
 .matches-slider-container:hover::after {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* Animações de entrada */
 @keyframes slideInFromRight {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .match-card {
-    animation: slideInFromRight 0.6s ease-out;
+  animation: slideInFromRight 0.6s ease-out;
 }
 
-.match-card:nth-child(1) { animation-delay: 0.1s; }
-.match-card:nth-child(2) { animation-delay: 0.2s; }
-.match-card:nth-child(3) { animation-delay: 0.3s; }
-.match-card:nth-child(4) { animation-delay: 0.4s; }
-.match-card:nth-child(5) { animation-delay: 0.5s; }
+.match-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.match-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.match-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.match-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.match-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
 
 /* Melhorias no banner */
-.banner-container {
-    background-image: 
-        linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(198,12,48,0.4) 100%),
-        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300"><defs><radialGradient id="flame" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:rgba(198,12,48,0.3);stop-opacity:1" /><stop offset="100%" style="stop-color:rgba(0,0,0,0);stop-opacity:1" /></radialGradient></defs><rect width="1200" height="300" fill="url(%23flame)"/></svg>');
-    background-size: cover;
-    background-position: center;
-}
+
 
 .banner-content h1 {
-    text-transform: uppercase;
+  text-transform: uppercase;
 
 }
 
 /* Responsividade aprimorada */
 @media (max-width: 1024px) {
-    .matches-slider-container::before,
-    .matches-slider-container::after {
-        display: none;
-    }
+
+  .matches-slider-container::before,
+  .matches-slider-container::after {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
-    .banner-content h1 {
+  .banner-content h1 {
 
-        color: #FFFFFF;
-    }
-} 
+    color: #FFFFFF;
+  }
+}
 
 /* ===== SEÇÃO AGÊNCIA OFICIAL DA NAÇÃO ===== */
 .agencia-oficial-secao {
   padding: var(--espacamento-xl) 0;
   background-color: var(--cor-cinza-claro);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-                    url('https://via.placeholder.com/1920x600/C60C30/FFFFFF?text=Agência+Oficial+da+Nação');
+  background-image:
+    /*linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),*/
+    url('img/flamengo-agencia-oficial-absolut-sport.jpg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   position: relative;
   overflow: hidden;
 }
@@ -1382,9 +1486,9 @@ img.lazy.loaded {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, 
+  /* background: linear-gradient(135deg, 
     rgba(198, 12, 48, 0.9) 0%, 
-    rgba(0, 0, 0, 0.7) 100%);
+    rgba(0, 0, 0, 0.7) 100%); */
   z-index: 1;
 }
 
@@ -1411,6 +1515,19 @@ img.lazy.loaded {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.agencia-title>span {
+  font-family: 'Soulcraft', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--cor-vermelho-principal);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  margin-bottom: var(--espacamento-md);
+  text-align: left;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 .agencia-description {
   font-size: 1.2rem;
   font-weight: 600;
@@ -1421,39 +1538,75 @@ img.lazy.loaded {
   margin-bottom: 0;
 }
 
+.agencia-oficial-img {
+  display: none;
+}
+
 /* Responsivo */
 @media (max-width: 1024px) {
   .agencia-oficial-secao {
     background-attachment: scroll;
+
   }
-  
+
   .agencia-title {
     font-size: 3rem;
   }
-  
+
   .agencia-description {
     font-size: 1.1rem;
+
   }
 }
 
 @media (max-width: 768px) {
   .agencia-oficial-secao {
     padding: var(--espacamento-lg) 0;
+    background-image: none;
   }
-  
+
   .agencia-content {
     padding: var(--espacamento-md);
     text-align: center;
+
   }
-  
+
+
+
   .agencia-title {
     font-size: 2.5rem;
-    text-align: center;
+    text-align: left;
+    color: var(--cor-preto);
+
   }
-  
+
+  .agencia-oficial-img,
+  .agencia-oficial-img > img {
+    display: flex;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .agencia-title>span {
+    font-family: 'Soulcraft', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: va(--cor-vermelho-principal);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    margin-bottom: var(--espacamento-md);
+    text-align: left;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
   .agencia-description {
     font-size: 1rem;
-    text-align: center;
+    text-align: left;
+    color: var(--cor-preto);
+    text-shadow: none;
   }
 }
 
@@ -1462,20 +1615,21 @@ img.lazy.loaded {
     font-size: 2rem;
     letter-spacing: 1px;
   }
-  
+
   .agencia-description {
     font-size: 0.95rem;
+    
   }
-  
+
   .agencia-content {
     padding: var(--espacamento-sm);
   }
-} 
+}
 
 /* ===== SEÇÃO O MARACA É NOSSO ===== */
 .maraca-secao {
   position: relative;
-  padding: 80px 0;
+  padding: 5px 0;
   background: #fafafa;
   overflow: hidden;
 }
@@ -1504,6 +1658,18 @@ img.lazy.loaded {
 
 .maraca-title {
   font-family: 'Soulcraft', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: var(--espacamento-md);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.maraca-title>span {
+  font-family: 'Soulcraft', sans-serif;
+  color: var(--cor-vermelho-principal);
   font-size: 3.5rem;
   font-weight: 900;
   line-height: 1.1;
@@ -1577,13 +1743,25 @@ img.lazy.loaded {
   border-radius: 15px;
   overflow: hidden;
   background: linear-gradient(135deg, var(--cor-vermelho-principal) 0%, var(--cor-vermelho-escuro) 100%);
-  background-image: url('https://via.placeholder.com/600x400/C60C30/FFFFFF?text=MARACANÃ');
+  background-image: url('img/o-maraca-é-nosso-o-lugar-e-seu-absolut-sport-agencia-oficial-do-flamengo.jpg');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+.maraca-image2 {
+  position: relative;
+  height: 400px;
+  margin-right: 50px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--cor-vermelho-principal) 0%, var(--cor-vermelho-escuro) 100%);
+  background-image: url('img/SIGA\ O\ FLAMENGO.png');
   background-size: cover;
   background-position: center;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
-.maraca-image::before {
+/* .maraca-image::before {
   content: '';
   position: absolute;
   top: 0;
@@ -1592,7 +1770,7 @@ img.lazy.loaded {
   bottom: 0;
   background: linear-gradient(45deg, rgba(198, 12, 48, 0.3) 0%, rgba(0, 0, 0, 0.2) 100%);
   z-index: 1;
-}
+} */
 
 .maraca-image::after {
   content: 'MARACANÃ';
@@ -1615,15 +1793,15 @@ img.lazy.loaded {
   .maraca-secao {
     padding: 60px 0;
   }
-  
+
   .maraca-title {
     font-size: 3rem;
   }
-  
+
   .maraca-description {
     font-size: 1rem;
   }
-  
+
   .maraca-image {
     height: 350px;
   }
@@ -1633,27 +1811,27 @@ img.lazy.loaded {
   .maraca-secao {
     padding: 40px 0;
   }
-  
+
   .maraca-content {
     text-align: center;
     padding: var(--espacamento-md) 0;
   }
-  
+
   .maraca-title {
     font-size: 2.5rem;
     margin-bottom: var(--espacamento-sm);
   }
-  
+
   .maraca-description {
     font-size: 0.95rem;
     margin: 0 auto var(--espacamento-md) auto;
   }
-  
+
   .maraca-image {
     height: 300px;
     margin-top: var(--espacamento-md);
   }
-  
+
   .maraca-cta {
     padding: 0.8rem 1.5rem;
     font-size: 0.9rem;
@@ -1665,22 +1843,22 @@ img.lazy.loaded {
     font-size: 2rem;
     letter-spacing: 1px;
   }
-  
+
   .maraca-description {
     font-size: 0.9rem;
     line-height: 1.5;
   }
-  
+
   .maraca-image {
     height: 250px;
   }
-  
+
   .maraca-cta {
     padding: 0.7rem 1.2rem;
     font-size: 0.8rem;
     border-radius: 40px;
   }
-  
+
   .maraca-content {
     padding: var(--espacamento-sm) 0;
   }
@@ -1692,6 +1870,7 @@ img.lazy.loaded {
     opacity: 0;
     transform: translateX(-30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -1703,6 +1882,7 @@ img.lazy.loaded {
     opacity: 0;
     transform: translateX(30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -1725,4 +1905,424 @@ img.lazy.loaded {
 
 .maraca-image:hover::before {
   background: linear-gradient(45deg, rgba(198, 12, 48, 0.4) 0%, rgba(0, 0, 0, 0.3) 100%);
-} 
+}
+
+/* ===== SEÇÃO PACOTES DISPONÍVEIS ===== */
+.pacotes-secao {
+  padding: var(--espacamento-sm) 0;
+  background-color: var(--cor-branco);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pacotes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 10px;
+  margin-top: var(--espacamento-md);
+  /* Remover width: 95vw; e max-width: 95vw; */
+  width: 100%;
+  max-width: 1200px; /* Definir largura máxima */
+}
+
+.pacote-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--sombra-card);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  aspect-ratio: 1;
+  width: 100%;
+}
+
+.pacote-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--sombra-hover);
+}
+
+.pacote-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.pacote-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.pacote-card:hover .pacote-image img {
+  transform: scale(1.05);
+}
+
+.pacote-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: var(--espacamento-md);
+  z-index: 2;
+  color: var(--cor-branco);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pacote-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacamento-xs);
+  align-self: flex-start;
+}
+
+.pacote-title {
+  font-family: 'Soulcraft', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.2;
+  color: var(--cor-branco); /* Alteração aqui para deixar o título branco */
+}
+
+.tag {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--cor-branco);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(10px);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* ===== MODAL STYLES ===== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background-color: var(--cor-branco);
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+  transform: scale(1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--cor-branco);
+  cursor: pointer;
+  z-index: 10001;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+  background-color: var(--cor-vermelho-principal);
+  transform: scale(1.1);
+}
+
+.modal-banner {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.modal-body {
+  padding: var(--espacamento-md);
+}
+
+.modal-body h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--cor-preto);
+  margin-bottom: var(--espacamento-sm);
+  text-transform: uppercase;
+}
+
+.modal-body p {
+  color: var(--cor-cinza-texto);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: var(--espacamento-md);
+}
+
+.modal-features {
+  margin-bottom: var(--espacamento-md);
+}
+
+.modal-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal-features li {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--espacamento-xs);
+  color: var(--cor-cinza-texto);
+}
+
+.modal-features li::before {
+  content: "✓";
+  color: var(--cor-vermelho-principal);
+  font-weight: bold;
+  margin-right: var(--espacamento-xs);
+}
+
+.modal-footer {
+  padding: var(--espacamento-md);
+  border-top: 1px solid var(--cor-cinza-claro);
+  text-align: center;
+}
+
+.modal-cta {
+  min-width: 250px;
+  padding: var(--espacamento-sm) var(--espacamento-md);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/* ===== MEDIA QUERIES PARA PACOTES ===== */
+@media (max-width: 768px) {
+  .pacotes-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 100%; /* Ao invés de 95vw */
+  }
+  
+  .pacote-card {
+    aspect-ratio: 1;
+  }
+  
+  .pacote-title {
+    font-size: 1.3rem;
+  }
+  
+  .modal-content {
+    width: 95%;
+  }
+  
+  .modal-body {
+    padding: var(--espacamento-sm);
+  }
+  
+  .modal-body h2 {
+    font-size: 1.5rem;
+  }
+  
+  .modal-footer {
+    padding: var(--espacamento-sm);
+  }
+  
+  .modal-cta {
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pacotes-secao {
+    padding: var(--espacamento-md) 0;
+  }
+  
+  .pacote-card {
+    aspect-ratio: 1;
+  }
+  
+  .pacote-title {
+    font-size: 1.2rem;
+  }
+  
+  .modal-banner {
+    height: 200px;
+  }
+  
+  .modal-close {
+    top: 10px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    font-size: 1.5rem;
+  }
+}
+
+/* ===== SEÇÃO BENEFÍCIOS ===== */
+.beneficios-container {
+  padding: 4rem 0;
+  background-color: var(--cor-cinza-claro);
+}
+
+.beneficios-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.beneficios-title p {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--cor-cinza-escuro);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.beneficios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.beneficio-card {
+  background-color: var(--cor-branco);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: left;
+  box-shadow: var(--sombra-card);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(196, 12, 48, 0.1);
+}
+
+.beneficio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--sombra-hover);
+}
+
+.beneficio-icon {
+  margin-bottom: 1.5rem;
+}
+
+.beneficio-icon i {
+  font-size: 3rem;
+  color: var(--cor-vermelho-principal);
+}
+
+.beneficio-text h4 {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--cor-cinza-escuro);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Media Queries para Benefícios */
+@media (max-width: 768px) {
+  .beneficios-container {
+    padding: 3rem 0;
+  }
+  
+  .beneficios-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .beneficio-card {
+    padding: 1.5rem;
+  }
+  
+  .beneficio-icon i {
+    font-size: 2.5rem;
+  }
+  
+  .beneficio-text h4 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .beneficios-container {
+    padding: 2rem 0;
+  }
+  
+  .beneficios-title p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .beneficio-card {
+    padding: 1.2rem;
+  }
+  
+  .beneficio-icon i {
+    font-size: 2rem;
+  }
+  
+  .beneficio-text h4 {
+    font-size: 1rem;
+  }
+}
+
+/* Media Query para resolução acima de 1440px - 5 cards em uma linha */
+@media (min-width: 1441px) {
+  .beneficios-grid {
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 1400px;
+    gap: 1.5rem;
+  }
+  
+  .beneficio-card {
+    padding: 1.8rem;
+  }
+  
+  .beneficio-icon i {
+    font-size: 2.5rem;
+  }
+  
+  .beneficio-text h4 {
+    font-size: 1.1rem;
+  }
+}
