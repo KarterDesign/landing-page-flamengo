@@ -79,10 +79,9 @@ body {
 }
 
 .logo-img {
-  width: 50px;
+  width: auto;
   height: 50px;
-  border-radius: 50%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .logo-text {
@@ -244,7 +243,6 @@ body {
   }
 
   .logo-img {
-    width: 40px;
     height: 40px;
   }
 
@@ -259,7 +257,6 @@ body {
   }
 
   .logo-img {
-    width: 35px;
     height: 35px;
   }
 
@@ -354,44 +351,172 @@ button {
 
 /* ===== HERO BANNER ===== */
 .hero-banner {
-  background: linear-gradient(135deg, var(--cor-vermelho-principal), var(--cor-vermelho-escuro));
-  color: var(--cor-branco);
-  padding: var(--espacamento-xl) 0;
-  text-align: center;
+  height: 80vh;
   position: relative;
   overflow: hidden;
+  color: var(--cor-branco);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
 }
 
-.hero-banner::before {
-  content: '';
+.hero-video-container {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('path/to/flamengo-pattern.png') repeat;
-  opacity: 0.1;
+  width: 100%;
+  height: 100%;
   z-index: 1;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  muted: true;
+  top: 0;
+  left: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
 }
 
 .hero-banner .container {
   position: relative;
-  z-index: 2;
+  z-index: 3;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.hero-banner h1 {
-  color: var(--cor-branco);
-  font-size: 4rem;
-  margin-bottom: var(--espacamento-md);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+.hero-content {
+  padding-bottom: 60px;
+  max-width: 700px;
 }
 
-.hero-banner p {
+.hero-title {
+  font-family: 'Soulcraft', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: var(--espacamento-sm);
+  line-height: 1.2;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero-subtitle {
   font-family: 'Barlow', sans-serif;
-  font-weight: 500;
-  font-size: 1.2rem;
-  margin-bottom: var(--espacamento-lg);
-  opacity: 0.9;
+  font-size: 1.9rem;
+  margin-bottom: var(--espacamento-md);
+  color: var(--cor-branco);
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.hero-cta {
+  background: var(--cor-vermelho-principal);
+  color: var(--cor-branco);
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 0;
+  transition: all 0.3s ease;
+  font-family: 'Soulcraft', sans-serif;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.hero-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.hero-cta:hover::before {
+  left: 100%;
+}
+
+.hero-cta:hover {
+  background: var(--cor-vermelho-escuro);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(198, 12, 48, 0.3);
+}
+
+/* Efeito máquina de escrever */
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background: var(--cor-branco);
+  margin-left: 5px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+#typewriter-text {
+  display: inline-block;
+  font-family: 'Soulcraft', sans-serif;
+  color: var(--cor-branco);
+}
+
+/* Responsive para vídeo */
+@media (max-width: 768px) {
+  .hero-banner {
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .hero-content {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  
+  .hero-overlay {
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-banner {
+    height: 100vh;
+  }
+  
+  .hero-content {
+    padding: 0 15px;
+  }
+  
+  .hero-cta {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
 }
 
 /* ===== SEÇÕES PRINCIPAIS ===== */
@@ -620,53 +745,7 @@ button {
   margin-bottom: var(--espacamento-md);
 }
 
-/* ===== FORMULÁRIOS ===== */
-.form-section {
-  background-color: var(--cor-cinza-claro);
-  padding: var(--espacamento-xl) 0;
-}
 
-.form-container {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.form-group {
-  margin-bottom: var(--espacamento-md);
-}
-
-.form-control {
-  width: 100%;
-  padding: var(--espacamento-sm);
-  border: 2px solid var(--cor-cinza-medio);
-  border-radius: 5px;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
-}
-
-.form-control:focus {
-  outline: none;
-  border-color: var(--cor-vermelho-principal);
-}
-
-.btn-primary {
-  background-color: var(--cor-vermelho-principal);
-  color: var(--cor-branco);
-  border: none;
-  padding: var(--espacamento-sm) var(--espacamento-lg);
-  border-radius: 25px;
-  font-family: 'Barlow', sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-.btn-primary:hover {
-  background-color: var(--cor-vermelho-escuro);
-  transform: scale(1.05);
-}
 
 /* ===== PERGUNTAS FREQUENTES ===== */
 .faq-section {
@@ -727,8 +806,17 @@ button {
     --espacamento-lg: 2rem;
   }
 
-  .hero-banner h1 {
+  .hero-title {
     font-size: 2.5rem;
+    min-height: 120px;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .hero-content {
+    padding-bottom: 40px;
   }
 
   h2 {
@@ -762,8 +850,17 @@ button {
     --espacamento-md: 1rem;
   }
 
-  .hero-banner h1 {
+  .hero-title {
     font-size: 2rem;
+    min-height: 100px;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-content {
+    padding-bottom: 30px;
   }
 
   h2 {
@@ -1058,10 +1155,9 @@ img.lazy.loaded {
 }
 
 .banner-container {
-  height: 300px;
-  display: flex;
-  align-items: center;
   position: relative;
+  width: 100%;
+  padding: var(--espacamento-xl) 0;
   background: url('img/torcedor-flameng-absolut-sport-agencia-oficial.jpg') center/cover;
 }
 
@@ -1070,46 +1166,27 @@ img.lazy.loaded {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0.2;
-  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
-
-}
-
-@media screen and (max-width: 768px) {
-
-  .banner-container {
-    align-items: flex-end;
-    background: url('img/torcedor-flameng-absolut-sport-agencia-oficial-mobile.jpg') center/cover;
-
-  }
-
-  .banner-content h1 {
-    color: #FFFFFF;
-    padding-bottom: 30px;
-  }
-
-
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 .banner-content {
-  text-align: left;
-  z-index: 2;
   position: relative;
+  z-index: 2;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  margin: 0 auto;  
 }
 
 .banner-content h1 {
   font-family: 'Soulcraft', sans-serif;
-  font-size: 4rem;
-  font-weight: 900;
-  color: #FFFFFF;
+  font-size: 3.5rem;
+  color: var(--cor-branco);
+  text-transform: uppercase;
   margin: 0;
-  line-height: 1.1;
-  letter-spacing: 2px;
+  text-align: left;
+  line-height: 1.2;
 }
 
 .matches-slider-container {
@@ -1122,7 +1199,9 @@ img.lazy.loaded {
   gap: 20px;
   overflow-x: auto;
   scroll-behavior: smooth;
-  padding: 0 20px;
+  padding: 0 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -1184,7 +1263,6 @@ img.lazy.loaded {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 2px solid #FFFFFF;
 }
 
 .match-date-info {
@@ -1498,7 +1576,6 @@ img.lazy.loaded {
 }
 
 .agencia-content {
-  padding: var(--espacamento-lg);
   max-width: 600px;
 }
 
@@ -1653,7 +1730,7 @@ img.lazy.loaded {
 
 .maraca-content {
   padding: var(--espacamento-lg) 0;
-  color: var(--cor-branco);
+  color: var(--cor-preto);
 }
 
 .maraca-title {
@@ -1664,7 +1741,8 @@ img.lazy.loaded {
   margin-bottom: var(--espacamento-md);
   text-transform: uppercase;
   letter-spacing: 2px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: none;
+  color: var(--cor-preto);
 }
 
 .maraca-title>span {
@@ -1755,7 +1833,19 @@ img.lazy.loaded {
   border-radius: 15px;
   overflow: hidden;
   background: linear-gradient(135deg, var(--cor-vermelho-principal) 0%, var(--cor-vermelho-escuro) 100%);
-  background-image: url('img/SIGA\ O\ FLAMENGO.png');
+  background-image: url('img/siga-o-flamengo.png');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+.maraca-image3 {
+  position: relative;
+  height: 400px;
+  margin-right: 50px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--cor-vermelho-principal) 0%, var(--cor-vermelho-escuro) 100%);
+  background-image: url('img/equipe-absolut-sport.jpg');
   background-size: cover;
   background-position: center;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
@@ -1938,7 +2028,7 @@ img.lazy.loaded {
 }
 
 .pacote-card:hover {
-  transform: translateY(-5px);
+  /* transform: translateY(-5px); */
   box-shadow: var(--sombra-hover);
 }
 
@@ -1955,11 +2045,25 @@ img.lazy.loaded {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.1s ease;
 }
 
-.pacote-card:hover .pacote-image img {
+/* Remover o hover simples - será controlado via JavaScript */
+/* .pacote-card:hover .pacote-image img {
   transform: scale(1.05);
+} */
+
+/* Classes para o efeito de zoom progressivo */
+.pacote-card.zoom-step-1 .pacote-image img {
+  transform: scale(1.15);
+}
+
+.pacote-card.zoom-step-2 .pacote-image img {
+  transform: scale(1.30);
+}
+
+.pacote-card.zoom-step-3 .pacote-image img {
+  transform: scale(1.15);
 }
 
 .pacote-content {
@@ -2324,5 +2428,244 @@ img.lazy.loaded {
   
   .beneficio-text h4 {
     font-size: 1.1rem;
+  }
+}
+
+/* ===== NEWSLETTER SECTION ===== */
+.newsletter-section {
+  background: linear-gradient(135deg, #2c1810 0%, #1a0f08 50%, #0d0604 100%);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.newsletter-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(198, 12, 48, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.newsletter-content {
+  display: grid;
+  grid-template-columns: 1fr 320px 1fr;
+  gap: 40px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.newsletter-left {
+  padding-right: 20px;
+}
+
+.newsletter-title {
+  font-family: 'Soulcraft', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--cor-branco);
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.newsletter-description {
+  color: var(--cor-branco);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+  opacity: 0.9;
+}
+
+.newsletter-form-container {
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(10px);
+  border-radius: 6px;
+  padding: 10px 10px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.newsletter-form .form-group {
+  margin-bottom: 20px;
+}
+
+.newsletter-form .form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--cor-branco);
+  font-size: 0.9rem;
+}
+
+.newsletter-form .form-control {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: var(--cor-branco);
+}
+
+.newsletter-form .form-control:focus {
+  outline: none;
+  border-color: var(--cor-vermelho-principal);
+  box-shadow: 0 0 0 3px rgba(198, 12, 48, 0.1);
+}
+
+.btn-newsletter {
+  width: 100%;
+  background: linear-gradient(45deg, var(--cor-vermelho-principal), var(--cor-vermelho-escuro));
+  color: var(--cor-branco);
+  border: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.btn-newsletter::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-newsletter:hover::before {
+  left: 100%;
+}
+
+.btn-newsletter:hover {
+  background: linear-gradient(45deg, var(--cor-vermelho-escuro), var(--cor-vermelho-principal));
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(198, 12, 48, 0.4);
+}
+
+.newsletter-image {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items:end;
+  padding-left: 20px;
+}
+
+.players-image {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.players-image:hover {
+  transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .newsletter-content {
+    grid-template-columns: 1fr 350px 1fr;
+    gap: 30px;
+  }
+  
+  .newsletter-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .newsletter-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .newsletter-left {
+    padding-right: 0;
+  }
+  
+  .newsletter-image {
+    order: -1;
+    padding-left: 0;
+  }
+  
+  .newsletter-form-container {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  
+  .players-image {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .newsletter-section {
+    padding: 60px 0;
+  }
+  
+  .newsletter-title {
+    font-size: 2rem;
+  }
+  
+  .newsletter-description {
+    font-size: 1rem;
+  }
+  
+  .newsletter-form-container {
+    padding: 30px 25px;
+  }
+  
+  .players-image {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .newsletter-section {
+    padding: 40px 0;
+  }
+  
+  .newsletter-title {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+  
+  .newsletter-description br {
+    display: none;
+  }
+  
+  .newsletter-form-container {
+    padding: 25px 20px;
+    margin: 0 15px;
+  }
+  
+  .newsletter-form .form-control {
+    padding: 10px 12px;
+  }
+  
+  .btn-newsletter {
+    padding: 12px 25px;
+  }
+  
+  .players-image {
+    max-width: 250px;
   }
 }

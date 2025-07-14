@@ -1,146 +1,94 @@
-# 🔴⚫ Landing Page Flamengo
+# Landing Page Flamengo
 
-Uma landing page moderna e responsiva inspirada no design oficial do Flamengo, desenvolvida com HTML, CSS e JavaScript.
+Esta é uma landing page desenvolvida para o Flamengo com design moderno e funcionalidades interativas.
 
-## 🎨 Design
+## Funcionalidades Implementadas
 
-O projeto foi baseado no design oficial do Flamengo, mantendo a identidade visual do clube com:
+### Hero Banner com Vídeo
+- **Vídeo de fundo**: O hero banner agora executa vídeos em loop contínuo
+- **Overlay transparente**: Camada preta transparente sobreposta ao vídeo para melhor legibilidade
+- **Efeito máquina de escrever**: Título animado que alterna entre 3 frases:
+  1. "AGÊNCIA OFICIAL DE VIAGENS E EXPERIÊNCIAS DO FLAMENGO"
+  2. "AGÊNCIA OFICIAL DA NAÇÃO"
+  3. "ABSOLUT SPORT - ISSO É VIVER"
+- **Posicionamento**: Texto alinhado à esquerda e na parte inferior do banner
+- **Tipografia**: Fonte Soulcraft em todos os textos do hero banner
+- **Responsividade**: Layout adaptativo para todos os tamanhos de tela
 
-- **Cores oficiais**: Vermelho (#C60C30) e Preto (#000000)
-- **Tipografia**: Soulcraft para títulos e Barlow para textos corridos
-- **Layout responsivo**: Adaptado para desktop, tablet e mobile
+### Elementos do Hero Banner
+- **Título**: Com efeito máquina de escrever
+- **Subtítulo**: "siga o flamengo e faça parte da historia"
+- **CTA**: Botão "COMPRE AGORA" com efeitos hover
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
-- **HTML5**: Estrutura semântica
-- **CSS3**: Estilização com variáveis CSS, Grid e Flexbox
-- **JavaScript**: Interatividade (FAQ accordion, smooth scrolling)
-- **Bootstrap 5**: Sistema de grid e componentes
-- **Font Awesome**: Ícones
-- **Google Fonts**: Fonte Barlow
-- **CDN Fonts**: Fonte Soulcraft
+- HTML5
+- CSS3 (com variáveis CSS)
+- JavaScript (ES6+)
+- Bootstrap 5
+- Font Awesome
+- Fonte Soulcraft
 
-## 🎯 Funcionalidades
+## Como Usar
 
-### ✅ Seções Implementadas
-- **Header Sticky**: Navegação fixa com logo e menu responsivo
-- **Hero Banner**: Seção principal com call-to-action
-- **Próximas Partidas**: Grid de cards com partidas em destaque
-- **Turismo**: Seção promocional com background
-- **Maracanã**: Layout em duas colunas com imagem
-- **Produtos Oficiais**: Grid de produtos com hover effects
-- **FAQ**: Accordion interativo com JavaScript
+1. Abra o arquivo `index.html` em seu navegador
+2. O hero banner carregará automaticamente com o vídeo de fundo
+3. O efeito máquina de escrever iniciará automaticamente
+4. A página é totalmente responsiva e funcional
 
-### 🔧 Características Técnicas
-- **Totalmente responsivo**: Mobile-first approach
-- **Acessibilidade**: Navegação por teclado e screen readers
-- **Performance**: Otimizado para carregamento rápido
-- **Animações**: Transições suaves e hover effects
-- **Cross-browser**: Compatível com navegadores modernos
+## Personalização
 
-### 🎯 Funcionalidades JavaScript
-- **FAQ Accordion**: Sistema interativo com animações
-- **Smooth Scroll**: Navegação suave entre seções
-- **Validação de Formulários**: Validação em tempo real
-- **Sistema de Notificações**: Feedback visual para usuário
-- **Loading States**: Estados de carregamento em botões
-- **Scroll Animations**: Animações ao rolar a página
-- **Menu Mobile**: Menu responsivo para dispositivos móveis
-- **Countdown Timer**: Timer de contagem regressiva
-- **Lazy Loading**: Carregamento otimizado de imagens
-- **Eventos de Teclado**: Suporte para navegação via teclado
-
-## 🎨 Paleta de Cores
-
-```css
-:root {
-  --cor-vermelho-principal: #C60C30;
-  --cor-vermelho-escuro: #A00A28;
-  --cor-preto: #000000;
-  --cor-branco: #FFFFFF;
-  --cor-cinza-claro: #F5F5F5;
-  --cor-cinza-medio: #CCCCCC;
-  --cor-cinza-escuro: #333333;
-  --cor-cinza-texto: #666666;
-}
+### Alterar Vídeos
+Para alterar os vídeos do hero banner, edite o arquivo `index.html` na seção:
+```html
+<video class="hero-video" autoplay muted loop playsinline>
+    <source src="SEU_VIDEO.mp4" type="video/mp4">
+</video>
 ```
 
-## 🔤 Tipografia
-
-- **Títulos (H1-H6)**: Soulcraft (fonte custom)
-- **Textos corridos**: Barlow (pesos 500-900)
-- **Hierarquia**: Bem definida com diferentes pesos
-
-## 📱 Responsividade
-
-### Breakpoints
-- **Mobile**: até 576px
-- **Tablet**: 577px - 768px
-- **Desktop**: 769px+
-
-### Ajustes Responsivos
-- Grid adaptativo para diferentes tamanhos de tela
-- Tipografia escalável
-- Espaçamentos proporcionais
-- Imagens responsivas
-
-## 🚀 Como Usar
-
-1. **Clone o repositório**
-   ```bash
-   git clone https://github.com/SEU-USUARIO/landing-page-flamengo.git
-   ```
-
-2. **Abra o arquivo HTML**
-   ```bash
-   open index.html
-   ```
-
-3. **Ou sirva com um servidor local**
-   ```bash
-   # Com Python
-   python -m http.server 8000
-   
-   # Com Node.js
-   npx serve .
-   ```
-
-## 📁 Estrutura do Projeto
-
-```
-landing-page-flamengo/
-├── index.html          # Arquivo principal HTML
-├── style.css           # Estilos CSS customizados
-├── script.js           # Funcionalidades JavaScript
-├── .gitignore          # Arquivos ignorados pelo Git
-└── README.md          # Documentação do projeto
+### Modificar Frases do Efeito Máquina de Escrever
+Edite o arquivo `script.js` na função `initTypewriter()` no array `sentences`:
+```javascript
+const sentences = [
+    "SUA PRIMEIRA FRASE",
+    "SUA SEGUNDA FRASE",
+    "SUA TERCEIRA FRASE"
+];
 ```
 
-## 🎯 Próximos Passos
+### Ajustar Velocidade da Digitação
+No arquivo `script.js`, modifique as constantes:
+```javascript
+const typingSpeed = 50;         // Velocidade da digitação (ms)
+const deletingSpeed = 30;       // Velocidade da deleção (ms)
+const pauseBetweenSentences = 2000; // Pausa entre frases (ms)
+const pauseBeforeDeleting = 1500;   // Pausa antes de deletar (ms)
+```
 
-- [ ] Adicionar imagens reais do Flamengo
-- [ ] Implementar formulário de contato funcional
-- [ ] Integrar com API de partidas
-- [ ] Adicionar mais animações
-- [ ] Otimizar para SEO
-- [ ] Implementar PWA
+## Compatibilidade
 
-## 🤝 Contribuindo
+- Navegadores modernos (Chrome, Firefox, Safari, Edge)
+- Dispositivos móveis (responsivo)
+- Suporte a vídeos HTML5
 
-1. Faça um fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`)
-3. Commit suas mudanças (`git commit -m 'Adiciona nova feature'`)
-4. Push para a branch (`git push origin feature/nova-feature`)
-5. Abra um Pull Request
+## Estrutura dos Arquivos
 
-## 📄 Licença
+```
+LP Fla/
+├── index.html          # Página principal
+├── style.css          # Estilos CSS
+├── script.js          # Funcionalidades JavaScript
+├── README.md          # Documentação
+└── img/              # Imagens utilizadas
+```
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+## Suporte
 
-## 🏆 Sobre o Flamengo
+Para dúvidas ou problemas, verifique:
+1. Se todos os arquivos estão no diretório correto
+2. Se a conexão com a internet está funcionando (para carregar vídeos externos)
+3. Se o navegador suporta vídeos HTML5
 
-O Clube de Regatas do Flamengo é uma agremiação poliesportiva brasileira com sede na cidade do Rio de Janeiro. Fundado em 1895, é um dos clubes mais tradicionais e populares do Brasil.
+## Licença
 
----
-
-**Desenvolvido com ❤️ por um rubro-negro apaixonado** 
+Este projeto é propriedade do Flamengo e desenvolvido para fins educacionais. 

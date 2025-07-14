@@ -11,6 +11,8 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
+    <!-- Soulcraft Font já importada no CSS -->
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -23,7 +25,7 @@
                 <!-- Logo e Texto -->
                 <div class="header-left">
                     <div class="logo">
-                        <img src="https://via.placeholder.com/50x50/C60C30/FFFFFF?text=CRF" alt="Flamengo" class="logo-img">
+                        <img src="img/flamengo-absolut-sport-logo-oficial-parceria.png" alt="Flamengo" class="logo-img">
                         <span class="logo-text">Agência Oficial de Viagens e Experiências</span>
                     </div>
                 </div>
@@ -58,14 +60,28 @@
 
     <!-- Hero Banner -->
     <section class="hero-banner">
+        <div class="hero-video-container">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="vid/intro-flamengo-nação.mp4" type="video/mp4">
+                <!-- Fallback video -->
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-soccer-field-at-sunset-1089-large.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
         <div class="container">
-            <h1>Hero Banner<br>1920x800</h1>
-            <p>Exemplo de implementação da landing page do Flamengo</p>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span id="typewriter-text"></span>
+                    <span class="cursor"></span>
+                </h1>
+                <p class="hero-subtitle">siga o flamengo e faça parte da historia</p>
+                <button class="hero-cta">COMPRE AGORA</button>
+            </div>
         </div>
     </section>
 
     <!-- Seção Você Aonde o Flamengo Estiver -->
-    <section class="voce-aonde-flamengo">
+    <section class="voce-aonde-flamengo" style="padding-top: 15px; background-color: var(--cor-preto);">
         <div class="banner-container">
             <div class="banner-content">
                 <h1>VOCÊ AONDE O<br>FLAMENGO ESTIVER</h1>
@@ -76,7 +92,7 @@
             <div class="matches-slider">
                 <div class="match-card">
                     <div class="match-header">
-                        <img src="https://via.placeholder.com/40x40/FFFFFF/000000?text=FLA" alt="Flamengo" class="team-logo">
+                        <img src="img/img.png" alt="Flamengo" class="team-logo">
                         <div class="match-date-info">
                             <span class="match-day">13</span>
                             <span class="match-month">JUL 2025</span>
@@ -96,7 +112,7 @@
 
                 <div class="match-card featured">
                     <div class="match-header">
-                        <img src="https://via.placeholder.com/40x40/FFFFFF/000000?text=FLA" alt="Flamengo" class="team-logo">
+                        <img src="img/img.png" alt="Flamengo" class="team-logo">
                         <div class="match-date-info">
                             <span class="match-day">27</span>
                             <span class="match-month">JUL 2025</span>
@@ -116,7 +132,7 @@
 
                 <div class="match-card">
                     <div class="match-header">
-                        <img src="https://via.placeholder.com/40x40/FFFFFF/000000?text=FLA" alt="Flamengo" class="team-logo">
+                        <img src="img/img.png" alt="Flamengo" class="team-logo">
                         <div class="match-date-info">
                             <span class="match-day">30</span>
                             <span class="match-month">JUL 2025</span>
@@ -136,7 +152,7 @@
 
                 <div class="match-card">
                     <div class="match-header">
-                        <img src="https://via.placeholder.com/40x40/FFFFFF/000000?text=FLA" alt="Flamengo" class="team-logo">
+                        <img src="img/img.png" alt="Flamengo" class="team-logo">
                         <div class="match-date-info">
                             <span class="match-day">10</span>
                             <span class="match-month">AGO 2025</span>
@@ -156,7 +172,64 @@
 
                 <div class="match-card">
                     <div class="match-header">
-                        <img src="https://via.placeholder.com/40x40/FFFFFF/000000?text=FLA" alt="Flamengo" class="team-logo">
+                        <img src="img/img.png" alt="Flamengo" class="team-logo">
+                        <div class="match-date-info">
+                            <span class="match-day">13</span>
+                            <span class="match-month">AGO 2025</span>
+                            <span class="match-time">21:00</span>
+                            <span class="match-stadium">Maracanã</span>
+                        </div>
+                    </div>
+                    <div class="match-teams">
+                        <div class="match-date-large">13 AGO</div>
+                        <div class="teams-info">
+                            <span class="team-name">TIMECO</span>
+                            <span class="team-opponent">FLAMENGO</span>
+                        </div>
+                    </div>
+                    <button class="match-cta">Lorem ipsum dolor</button>
+                </div>
+                <div class="match-card">
+                    <div class="match-header">
+                        <img src="img/img.png" alt="Flamengo" class="team-logo">
+                        <div class="match-date-info">
+                            <span class="match-day">13</span>
+                            <span class="match-month">AGO 2025</span>
+                            <span class="match-time">21:00</span>
+                            <span class="match-stadium">Maracanã</span>
+                        </div>
+                    </div>
+                    <div class="match-teams">
+                        <div class="match-date-large">13 AGO</div>
+                        <div class="teams-info">
+                            <span class="team-name">TIMECO</span>
+                            <span class="team-opponent">FLAMENGO</span>
+                        </div>
+                    </div>
+                    <button class="match-cta">Lorem ipsum dolor</button>
+                </div>
+                <div class="match-card">
+                    <div class="match-header">
+                        <img src="img/img.png" alt="Flamengo" class="team-logo">
+                        <div class="match-date-info">
+                            <span class="match-day">13</span>
+                            <span class="match-month">AGO 2025</span>
+                            <span class="match-time">21:00</span>
+                            <span class="match-stadium">Maracanã</span>
+                        </div>
+                    </div>
+                    <div class="match-teams">
+                        <div class="match-date-large">13 AGO</div>
+                        <div class="teams-info">
+                            <span class="team-name">TIMECO</span>
+                            <span class="team-opponent">FLAMENGO</span>
+                        </div>
+                    </div>
+                    <button class="match-cta">Lorem ipsum dolor</button>
+                </div>
+                <div class="match-card">
+                    <div class="match-header">
+                        <img src="img/img.png" alt="Flamengo" class="team-logo">
                         <div class="match-date-info">
                             <span class="match-day">13</span>
                             <span class="match-month">AGO 2025</span>
@@ -297,6 +370,8 @@
                 </div>
             </div>
         </div>
+
+        
         
         <!-- Seção Benefícios -->
         <div class="beneficios-container">
@@ -375,7 +450,151 @@
         </div>
     </div>
 
-    <!-- Seção Produtos -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-left">
+                    <h2 class="newsletter-title">
+                        QUER SER AVISADO 
+                        SOBRE OS PRÓXIMOS 
+                        PACOTES?
+                    </h2>
+                    <p class="newsletter-description">
+                        Deixe seu contato e garanta prioridade no acesso às melhores
+                        experiências nos jogos do Flamengo. Viva o Flamengo como
+                        protagonista!
+                    </p>
+                </div>
+                
+                <div class="newsletter-form-container">
+                    <form class="newsletter-form" id="newsletter-form">
+                        <div class="form-group">
+                            <label for="nome" class="form-label">Nome*</label>
+                            <input type="text" class="form-control" id="nome" name="nome" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email*</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="time" class="form-label">Qual time você torce*</label>
+                            <input type="text" class="form-control" id="time" name="time" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="perfil" class="form-label">Eu sou um(a):*</label>
+                            <input type="text" class="form-control" id="perfil" name="perfil" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="captcha" class="form-label">80 + 1 = ?</label>
+                            <input type="number" class="form-control" id="captcha" name="captcha" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="btn-newsletter">
+                                Quero ser avisado!
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="newsletter-image">
+                    <img src="img/Jogadores.png" alt="Torcedores Flamengo" class="players-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Por que comprar com ABSOLUT Sport -->
+    <section class="maraca-secao">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="maraca-content">
+                        <h2 class="maraca-title">POR QUE COMPRAR COM<br><span>ABSOLUT SPORT?</span></h2>
+                        <p class="maraca-description">
+                            Na ABSOLUT Sport, cada detalhe é pensado para que você viva o Flamengo do jeito que merece: sem preocupação, com segurança e cercado de experiências oficiais e exclusivas. Somos a agência oficial de viagens e experiências do Clube, o que garante acesso a ingressos certificados, logística completa e atendimento dedicado, seja no Maracanã ou em qualquer estádio do Brasil.
+                        </p>
+                        <button class="btn-primary maraca-cta">Saiba mais</button>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="maraca-image3">
+                        <!-- Imagem dos torcedores será aplicada via CSS como background -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Seção Benefícios "Por que escolher a ABSOLUT Sport?" -->
+        <div class="beneficios-container">
+            <div class="container">
+                <div class="beneficios-title">
+                    <h3 style="text-align: center; font-size: 2rem; color: var(--cor-cinza-escuro); margin-bottom: 1rem;">Por que escolher a ABSOLUT Sport?</h3>
+                </div>
+                <div class="beneficios-grid">
+                    <div class="beneficio-card">
+                        <div class="beneficio-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="beneficio-text">
+                            <h4>Equipe Dedicada.</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="beneficio-card">
+                        <div class="beneficio-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="beneficio-text">
+                            <h4>Atendimento e Suporte.</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="beneficio-card">
+                        <div class="beneficio-icon">
+                            <i class="fas fa-bed"></i>
+                        </div>
+                        <div class="beneficio-text">
+                            <h4>Melhores acomodações.</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="beneficio-card">
+                        <div class="beneficio-icon">
+                            <i class="fas fa-bus"></i>
+                        </div>
+                        <div class="beneficio-text">
+                            <h4>Transfer oficiais.</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="beneficio-card">
+                        <div class="beneficio-icon">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <div class="beneficio-text">
+                            <h4>Aéreo sob cotação.</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="beneficio-card">
+                        <div class="beneficio-icon">
+                            <i class="fas fa-ticket-alt"></i>
+                        </div>
+                        <div class="beneficio-text">
+                            <h4>Ingressos oficiais.</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Produtos
     <section class="section-flamengo">
         <div class="container">
             <div class="section-title">
@@ -408,7 +627,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Seção FAQ -->
     <section class="faq-section">

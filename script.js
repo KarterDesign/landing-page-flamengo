@@ -28,6 +28,8 @@ function initializeApp() {
     initImageLazyLoading();
     initMatchesSlider(); // Adicionado para o slider de partidas
     initPacotesModal(); // Adicionado para o modal dos pacotes
+    initPacoteZoomEffect(); // Adicionado para o efeito de zoom progressivo
+    initTypewriter(); // Adicionado para o efeito máquina de escrever
     
     console.log('✅ Landing Page Flamengo inicializada com sucesso!');
 }
@@ -815,6 +817,116 @@ function addPacoteHoverEffects() {
             this.style.transform = 'translateY(0)';
         });
     });
+}
+
+/**
+ * Adiciona efeito de zoom progressivo em 3 etapas aos cards dos pacotes
+ */
+function initPacoteZoomEffect() {
+    const pacoteCards = document.querySelectorAll('.pacote-card');
+    
+    pacoteCards.forEach(card => {
+        let zoomTimeouts = [];
+        
+        card.addEventListener('mouseenter', function() {
+            // Limpar timeouts anteriores se existirem
+            zoomTimeouts.forEach(timeout => clearTimeout(timeout));
+            zoomTimeouts = [];
+            
+            // Primeira etapa - 5% de zoom
+            this.classList.add('zoom-step-1');
+            
+            // Segunda etapa - 10% de zoom (após 30ms)
+            zoomTimeouts.push(setTimeout(() => {
+                this.classList.remove('zoom-step-1');
+                this.classList.add('zoom-step-2');
+            }, 220));
+            
+            // Terceira etapa - 15% de zoom (após mais 30ms)
+            // zoomTimeouts.push(setTimeout(() => {
+            //     this.classList.remove('zoom-step-2');
+            //     this.classList.add('zoom-step-3');
+            // }, 360));
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            // Limpar timeouts pendentes
+            zoomTimeouts.forEach(timeout => clearTimeout(timeout));
+            zoomTimeouts = [];
+            
+            // Remover todas as classes de zoom
+            this.classList.remove('zoom-step-1', 'zoom-step-2', 'zoom-step-3');
+        });
+    });
+}
+
+// ===== EFEITO MÁQUINA DE ESCREVER =====
+function initTypewriter() {
+    const textElement = document.getElementById('typewriter-text');
+    const cursorElement = document.querySelector('.cursor');
+    
+    if (!textElement) return;
+    
+    // Remover o cursor separado do HTML - vamos incorporá-lo ao texto
+    if (cursorElement) {
+        cursorElement.remove();
+    }
+    
+    const sentences = [
+        "AGÊNCIA OFICIAL DE VIAGENS E EXPERIÊNCIAS DO FLAMENGO",
+        "AGÊNCIA OFICIAL DA NAÇÃO",
+        "ABSOLUT SPORT  ISSO É VIVER"
+    ];
+    
+    let currentSentenceIndex = 0;
+    let currentCharIndex = 0;
+    let isTyping = true;
+    
+    // Agora você pode usar qualquer valor para as pausas
+    const typingSpeed = 40;
+    const deletingSpeed = 30;
+    const pauseBetweenSentences = 1000; // Ex: 2 segundos
+    const pauseBeforeDeleting = 2000;    // Ex: 2 segundos
+    
+    function typewriter() {
+        const currentSentence = sentences[currentSentenceIndex];
+        
+        if (isTyping) {
+            // Se ainda não terminou de digitar a frase
+            if (currentCharIndex < currentSentence.length) {
+                const currentText = currentSentence.substring(0, currentCharIndex + 1);
+                textElement.innerHTML = currentText + '<span class="cursor-inline">|</span>';
+                currentCharIndex++;
+                setTimeout(typewriter, typingSpeed);
+            } 
+            // Se terminou de digitar, inicia a pausa antes de apagar
+            else {
+                isTyping = false;
+                // Deixa o texto completo com o cursor piscando
+                textElement.innerHTML = currentSentence + '<span class="cursor-inline blinking">|</span>';
+                setTimeout(typewriter, pauseBeforeDeleting);
+            }
+        } else { // Apagando
+            // Se ainda não terminou de apagar
+            if (currentCharIndex > 0) {
+                const currentText = currentSentence.substring(0, currentCharIndex - 1);
+                textElement.innerHTML = currentText + '<span class="cursor-inline">|</span>';
+                currentCharIndex--;
+                setTimeout(typewriter, deletingSpeed);
+            }
+            // Se terminou de apagar, inicia a pausa antes da próxima frase
+            else {
+                isTyping = true;
+                currentSentenceIndex = (currentSentenceIndex + 1) % sentences.length;
+                // Deixa apenas o cursor piscando
+                textElement.innerHTML = '<span class="cursor-inline blinking">|</span>';
+                setTimeout(typewriter, pauseBetweenSentences);
+            }
+        }
+    }
+    
+    // Iniciar o efeito
+    typewriter();
 }
 
 // ===== EVENTOS GLOBAIS =====
