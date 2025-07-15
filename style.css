@@ -47,6 +47,158 @@ body {
   background-color: var(--cor-branco);
 }
 
+
+/* NOVO CARD */
+.grupo1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.grupo2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+}
+
+#databig {
+  font-family: 'Soulcraft', sans-serif;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+  color: #000;
+  color: #353535;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Soulcraft;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 107.556%;
+  /* 91.853px */
+
+}
+
+#time1,
+#time2 {
+  color: #4C4C4C;
+  font-family: 'Barlow', sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+#datasmall,
+#horariosmall,
+#localsmall {
+  color: #4C4C4C;
+  font-family: 'Barlow', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+
+
+
+.cardjogo {
+  display: inline-flex;
+  padding: 47px 25px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  border-radius: 12px;
+  background: #F9F9F9;
+  width: 322px;
+  height: 420px;
+  aspect-ratio: 322/420;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  user-select: none;
+  /* Impede a seleção do texto */
+  cursor: pointer;
+  /* Indica que o card é clicável */
+}
+
+.cardjogo:hover {
+  transform: translateY(-5px);
+  border-color: #C60C30;
+  box-shadow: 0 10px 25px rgba(198, 12, 48, 0.3);
+}
+
+.cardjogo p {
+  color: #000;
+  font-family: Barlow;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+}
+
+.logocampeonato {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.logocampeonato img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  aspect-ratio: 1/1;
+}
+
+.infos1cardjogo {
+  display: flex;
+  font-size: 18px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 5px;
+
+}
+
+.infos2cardjogo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+  align-self: stretch;
+}
+
+.btncardjogo {
+  display: flex;
+  padding: 12px 0px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  color: #FFF;
+  text-align: center;
+  font-family: Barlow;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border-radius: 50px;
+  background: #155F97;
+  text-decoration: none;
+}
+
+/* FIM NOVO CARD */
+
 /* ===== HEADER ===== */
 .header {
   position: fixed;
@@ -475,8 +627,16 @@ button {
 }
 
 @keyframes blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0; }
+
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  51%,
+  100% {
+    opacity: 0;
+  }
 }
 
 #typewriter-text {
@@ -493,12 +653,12 @@ button {
     justify-content: center;
     text-align: center;
   }
-  
+
   .hero-content {
     max-width: 100%;
     padding: 0 20px;
   }
-  
+
   .hero-overlay {
     background: rgba(0, 0, 0, 0.7);
   }
@@ -508,11 +668,11 @@ button {
   .hero-banner {
     height: 100vh;
   }
-  
+
   .hero-content {
     padding: 0 15px;
   }
-  
+
   .hero-cta {
     padding: 12px 30px;
     font-size: 1rem;
@@ -810,11 +970,11 @@ button {
     font-size: 2.5rem;
     min-height: 120px;
   }
-  
+
   .hero-subtitle {
     font-size: 1.2rem;
   }
-  
+
   .hero-content {
     padding-bottom: 40px;
   }
@@ -854,11 +1014,11 @@ button {
     font-size: 2rem;
     min-height: 100px;
   }
-  
+
   .hero-subtitle {
     font-size: 1rem;
   }
-  
+
   .hero-content {
     padding-bottom: 30px;
   }
@@ -1176,7 +1336,7 @@ img.lazy.loaded {
   position: relative;
   z-index: 2;
   max-width: 1200px;
-  margin: 0 auto;  
+  margin: 0 auto;
 }
 
 .banner-content h1 {
@@ -1658,7 +1818,7 @@ img.lazy.loaded {
   }
 
   .agencia-oficial-img,
-  .agencia-oficial-img > img {
+  .agencia-oficial-img>img {
     display: flex;
     max-width: 100%;
     height: auto;
@@ -1695,7 +1855,7 @@ img.lazy.loaded {
 
   .agencia-description {
     font-size: 0.95rem;
-    
+
   }
 
   .agencia-content {
@@ -1826,6 +1986,7 @@ img.lazy.loaded {
   background-position: center;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
+
 .maraca-image2 {
   position: relative;
   height: 400px;
@@ -1838,6 +1999,7 @@ img.lazy.loaded {
   background-position: center;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
+
 .maraca-image3 {
   position: relative;
   height: 400px;
@@ -2013,7 +2175,8 @@ img.lazy.loaded {
   margin-top: var(--espacamento-md);
   /* Remover width: 95vw; e max-width: 95vw; */
   width: 100%;
-  max-width: 1200px; /* Definir largura máxima */
+  max-width: 1200px;
+  /* Definir largura máxima */
 }
 
 .pacote-card {
@@ -2094,7 +2257,8 @@ img.lazy.loaded {
   text-transform: uppercase;
   margin: 0;
   line-height: 1.2;
-  color: var(--cor-branco); /* Alteração aqui para deixar o título branco */
+  color: var(--cor-branco);
+  /* Alteração aqui para deixar o título branco */
 }
 
 .tag {
@@ -2243,33 +2407,34 @@ img.lazy.loaded {
   .pacotes-grid {
     grid-template-columns: 1fr;
     gap: 10px;
-    width: 100%; /* Ao invés de 95vw */
+    width: 100%;
+    /* Ao invés de 95vw */
   }
-  
+
   .pacote-card {
     aspect-ratio: 1;
   }
-  
+
   .pacote-title {
     font-size: 1.3rem;
   }
-  
+
   .modal-content {
     width: 95%;
   }
-  
+
   .modal-body {
     padding: var(--espacamento-sm);
   }
-  
+
   .modal-body h2 {
     font-size: 1.5rem;
   }
-  
+
   .modal-footer {
     padding: var(--espacamento-sm);
   }
-  
+
   .modal-cta {
     min-width: 200px;
   }
@@ -2279,19 +2444,19 @@ img.lazy.loaded {
   .pacotes-secao {
     padding: var(--espacamento-md) 0;
   }
-  
+
   .pacote-card {
     aspect-ratio: 1;
   }
-  
+
   .pacote-title {
     font-size: 1.2rem;
   }
-  
+
   .modal-banner {
     height: 200px;
   }
-  
+
   .modal-close {
     top: 10px;
     right: 15px;
@@ -2368,20 +2533,20 @@ img.lazy.loaded {
   .beneficios-container {
     padding: 3rem 0;
   }
-  
+
   .beneficios-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .beneficio-card {
     padding: 1.5rem;
   }
-  
+
   .beneficio-icon i {
     font-size: 2.5rem;
   }
-  
+
   .beneficio-text h4 {
     font-size: 1.1rem;
   }
@@ -2391,20 +2556,20 @@ img.lazy.loaded {
   .beneficios-container {
     padding: 2rem 0;
   }
-  
+
   .beneficios-title p {
     font-size: 1rem;
     padding: 0 1rem;
   }
-  
+
   .beneficio-card {
     padding: 1.2rem;
   }
-  
+
   .beneficio-icon i {
     font-size: 2rem;
   }
-  
+
   .beneficio-text h4 {
     font-size: 1rem;
   }
@@ -2417,15 +2582,15 @@ img.lazy.loaded {
     max-width: 1400px;
     gap: 1.5rem;
   }
-  
+
   .beneficio-card {
     padding: 1.8rem;
   }
-  
+
   .beneficio-icon i {
     font-size: 2.5rem;
   }
-  
+
   .beneficio-text h4 {
     font-size: 1.1rem;
   }
@@ -2543,7 +2708,7 @@ img.lazy.loaded {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transition: left 0.5s;
 }
 
@@ -2561,7 +2726,7 @@ img.lazy.loaded {
   display: flex;
   height: 100%;
   justify-content: center;
-  align-items:end;
+  align-items: end;
   padding-left: 20px;
 }
 
@@ -2584,7 +2749,7 @@ img.lazy.loaded {
     grid-template-columns: 1fr 350px 1fr;
     gap: 30px;
   }
-  
+
   .newsletter-title {
     font-size: 2.2rem;
   }
@@ -2596,21 +2761,21 @@ img.lazy.loaded {
     gap: 40px;
     text-align: center;
   }
-  
+
   .newsletter-left {
     padding-right: 0;
   }
-  
+
   .newsletter-image {
     order: -1;
     padding-left: 0;
   }
-  
+
   .newsletter-form-container {
     max-width: 280px;
     margin: 0 auto;
   }
-  
+
   .players-image {
     max-width: 400px;
   }
@@ -2620,19 +2785,19 @@ img.lazy.loaded {
   .newsletter-section {
     padding: 60px 0;
   }
-  
+
   .newsletter-title {
     font-size: 2rem;
   }
-  
+
   .newsletter-description {
     font-size: 1rem;
   }
-  
+
   .newsletter-form-container {
     padding: 30px 25px;
   }
-  
+
   .players-image {
     max-width: 300px;
   }
@@ -2642,30 +2807,78 @@ img.lazy.loaded {
   .newsletter-section {
     padding: 40px 0;
   }
-  
+
   .newsletter-title {
     font-size: 1.8rem;
     line-height: 1.2;
   }
-  
+
   .newsletter-description br {
     display: none;
   }
-  
+
   .newsletter-form-container {
     padding: 25px 20px;
     margin: 0 15px;
   }
-  
+
   .newsletter-form .form-control {
     padding: 10px 12px;
   }
-  
+
   .btn-newsletter {
     padding: 12px 25px;
   }
-  
+
   .players-image {
     max-width: 250px;
   }
+}
+
+.cardjogo * {
+  user-select: none;
+  pointer-events: none;
+}
+
+.cardjogo .btncardjogo {
+  pointer-events: auto;
+  /* Permite cliques no botão */
+}
+
+/* Estilos para estados de carregamento dos cards */
+.loading-cards, .error-cards, .no-games {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    color: var(--cor-cinza-texto);
+    background: var(--cor-cinza-claro);
+    border-radius: 12px;
+    margin: 20px;
+}
+
+.loading-cards {
+    color: var(--cor-vermelho-principal);
+    font-weight: 600;
+}
+
+.error-cards {
+    color: #d32f2f;
+    font-weight: 500;
+}
+
+.no-games {
+    color: var(--cor-cinza-texto);
+    font-style: italic;
+}
+
+/* Responsividade para os cards */
+@media (max-width: 768px) {
+    .cardjogo {
+        width: 280px;
+        height: 380px;
+        padding: 30px 20px;
+    }
 }
