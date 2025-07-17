@@ -61,13 +61,42 @@ Este sistema permite que você edite todos os textos e imagens da landing page d
 - **Tipo:** `imagem`
 - **Exemplo:** Logos, banners, fotos
 - **Formato:** URL completa da imagem
-- **Exemplo:** `img/logo.png` ou `https://exemplo.com/imagem.jpg`
+- **Exemplo:** `img/logo.png` ou
 
 #### 🎥 Vídeo
 - **Tipo:** `video`
 - **Exemplo:** Vídeo de fundo do hero
 - **Formato:** URL do arquivo de vídeo
 - **Exemplo:** `vid/video.mp4`
+
+## 🎮 Cards de Jogos
+
+### Sistema Dinâmico de Jogos
+
+Os cards de jogos são carregados dinamicamente de uma planilha separada no Google Sheets. 
+
+**Configuração da Planilha de Jogos:**
+1. Crie uma nova planilha com as seguintes colunas:
+   - `campeonato`: Nome do campeonato (ex: Brasileiro, Libertadores)
+   - `datasmall`: Data resumida (ex: 30 JUL 2025)
+   - `horasmall`: Horário do jogo (ex: 19:00)
+   - `localsmall`: Local do jogo (ex: Maracanã)
+   - `databig`: Data em formato grande (ex: 30 JUL)
+   - `time1`: Primeiro time (ex: Flamengo)
+   - `time2`: Segundo time (ex: São Paulo)
+   - `link`: URL para onde o botão deve redirecionar
+   - `textobtn`: Texto que aparece no botão (ex: "Saiba Mais", "Comprar Ingresso")
+
+2. Configure a URL da planilha no arquivo `cardsJogos.js`:
+   ```javascript
+   const GOOGLE_SHEETS_URL = 'SUA_URL_DOS_JOGOS_AQUI';
+   ```
+
+**Exemplo de dados:**
+```
+campeonato,datasmall,horasmall,localsmall,databig,time1,time2,link,textobtn
+Brasileiro,30 JUL 2025,19:00,Maracanã,30 JUL,Flamengo,São Paulo,https://ingressos.flamengo.com.br,Comprar Ingresso
+```
 
 ## 🗂️ Estrutura da Planilha
 

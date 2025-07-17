@@ -4,7 +4,7 @@
  */
 
 // URL do Google Sheets CSV
-const GOOGLE_SHEETS_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT6ZLMHTQvb06ExDk8Q4fG65b3Q-6dvP8gfaxiW8kPzXos4gxCnE4W-ClL-ceHB5kEy2qU8BBUbi2WS/pub?gid=0&single=true&output=csv';
+const GOOGLE_SHEETS_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQuz0diAWyMYDYYQjK0LMDC0pwzhTlrB9eT3aNtotZJkPgucV2QC646FR9KLD1t6xdhZsYkKXta0bIJ/pub?gid=713380388&single=true&output=csv';
 
 /**
  * Função para converter CSV em array de objetos
@@ -79,7 +79,7 @@ function createCardJogo(jogo) {
                     <span id="time2">${jogo.time2}</span>
                 </p>
             </div>
-            <a class="btncardjogo" href="#" onclick="abrirDetalhesJogo('${jogo.time1}', '${jogo.time2}', '${jogo.datasmall}')">Saiba Mais</a>
+            <a class="btncardjogo" href="${jogo.link}" onclick="abrirDetalhesJogo('${jogo.time1}', '${jogo.time2}', '${jogo.datasmall}')">${jogo.textobtn}</a>
         </div>
     `;
     
