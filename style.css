@@ -67,20 +67,18 @@ body {
 
 #databig {
   font-family: 'Soulcraft', sans-serif;
-  font-size: 24px;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
   line-height: 100%;
   letter-spacing: 0.24px;
   text-transform: uppercase;
   color: #fff;
-  leading-trim: both;
-  text-edge: cap;
-  font-family: Soulcraft;
-  font-size: 60px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 107.556%;
-  /* 91.853px */
-
+  /* Evitar quebra de linha */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 #time1,
