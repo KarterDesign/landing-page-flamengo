@@ -32,10 +32,10 @@ function parseCSV(csvText) {
  */
 function getLogoCampeonato(campeonato) {
     const logos = {
-        'Brasileiro': 'https://webapp404138.ip-50-116-48-60.cloudezapp.io/img/img.png',
-        'Libertadores': 'https://webapp404138.ip-50-116-48-60.cloudezapp.io/img/img.png',
+        'Brasileiro': 'https://libertadores.absolut-sport.com.br/images/logos-campeonatos/brasileiro.png',
+        'CONMEBOL Libertadores': 'https://libertadores.absolut-sport.com.br/images/logos-campeonatos/libertadores.png',
         'Sulamericana': 'https://webapp404138.ip-50-116-48-60.cloudezapp.io/img/img.png',
-        'Copa do Brasil': 'https://webapp404138.ip-50-116-48-60.cloudezapp.io/img/img.png'
+        'Copa do Brasil': 'https://libertadores.absolut-sport.com.br/images/logos-campeonatos/CopaDoBrasil.png'
     };
     
     return logos[campeonato] || 'https://webapp404138.ip-50-116-48-60.cloudezapp.io/img/img.png';
