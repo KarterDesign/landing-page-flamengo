@@ -12,8 +12,6 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <!-- Soulcraft Font já importada no CSS -->
-
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
     <script src="conteudoDinamico.js"></script>
@@ -28,17 +26,17 @@
                 <!-- Logo e Texto -->
                 <div class="header-left">
                     <div class="logo">
-                        <img src="img/flamengo-absolut-sport-logo-oficial-parceria.png" alt="Flamengo" class="logo-img">
-                        <span class="logo-text">Agência Oficial de Viagens e Experiências</span>
+                        <img id="header-logo-img" src="" alt="Flamengo" class="logo-img">
+                        <span id="header-logo-text" class="logo-text"></span>
                     </div>
                 </div>
 
                 <!-- Links Desktop -->
                 <nav class="header-nav">
                     <ul class="nav-links">
-                        <li><a href="#espaco-fla">Espaço FLA+</a></li>
-                        <li><a href="#oeste-inferior">Oeste Inferior</a></li>
-                        <li><a href="#camarote-absolut">Camarote ABSOLUT Sport</a></li>
+                        <li><a id="nav-link-1" href="#espaco-fla"></a></li>
+                        <li><a id="nav-link-2" href="#oeste-inferior"></a></li>
+                        <li><a id="nav-link-3" href="#camarote-absolut"></a></li>
                     </ul>
                 </nav>
 
@@ -54,9 +52,9 @@
         <!-- Menu Mobile -->
         <nav class="mobile-menu">
             <ul class="mobile-nav-links">
-                <li><a href="#espaco-fla">Espaço FLA+</a></li>
-                <li><a href="#oeste-inferior">Oeste Inferior</a></li>
-                <li><a href="#camarote-absolut">Camarote ABSOLUT Sport</a></li>
+                <li><a id="mobile-nav-link-1" href="#espaco-fla"></a></li>
+                <li><a id="mobile-nav-link-2" href="#oeste-inferior"></a></li>
+                <li><a id="mobile-nav-link-3" href="#camarote-absolut"></a></li>
             </ul>
         </nav>
     </header>
@@ -64,11 +62,8 @@
     <!-- Hero Banner -->
     <section class="hero-banner">
         <div class="hero-video-container">
-            <video class="hero-video" autoplay muted loop playsinline>
-                <source src="vid/intro-flamengo-nação.mp4" type="video/mp4">
-                <!-- Fallback video -->
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-soccer-field-at-sunset-1089-large.mp4"
-                    type="video/mp4">
+            <video id="hero-video" class="hero-video" autoplay muted loop playsinline>
+                <source src="" type="video/mp4">
             </video>
             <div class="hero-overlay"></div>
         </div>
@@ -78,8 +73,8 @@
                     <span id="typewriter-text"></span>
                     <span class="cursor"></span>
                 </h1>
-                <p class="hero-subtitle">siga o flamengo e faça parte da historia</p>
-                <button class="hero-cta">COMPRE AGORA</button>
+                <p id="hero-subtitle" class="hero-subtitle"></p>
+                <button id="hero-cta" class="hero-cta"></button>
             </div>
         </div>
     </section>
@@ -88,38 +83,13 @@
     <section class="voce-aonde-flamengo" style="padding-top: 15px; background-color: var(--cor-preto);">
         <div class="banner-container">
             <div class="banner-content">
-                <h1>VOCÊ AONDE O<br>FLAMENGO ESTIVER</h1>
+                <h1 id="secao-aonde-title"></h1>
             </div>
         </div>
 
         <div class="matches-slider-container">
             <div class="matches-slider">
-                <!-- <div class="match-card">
-                    <div class="match-header">
-                        <img src="img/img.png" alt="Flamengo" class="team-logo">
-                        <div class="match-date-info">
-                            <span class="match-day">13</span>
-                            <span class="match-month">JUL 2025</span>
-                            <span class="match-time">19:00</span>
-                            <span class="match-stadium">Maracanã</span>
-                        </div>
-                    </div>
-                    <div class="match-teams">
-                        <div class="match-date-large">13 JUL</div>
-                        <div class="teams-info">
-                            <span class="team-name">FLAMENGO</span>
-                            <span class="team-opponent">São Paulo</span>
-                        </div>
-                    </div>
-                    <button class="match-cta">Lorem ipsum dolor</button>
-                </div> -->
-
-
-
-                <!-- CARD JOGO -->
                 <!-- CARDS DE JOGOS SERÃO INSERIDOS DINAMICAMENTE AQUI -->
-
-
             </div>
 
             <!-- Controles do slider -->
@@ -133,17 +103,14 @@
     <!-- Seção Agência Oficial da Nação -->
     <section class="agencia-oficial-secao">
         <div class="agencia-oficial-img">
-            <img src="img/flamengo-agencia-oficial-absolut-sport-mobile.jpg" alt="Agência Oficial da Nação">
+            <img id="agencia-img" src="" alt="">
         </div>
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="agencia-content">
-                        <h2 class="agencia-title">AGÊNCIA OFICIAL <SPAN>DA NAÇÃO</SPAN></h2>
-                        <p class="agencia-description">
-                            Porque somos a agência oficial do Flamengo, oferecendo experiência 100% oficial, logística
-                            completa e suporte total para você só se preocupar em torcer dentro e fora de casa.
-                        </p>
+                        <h2 id="agencia-title" class="agencia-title"></h2>
+                        <p id="agencia-description" class="agencia-description"></p>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -159,12 +126,9 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="maraca-content">
-                        <h2 class="maraca-title">O MARACA É NOSSO<br><span>O LUGAR É SEU.</span></h2>
-                        <p class="maraca-description">
-                            Do embarque na Gávea ao apito final no Maracanã, seu jogo começa antes com conforto,
-                            segurança e Transfer Oficial do Flamengo.
-                        </p>
-                        <button class="btn-primary maraca-cta">LOREM IPSUM DOLOR AMET</button>
+                        <h2 id="maraca-title-1" class="maraca-title"></h2>
+                        <p id="maraca-description-1" class="maraca-description"></p>
+                        <button id="maraca-cta-1" class="btn-primary maraca-cta"></button>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -180,51 +144,48 @@
     <section class="pacotes-secao">
         <div class="container">
             <div class="section-title">
-                <h2>PACOTES DISPONÍVEIS</h2>
+                <h2 id="pacotes-title"></h2>
             </div>
             <div class="pacotes-grid">
-                <div class="pacote-card" data-pacote="oeste-inferior" tabindex="0" role="button"
-                    aria-label="Clique para ver detalhes do Pacote Oeste Inferior">
+                <div class="pacote-card" data-pacote="oeste-inferior" tabindex="0" role="button">
                     <div class="pacote-image">
-                        <img src="img/pacote oeste inferior.png" alt="Pacote Oeste Inferior">
+                        <img id="pacote-1-img" src="" alt="">
                     </div>
                     <div class="pacote-content">
                         <div class="pacote-tags">
-                            <span class="tag">TAG 01</span>
-                            <span class="tag">TAG 01</span>
-                            <span class="tag">TAG 01</span>
+                            <span id="pacote-1-tag-1" class="tag"></span>
+                            <span id="pacote-1-tag-2" class="tag"></span>
+                            <span id="pacote-1-tag-3" class="tag"></span>
                         </div>
-                        <h3 class="pacote-title">PACOTE<br>OESTE INFERIOR</h3>
+                        <h3 id="pacote-1-title" class="pacote-title"></h3>
                     </div>
                 </div>
 
-                <div class="pacote-card" data-pacote="espaco-fla" tabindex="0" role="button"
-                    aria-label="Clique para ver detalhes do Pacote Espaço FLA+">
+                <div class="pacote-card" data-pacote="espaco-fla" tabindex="0" role="button">
                     <div class="pacote-image">
-                        <img src="img/pacote oeste inferior fla+.png" alt="Pacote Camarote">
+                        <img id="pacote-2-img" src="" alt="">
                     </div>
                     <div class="pacote-content">
                         <div class="pacote-tags">
-                            <span class="tag">TAG 01</span>
-                            <span class="tag">TAG 01</span>
-                            <span class="tag">TAG 01</span>
+                            <span id="pacote-2-tag-1" class="tag"></span>
+                            <span id="pacote-2-tag-2" class="tag"></span>
+                            <span id="pacote-2-tag-3" class="tag"></span>
                         </div>
-                        <h3 class="pacote-title">PACOTE<br>ESPAÇO FLA+</h3>
+                        <h3 id="pacote-2-title" class="pacote-title"></h3>
                     </div>
                 </div>
 
-                <div class="pacote-card" data-pacote="camarote" tabindex="0" role="button"
-                    aria-label="Clique para ver detalhes do Pacote Camarote">
+                <div class="pacote-card" data-pacote="camarote" tabindex="0" role="button">
                     <div class="pacote-image">
-                        <img src="img/Soccer Stadium crowd.png" alt="Pacote Camarote">
+                        <img id="pacote-3-img" src="" alt="">
                     </div>
                     <div class="pacote-content">
                         <div class="pacote-tags">
-                            <span class="tag">TAG 01</span>
-                            <span class="tag">TAG 01</span>
-                            <span class="tag">TAG 01</span>
+                            <span id="pacote-3-tag-1" class="tag"></span>
+                            <span id="pacote-3-tag-2" class="tag"></span>
+                            <span id="pacote-3-tag-3" class="tag"></span>
                         </div>
-                        <h3 class="pacote-title">PACOTE<br>CAMAROTE</h3>
+                        <h3 id="pacote-3-title" class="pacote-title"></h3>
                     </div>
                 </div>
             </div>
@@ -236,29 +197,24 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="maraca-image2">
-                        <!-- Imagem do Maracanã será aplicada via CSS como background -->
+                        <!-- Imagem será aplicada via CSS como background -->
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="maraca-content">
-                        <h2 class="maraca-title">SIGA O FLAMENGO<br><span>AONDE ELE FOR</span></h2>
-                        <p class="maraca-description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta faucibus tellus vitae
-                            semper. Morbi vulputate viverra dui, nec bibendum est tincidunt lacinia. Donec iaculis orci
-                            eget tortor venenatis posuere. </p>
-                        <button class="btn-primary maraca-cta">LOREM IPSUM DOLOR AMET</button>
+                        <h2 id="maraca-title-2" class="maraca-title"></h2>
+                        <p id="maraca-description-2" class="maraca-description"></p>
+                        <button id="maraca-cta-2" class="btn-primary maraca-cta"></button>
                     </div>
                 </div>
             </div>
         </div>
 
-
-
         <!-- Seção Benefícios -->
         <div class="beneficios-container">
             <div class="container">
                 <div class="beneficios-title">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta faucibus.</p>
+                    <p id="beneficios-title-1"></p>
                 </div>
                 <div class="beneficios-grid">
                     <div class="beneficio-card">
@@ -266,7 +222,7 @@
                             <i class="fas fa-ticket-alt"></i>
                         </div>
                         <div class="beneficio-text">
-                            <h4>Ingressos no setor da torcida do Flamengo.</h4>
+                            <h4 id="beneficio-1-text"></h4>
                         </div>
                     </div>
 
@@ -275,7 +231,7 @@
                             <i class="fas fa-bed"></i>
                         </div>
                         <div class="beneficio-text">
-                            <h4>Hospedagem nos melhores hotéis.</h4>
+                            <h4 id="beneficio-2-text"></h4>
                         </div>
                     </div>
 
@@ -284,7 +240,7 @@
                             <i class="fas fa-bus"></i>
                         </div>
                         <div class="beneficio-text">
-                            <h4>Matchday transfer.</h4>
+                            <h4 id="beneficio-3-text"></h4>
                         </div>
                     </div>
 
@@ -293,7 +249,7 @@
                             <i class="fas fa-gift"></i>
                         </div>
                         <div class="beneficio-text">
-                            <h4>Experiências locais, brindes e suporte.</h4>
+                            <h4 id="beneficio-4-text"></h4>
                         </div>
                     </div>
 
@@ -302,7 +258,7 @@
                             <i class="fas fa-plane"></i>
                         </div>
                         <div class="beneficio-text">
-                            <h4>Aéreo (sob consulta)</h4>
+                            <h4 id="beneficio-5-text"></h4>
                         </div>
                     </div>
                 </div>
@@ -310,13 +266,12 @@
         </div>
     </section>
 
-
     <!-- Modal para Detalhes do Pacote -->
     <div id="pacoteModal" class="modal-overlay">
         <div class="modal-content">
             <button class="modal-close" aria-label="Fechar modal">&times;</button>
             <div class="modal-header">
-                <img id="modalBanner" src="" alt="Banner do Pacote" class="modal-banner">
+                <img id="modalBanner" src="" alt="" class="modal-banner">
             </div>
             <div class="modal-body">
                 <h2 id="modalTitle"></h2>
@@ -326,7 +281,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button class="btn-primary modal-cta">COMPRAR AGORA</button>
+                <button id="modal-cta" class="btn-primary modal-cta"></button>
             </div>
         </div>
     </div>
@@ -335,55 +290,45 @@
         <div class="container">
             <div class="newsletter-content">
                 <div class="newsletter-left">
-                    <h2 class="newsletter-title">
-                        QUER SER AVISADO
-                        SOBRE OS PRÓXIMOS
-                        PACOTES?
-                    </h2>
-                    <p class="newsletter-description">
-                        Deixe seu contato e garanta prioridade no acesso às melhores
-                        experiências nos jogos do Flamengo. Viva o Flamengo como
-                        protagonista!
-                    </p>
+                    <h2 id="newsletter-title" class="newsletter-title"></h2>
+                    <p id="newsletter-description" class="newsletter-description"></p>
                 </div>
 
                 <div class="newsletter-form-container">
                     <form class="newsletter-form" id="newsletter-form">
                         <div class="form-group">
-                            <label for="nome" class="form-label">Nome*</label>
+                            <label id="newsletter-label-nome" for="nome" class="form-label"></label>
                             <input type="text" class="form-control" id="nome" name="nome" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="email" class="form-label">Email*</label>
+                            <label id="newsletter-label-email" for="email" class="form-label"></label>
                             <input type="email" class="form-control" id="email" name="email" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="time" class="form-label">Qual time você torce*</label>
+                            <label id="newsletter-label-time" for="time" class="form-label"></label>
                             <input type="text" class="form-control" id="time" name="time" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="perfil" class="form-label">Eu sou um(a):*</label>
+                            <label id="newsletter-label-perfil" for="perfil" class="form-label"></label>
                             <input type="text" class="form-control" id="perfil" name="perfil" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="captcha" class="form-label">80 + 1 = ?</label>
+                            <label id="newsletter-label-captcha" for="captcha" class="form-label"></label>
                             <input type="number" class="form-control" id="captcha" name="captcha" required>
                         </div>
 
                         <div class="form-group">
-                            <button type="submit" class="btn-newsletter">
-                                Quero ser avisado!
-                            </button>
+                            <button id="newsletter-submit" type="submit" class="btn-newsletter"></button>
                         </div>
                     </form>
                 </div>
 
                 <div class="newsletter-image">
-                    <img src="img/Jogadores.png" alt="Torcedores Flamengo" class="players-image">
+                    <img id="newsletter-img" src="" alt="" class="players-image">
                 </div>
             </div>
         </div>
@@ -395,15 +340,9 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="maraca-content">
-                        <h2 class="maraca-title">POR QUE COMPRAR COM A<br><span style="color: #155f97;" >ABSOLUT SPORT?</span></h2>
-                        <p class="maraca-description">
-                            Na ABSOLUT Sport, cada detalhe é pensado para que você viva o Flamengo do jeito que merece:
-                            sem preocupação, com segurança e cercado de experiências oficiais e exclusivas. Somos a
-                            agência oficial de viagens e experiências do Clube, o que garante acesso a ingressos
-                            certificados, logística completa e atendimento dedicado, seja no Maracanã ou em qualquer
-                            estádio do Brasil.
-                        </p>
-                        <button class="btn-primary maraca-cta">Saiba mais</button>
+                        <h2 id="absolut-title" class="maraca-title"></h2>
+                        <p id="absolut-description" class="maraca-description"></p>
+                        <button id="absolut-cta" class="btn-primary maraca-cta"></button>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -418,9 +357,7 @@
         <div class="beneficios-container">
             <div class="container">
                 <div class="beneficios-title">
-                    <h3
-                        style="text-align: center; font-size: 2rem; color: var(--cor-cinza-escuro); margin-bottom: 1rem;">
-                        Por que escolher a ABSOLUT Sport?</h3>
+                    <h3 id="beneficios-title-2" style="text-align: center; font-size: 2rem; color: var(--cor-cinza-escuro); margin-bottom: 1rem;"></h3>
                 </div>
                 <div class="beneficios-grid">
                     <div class="beneficio-card">
@@ -428,7 +365,7 @@
                             <i class="fas fa-users"></i>
                         </div>
                         <div class="beneficio-text">
-                            <h4>Equipe Dedicada.</h4>
+                            <h4 id="absolut-beneficio-1-text"></h4>
                         </div>
                     </div>
 
@@ -437,7 +374,7 @@
                             <i class="fas fa-headset"></i>
                         </div>
                         <div class="beneficio-text">
-                            <h4>Atendimento e Suporte.</h4>
+                            <h4 id="absolut-beneficio-2-text"></h4>
                         </div>
                     </div>
 
@@ -446,7 +383,7 @@
                             <i class="fas fa-bed"></i>
                         </div>
                         <div class="beneficio-text">
-                            <h4>Melhores acomodações.</h4>
+                            <h4 id="absolut-beneficio-3-text"></h4>
                         </div>
                     </div>
 
@@ -455,7 +392,7 @@
                             <i class="fas fa-bus"></i>
                         </div>
                         <div class="beneficio-text">
-                            <h4>Transfer oficiais.</h4>
+                            <h4 id="absolut-beneficio-4-text"></h4>
                         </div>
                     </div>
 
@@ -464,7 +401,7 @@
                             <i class="fas fa-plane"></i>
                         </div>
                         <div class="beneficio-text">
-                            <h4>Aéreo sob cotação.</h4>
+                            <h4 id="absolut-beneficio-5-text"></h4>
                         </div>
                     </div>
 
@@ -473,7 +410,7 @@
                             <i class="fas fa-ticket-alt"></i>
                         </div>
                         <div class="beneficio-text">
-                            <h4>Ingressos oficiais.</h4>
+                            <h4 id="absolut-beneficio-6-text"></h4>
                         </div>
                     </div>
                 </div>
@@ -481,76 +418,38 @@
         </div>
     </section>
 
-    <!-- Seção Produtos
-    <section class="section-flamengo">
-        <div class="container">
-            <div class="section-title">
-                <h2>Produtos Oficiais</h2>
-            </div>
-            <div class="produtos-grid">
-                <div class="produto-card">
-                    <div class="produto-image" style="background-image: url('https://via.placeholder.com/300x200/C60C30/FFFFFF?text=Camisa')"></div>
-                    <div class="produto-content">
-                        <h3 class="produto-title">Camisa Oficial</h3>
-                        <p class="produto-description">Vista as cores do Flamengo com orgulho. Camisa oficial da temporada 2024.</p>
-                        <button class="btn-primary">Comprar</button>
-                    </div>
-                </div>
-                <div class="produto-card">
-                    <div class="produto-image" style="background-image: url('https://via.placeholder.com/300x200/000000/FFFFFF?text=Produtos')"></div>
-                    <div class="produto-content">
-                        <h3 class="produto-title">Produtos Oficiais</h3>
-                        <p class="produto-description">Linha completa de produtos oficiais do Flamengo para toda a família.</p>
-                        <button class="btn-primary">Ver Todos</button>
-                    </div>
-                </div>
-                <div class="produto-card">
-                    <div class="produto-image" style="background-image: url('https://via.placeholder.com/300x200/C60C30/FFFFFF?text=Acessórios')"></div>
-                    <div class="produto-content">
-                        <h3 class="produto-title">Acessórios</h3>
-                        <p class="produto-description">Bonés, cachecóis, chaveiros e muito mais para completar seu look rubro-negro.</p>
-                        <button class="btn-primary">Explorar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
     <!-- Seção FAQ -->
     <section class="faq-section">
         <div class="container">
             <div class="section-title">
-                <h2>Perguntas Frequentes</h2>
+                <h2 id="faq-title"></h2>
             </div>
             <div class="faq-container">
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>Como posso comprar ingressos?</span>
+                        <span id="faq-question-1"></span>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Você pode comprar ingressos através do site oficial, nas bilheterias do Maracanã ou nos
-                            pontos de venda autorizados.</p>
+                        <p id="faq-answer-1"></p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>Qual é o programa de sócio-torcedor?</span>
+                        <span id="faq-question-2"></span>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>O programa oferece benefícios exclusivos como desconto em ingressos, prioridade na compra e
-                            produtos oficiais.</p>
+                        <p id="faq-answer-2"></p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>Como funciona o programa de turismo?</span>
+                        <span id="faq-question-3"></span>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Organizamos viagens para acompanhar o Flamengo em jogos fora de casa, com pacotes completos
-                            incluindo transporte e hospedagem.</p>
+                        <p id="faq-answer-3"></p>
                     </div>
                 </div>
             </div>

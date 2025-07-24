@@ -1,73 +1,69 @@
 secao,elemento,id,tipo,conteudo_atual,observacoes
-header,logo_texto,header_logo_text,texto,Agência Oficial de Viagens e Experiências,Texto exibido ao lado do logo
-header,menu_link_1,nav_link_1,texto,Espaço FLA+,Primeiro link do menu
-header,menu_link_2,nav_link_2,texto,Oeste Inferior,Segundo link do menu
-header,menu_link_3,nav_link_3,texto,Camarote ABSOLUT Sport,Terceiro link do menu
-header,logo_imagem,header_logo_img,imagem,img/flamengo-absolut-sport-logo-oficial-parceria.png,Logo principal do header
-hero,titulo_principal,hero_title,texto,FLAMENGO NAÇÃO,Título principal animado (typewriter)
-hero,subtitulo,hero_subtitle,texto,siga o flamengo e faça parte da historia,Subtítulo do hero
-hero,botao_cta,hero_cta,texto,COMPRE AGORA,Botão principal do hero
-hero,video_principal,hero_video,video,vid/intro-flamengo-nação.mp4,Vídeo de fundo do hero
-secao_aonde,titulo,secao_aonde_title,texto,VOCÊ AONDE O FLAMENGO ESTIVER,Título da seção de jogos
-agencia_oficial,titulo,agencia_title,texto,AGÊNCIA OFICIAL DA NAÇÃO,Título da seção agência oficial
-agencia_oficial,descricao,agencia_description,texto,Porque somos a agência oficial do Flamengo oferecendo experiência 100% oficial logística completa e suporte total para você só se preocupar em torcer dentro e fora de casa.,Descrição da agência oficial
-agencia_oficial,imagem,agencia_img,imagem,img/flamengo-agencia-oficial-absolut-sport-mobile.jpg,Imagem da seção agência oficial
-maraca_1,titulo,maraca_1_title,texto,O MARACA É NOSSO O LUGAR É SEU.,Título da primeira seção do Maracanã
-maraca_1,descricao,maraca_1_description,texto,Do embarque na Gávea ao apito final no Maracanã seu jogo começa antes com conforto segurança e Transfer Oficial do Flamengo.,Descrição da primeira seção do Maracanã
-maraca_1,botao_cta,maraca_1_cta,texto,LOREM IPSUM DOLOR AMET,Botão CTA da primeira seção do Maracanã
-maraca_1,imagem,maraca_1_img,imagem,img/o-maraca-é-nosso-o-lugar-e-seu-absolut-sport-agencia-oficial-do-flamengo.jpg,Imagem da primeira seção do Maracanã
-pacotes,titulo_secao,pacotes_title,texto,PACOTES DISPONÍVEIS,Título da seção de pacotes
-pacotes,pacote_1_titulo,pacote_1_title,texto,PACOTE OESTE INFERIOR,Título do primeiro pacote
-pacotes,pacote_1_imagem,pacote_1_img,imagem,img/pacote oeste inferior.png,Imagem do primeiro pacote
-pacotes,pacote_1_tag_1,pacote_1_tag_1,texto,TAG 01,Primeira tag do primeiro pacote
-pacotes,pacote_1_tag_2,pacote_1_tag_2,texto,TAG 01,Segunda tag do primeiro pacote
-pacotes,pacote_1_tag_3,pacote_1_tag_3,texto,TAG 01,Terceira tag do primeiro pacote
-pacotes,pacote_2_titulo,pacote_2_title,texto,PACOTE ESPAÇO FLA+,Título do segundo pacote
-pacotes,pacote_2_imagem,pacote_2_img,imagem,img/pacote oeste inferior fla+.png,Imagem do segundo pacote
-pacotes,pacote_2_tag_1,pacote_2_tag_1,texto,TAG 01,Primeira tag do segundo pacote
-pacotes,pacote_2_tag_2,pacote_2_tag_2,texto,TAG 01,Segunda tag do segundo pacote
-pacotes,pacote_2_tag_3,pacote_2_tag_3,texto,TAG 01,Terceira tag do segundo pacote
-pacotes,pacote_3_titulo,pacote_3_title,texto,PACOTE CAMAROTE,Título do terceiro pacote
-pacotes,pacote_3_imagem,pacote_3_img,imagem,img/Soccer Stadium crowd.png,Imagem do terceiro pacote
-pacotes,pacote_3_tag_1,pacote_3_tag_1,texto,TAG 01,Primeira tag do terceiro pacote
-pacotes,pacote_3_tag_2,pacote_3_tag_2,texto,TAG 01,Segunda tag do terceiro pacote
-pacotes,pacote_3_tag_3,pacote_3_tag_3,texto,TAG 01,Terceira tag do terceiro pacote
-maraca_2,titulo,maraca_2_title,texto,SIGA O FLAMENGO AONDE ELE FOR,Título da segunda seção do Maracanã
-maraca_2,descricao,maraca_2_description,texto,Lorem ipsum dolor sit amet consectetur adipiscing elit. Donec porta faucibus tellus vitae semper. Morbi vulputate viverra dui nec bibendum est tincidunt lacinia. Donec iaculis orci eget tortor venenatis posuere.,Descrição da segunda seção do Maracanã
-maraca_2,botao_cta,maraca_2_cta,texto,LOREM IPSUM DOLOR AMET,Botão CTA da segunda seção do Maracanã
-maraca_2,imagem,maraca_2_img,imagem,img/siga-o-flamengo.png,Imagem da segunda seção do Maracanã
-beneficios_1,titulo_secao,beneficios_1_title,texto,Lorem ipsum dolor sit amet consectetur adipiscing elit. Donec porta faucibus.,Título da primeira seção de benefícios
-beneficios_1,beneficio_1,beneficio_1_text,texto,Ingressos no setor da torcida do Flamengo.,Primeiro benefício
-beneficios_1,beneficio_2,beneficio_2_text,texto,Hospedagem nos melhores hotéis.,Segundo benefício
-beneficios_1,beneficio_3,beneficio_3_text,texto,Matchday transfer.,Terceiro benefício
-beneficios_1,beneficio_4,beneficio_4_text,texto,Experiências locais brindes e suporte.,Quarto benefício
-beneficios_1,beneficio_5,beneficio_5_text,texto,Aéreo (sob consulta),Quinto benefício
-newsletter,titulo,newsletter_title,texto,QUER SER AVISADO SOBRE OS PRÓXIMOS PACOTES?,Título da newsletter
-newsletter,descricao,newsletter_description,texto,Deixe seu contato e garanta prioridade no acesso às melhores experiências nos jogos do Flamengo. Viva o Flamengo como protagonista!,Descrição da newsletter
-newsletter,label_nome,newsletter_label_nome,texto,Nome*,Label do campo nome
-newsletter,label_email,newsletter_label_email,texto,Email*,Label do campo email
-newsletter,label_time,newsletter_label_time,texto,Qual time você torce*,Label do campo time
-newsletter,label_perfil,newsletter_label_perfil,texto,Eu sou um(a):*,Label do campo perfil
-newsletter,label_captcha,newsletter_label_captcha,texto,80 + 1 = ?,Label do captcha
-newsletter,botao_submit,newsletter_submit,texto,Quero ser avisado!,Botão de envio da newsletter
-newsletter,imagem,newsletter_img,imagem,img/Jogadores.png,Imagem da newsletter
-absolut_sport,titulo,absolut_title,texto,POR QUE COMPRAR COM A ABSOLUT SPORT?,Título da seção ABSOLUT Sport
-absolut_sport,descricao,absolut_description,texto,Na ABSOLUT Sport cada detalhe é pensado para que você viva o Flamengo do jeito que merece: sem preocupação com segurança e cercado de experiências oficiais e exclusivas. Somos a agência oficial de viagens e experiências do Clube o que garante acesso a ingressos certificados logística completa e atendimento dedicado seja no Maracanã ou em qualquer estádio do Brasil.,Descrição da seção ABSOLUT Sport
-absolut_sport,botao_cta,absolut_cta,texto,Saiba mais,Botão CTA da seção ABSOLUT Sport
-absolut_sport,imagem,absolut_img,imagem,img/torcedor-flameng-absolut-sport-agencia-oficial.jpg,Imagem da seção ABSOLUT Sport
-beneficios_2,titulo_secao,beneficios_2_title,texto,Por que escolher a ABSOLUT Sport?,Título da segunda seção de benefícios
-beneficios_2,beneficio_1,beneficio_2_1_text,texto,Equipe Dedicada.,Primeiro benefício da segunda seção
-beneficios_2,beneficio_2,beneficio_2_2_text,texto,Atendimento e Suporte.,Segundo benefício da segunda seção
-beneficios_2,beneficio_3,beneficio_2_3_text,texto,Melhores acomodações.,Terceiro benefício da segunda seção
-beneficios_2,beneficio_4,beneficio_2_4_text,texto,Transfer oficiais.,Quarto benefício da segunda seção
-beneficios_2,beneficio_5,beneficio_2_5_text,texto,Aéreo sob cotação.,Quinto benefício da segunda seção
-beneficios_2,beneficio_6,beneficio_2_6_text,texto,Ingressos oficiais.,Sexto benefício da segunda seção
-faq,titulo_secao,faq_title,texto,Perguntas Frequentes,Título da seção FAQ
-faq,pergunta_1,faq_question_1,texto,Como posso comprar ingressos?,Primeira pergunta do FAQ
-faq,resposta_1,faq_answer_1,texto,Você pode comprar ingressos através do site oficial nas bilheterias do Maracanã ou nos pontos de venda autorizados.,Primeira resposta do FAQ
-faq,pergunta_2,faq_question_2,texto,Qual é o programa de sócio-torcedor?,Segunda pergunta do FAQ
-faq,resposta_2,faq_answer_2,texto,O programa oferece benefícios exclusivos como desconto em ingressos prioridade na compra e produtos oficiais.,Segunda resposta do FAQ
-faq,pergunta_3,faq_question_3,texto,Como funciona o programa de turismo?,Terceira pergunta do FAQ
-faq,resposta_3,faq_answer_3,texto,Organizamos viagens para acompanhar o Flamengo em jogos fora de casa com pacotes completos incluindo transporte e hospedagem.,Terceira resposta do FAQ
-modal,botao_comprar,modal_cta,texto,COMPRAR AGORA,Botão de compra do modal
-modal,imagem_background,modal_bg,imagem,img/background-forms.jpg,Imagem de fundo dos formulários 
+header,logo_texto,header-logo-text,texto,Agência Oficial de Viagens e Experiências,Texto exibido ao lado do logo
+header,menu_link_1,nav-link-1,texto,Espaço FLA+,Primeiro link do menu
+header,menu_link_2,nav-link-2,texto,Oeste Inferior,Segundo link do menu
+header,menu_link_3,nav-link-3,texto,Camarote ABSOLUT Sport,Terceiro link do menu
+header,logo_imagem,header-logo-img,imagem,img/flamengo-absolut-sport-logo-oficial-parceria.png,Logo principal do header
+hero,titulo_principal,typewriter-text,texto,FLAMENGO NAÇÃO,Título principal animado (typewriter)
+hero,subtitulo,hero-subtitle,texto,siga o flamengo e faça parte da historia,Subtítulo do hero
+hero,botao_cta,hero-cta,texto,COMPRE AGORA,Botão principal do hero
+hero,video_principal,hero-video,video,vid/intro-flamengo-nação.mp4,Vídeo de fundo do hero
+secao_aonde,titulo,secao-aonde-title,texto,VOCÊ AONDE O<br>FLAMENGO ESTIVER,Título da seção de jogos
+agencia_oficial,titulo,agencia-title,texto,AGÊNCIA OFICIAL <span>DA NAÇÃO</span>,Título da seção agência oficial
+agencia_oficial,descricao,agencia-description,texto,Porque somos a agência oficial do Flamengo oferecendo experiência 100% oficial logística completa e suporte total para você só se preocupar em torcer dentro e fora de casa.,Descrição da agência oficial
+agencia_oficial,imagem,agencia-img,imagem,img/flamengo-agencia-oficial-absolut-sport-mobile.jpg,Imagem da seção agência oficial
+maraca_1,titulo,maraca-title-1,texto,O MARACA É NOSSO<br><span>O LUGAR É SEU.</span>,Título da primeira seção do Maracanã
+maraca_1,descricao,maraca-description-1,texto,Do embarque na Gávea ao apito final no Maracanã seu jogo começa antes com conforto segurança e Transfer Oficial do Flamengo.,Descrição da primeira seção do Maracanã
+maraca_1,botao_cta,maraca-cta-1,texto,LOREM IPSUM DOLOR AMET,Botão CTA da primeira seção do Maracanã
+pacotes,titulo_secao,pacotes-title,texto,PACOTES DISPONÍVEIS,Título da seção de pacotes
+pacotes,pacote_1_titulo,pacote-1-title,texto,PACOTE<br>OESTE INFERIOR,Título do primeiro pacote
+pacotes,pacote_1_imagem,pacote-1-img,imagem,img/pacote oeste inferior.png,Imagem do primeiro pacote
+pacotes,pacote_1_tag_1,pacote-1-tag-1,texto,TAG 01,Primeira tag do primeiro pacote
+pacotes,pacote_1_tag_2,pacote-1-tag-2,texto,TAG 02,Segunda tag do primeiro pacote
+pacotes,pacote_1_tag_3,pacote-1-tag-3,texto,TAG 03,Terceira tag do primeiro pacote
+pacotes,pacote_2_titulo,pacote-2-title,texto,PACOTE<br>ESPAÇO FLA+,Título do segundo pacote
+pacotes,pacote_2_imagem,pacote-2-img,imagem,img/pacote oeste inferior fla+.png,Imagem do segundo pacote
+pacotes,pacote_2_tag_1,pacote-2-tag-1,texto,TAG 01,Primeira tag do segundo pacote
+pacotes,pacote_2_tag_2,pacote-2-tag-2,texto,TAG 02,Segunda tag do segundo pacote
+pacotes,pacote_2_tag_3,pacote-2-tag-3,texto,TAG 03,Terceira tag do segundo pacote
+pacotes,pacote_3_titulo,pacote-3-title,texto,PACOTE<br>CAMAROTE,Título do terceiro pacote
+pacotes,pacote_3_imagem,pacote-3-img,imagem,img/Soccer Stadium crowd.png,Imagem do terceiro pacote
+pacotes,pacote_3_tag_1,pacote-3-tag-1,texto,TAG 01,Primeira tag do terceiro pacote
+pacotes,pacote_3_tag_2,pacote-3-tag-2,texto,TAG 02,Segunda tag do terceiro pacote
+pacotes,pacote_3_tag_3,pacote-3-tag-3,texto,TAG 03,Terceira tag do terceiro pacote
+maraca_2,titulo,maraca-title-2,texto,SIGA O FLAMENGO<br><span>AONDE ELE FOR</span>,Título da segunda seção do Maracanã
+maraca_2,descricao,maraca-description-2,texto,Lorem ipsum dolor sit amet consectetur adipiscing elit. Donec porta faucibus tellus vitae semper. Morbi vulputate viverra dui nec bibendum est tincidunt lacinia. Donec iaculis orci eget tortor venenatis posuere.,Descrição da segunda seção do Maracanã
+maraca_2,botao_cta,maraca-cta-2,texto,LOREM IPSUM DOLOR AMET,Botão CTA da segunda seção do Maracanã
+beneficios_1,titulo_secao,beneficios-title-1,texto,Lorem ipsum dolor sit amet consectetur adipiscing elit. Donec porta faucibus.,Título da primeira seção de benefícios
+beneficios_1,beneficio_1,beneficio-1-text,texto,Ingressos no setor da torcida do Flamengo.,Primeiro benefício
+beneficios_1,beneficio_2,beneficio-2-text,texto,Hospedagem nos melhores hotéis.,Segundo benefício
+beneficios_1,beneficio_3,beneficio-3-text,texto,Matchday transfer.,Terceiro benefício
+beneficios_1,beneficio_4,beneficio-4-text,texto,Experiências locais brindes e suporte.,Quarto benefício
+beneficios_1,beneficio_5,beneficio-5-text,texto,Aéreo (sob consulta),Quinto benefício
+newsletter,titulo,newsletter-title,texto,QUER SER AVISADO<br>SOBRE OS PRÓXIMOS<br>PACOTES?,Título da newsletter
+newsletter,descricao,newsletter-description,texto,Deixe seu contato e garanta prioridade no acesso às melhores experiências nos jogos do Flamengo. Viva o Flamengo como protagonista!,Descrição da newsletter
+newsletter,label_nome,newsletter-label-nome,texto,Nome*,Label do campo nome
+newsletter,label_email,newsletter-label-email,texto,Email*,Label do campo email
+newsletter,label_time,newsletter-label-time,texto,Qual time você torce*,Label do campo time
+newsletter,label_perfil,newsletter-label-perfil,texto,Eu sou um(a):*,Label do campo perfil
+newsletter,label_captcha,newsletter-label-captcha,texto,80 + 1 = ?,Label do captcha
+newsletter,botao_submit,newsletter-submit,texto,Quero ser avisado!,Botão de envio da newsletter
+newsletter,imagem,newsletter-img,imagem,img/Jogadores.png,Imagem da newsletter
+absolut_sport,titulo,absolut-title,texto,POR QUE COMPRAR COM A<br><span style="color: #155f97;">ABSOLUT SPORT?</span>,Título da seção ABSOLUT Sport
+absolut_sport,descricao,absolut-description,texto,Na ABSOLUT Sport cada detalhe é pensado para que você viva o Flamengo do jeito que merece: sem preocupação com segurança e cercado de experiências oficiais e exclusivas. Somos a agência oficial de viagens e experiências do Clube o que garante acesso a ingressos certificados logística completa e atendimento dedicado seja no Maracanã ou em qualquer estádio do Brasil.,Descrição da seção ABSOLUT Sport
+absolut_sport,botao_cta,absolut-cta,texto,Saiba mais,Botão CTA da seção ABSOLUT Sport
+beneficios_2,titulo_secao,beneficios-title-2,texto,Por que escolher a ABSOLUT Sport?,Título da segunda seção de benefícios
+beneficios_2,beneficio_1,absolut-beneficio-1-text,texto,Equipe Dedicada.,Primeiro benefício da segunda seção
+beneficios_2,beneficio_2,absolut-beneficio-2-text,texto,Atendimento e Suporte.,Segundo benefício da segunda seção
+beneficios_2,beneficio_3,absolut-beneficio-3-text,texto,Melhores acomodações.,Terceiro benefício da segunda seção
+beneficios_2,beneficio_4,absolut-beneficio-4-text,texto,Transfer oficiais.,Quarto benefício da segunda seção
+beneficios_2,beneficio_5,absolut-beneficio-5-text,texto,Aéreo sob cotação.,Quinto benefício da segunda seção
+beneficios_2,beneficio_6,absolut-beneficio-6-text,texto,Ingressos oficiais.,Sexto benefício da segunda seção
+faq,titulo_secao,faq-title,texto,Perguntas Frequentes,Título da seção FAQ
+faq,pergunta_1,faq-question-1,texto,Como posso comprar ingressos?,Primeira pergunta do FAQ
+faq,resposta_1,faq-answer-1,texto,Você pode comprar ingressos através do site oficial nas bilheterias do Maracanã ou nos pontos de venda autorizados.,Primeira resposta do FAQ
+faq,pergunta_2,faq-question-2,texto,Qual é o programa de sócio-torcedor?,Segunda pergunta do FAQ
+faq,resposta_2,faq-answer-2,texto,O programa oferece benefícios exclusivos como desconto em ingressos prioridade na compra e produtos oficiais.,Segunda resposta do FAQ
+faq,pergunta_3,faq-question-3,texto,Como funciona o programa de turismo?,Terceira pergunta do FAQ
+faq,resposta_3,faq-answer-3,texto,Organizamos viagens para acompanhar o Flamengo em jogos fora de casa com pacotes completos incluindo transporte e hospedagem.,Terceira resposta do FAQ
+modal,botao_comprar,modal-cta,texto,COMPRAR AGORA,Botão de compra do modal 
