@@ -34,9 +34,9 @@
                 <!-- Links Desktop -->
                 <nav class="header-nav">
                     <ul class="nav-links">
-                        <li><a id="nav-link-1" href="#espaco-fla"></a></li>
-                        <li><a id="nav-link-2" href="#oeste-inferior"></a></li>
-                        <li><a id="nav-link-3" href="#camarote-absolut"></a></li>
+                        <li><a id="nav-link-1" href="#pacotes-secao"></a></li>
+                        <li><a id="nav-link-2" href="#pacotes-secao"></a></li>
+                        <li><a id="nav-link-3" href="#pacotes-secao"></a></li>
                     </ul>
                 </nav>
 
@@ -74,21 +74,22 @@
                     <span class="cursor"></span>
                 </h1>
                 <p id="hero-subtitle" class="hero-subtitle"></p>
-                <button id="hero-cta" class="hero-cta"></button>
+                <button id="hero-cta" class="hero-cta" onclick="window.location.href='#voce-aonde-flamengo'"></button>
             </div>
         </div>
     </section>
 
     <!-- Seção Você Aonde o Flamengo Estiver -->
-    <section class="voce-aonde-flamengo" style="padding-top: 15px; background-color: var(--cor-preto);">
+    <section id="voce-aonde-flamengo" class="voce-aonde-flamengo"
+        style="padding-top: 15px; background-color: var(--cor-preto);">
         <div class="banner-container">
             <div class="banner-content">
                 <h1 id="secao-aonde-title"></h1>
             </div>
         </div>
 
-        <div class="matches-slider-container">
-            <div class="matches-slider">
+        <div id="matches-slider-container" class="matches-slider-container">
+            <div id="matches-slider" class="matches-slider">
                 <!-- CARDS DE JOGOS SERÃO INSERIDOS DINAMICAMENTE AQUI -->
             </div>
 
@@ -141,7 +142,7 @@
     </section>
 
     <!-- Seção Pacotes Disponíveis -->
-    <section class="pacotes-secao">
+    <section id="pacotes-secao" class="pacotes-secao">
         <div class="container">
             <div class="section-title">
                 <h2 id="pacotes-title"></h2>
@@ -204,11 +205,30 @@
                     <div class="maraca-content">
                         <h2 id="maraca-title-2" class="maraca-title"></h2>
                         <p id="maraca-description-2" class="maraca-description"></p>
-                        <button id="maraca-cta-2" class="btn-primary maraca-cta"></button>
+                        <!-- <button id="maraca-cta-2" class="btn-primary maraca-cta"></button> -->
                     </div>
                 </div>
             </div>
         </div>
+
+
+        <!-- Seção Jogos Fora de Casa -->
+        <section id="jogos-fora-casa" class="voce-aonde-flamengo"
+            style="padding-top: 15px; background-color: var(--cor-preto);">
+  
+
+            <div id="matches-slider-fora-casa-container" class="matches-slider-container">
+                <div id="matches-slider-fora-casa" class="matches-slider">
+                    <!-- CARDS DE JOGOS FORA DE CASA SERÃO INSERIDOS DINAMICAMENTE AQUI -->
+                </div>
+
+                <!-- Controles do slider -->
+                <div class="slider-controls">
+                    <button class="slider-btn prev" aria-label="Anterior">‹</button>
+                    <button class="slider-btn next" aria-label="Próximo">›</button>
+                </div>
+            </div>
+        </section>
 
         <!-- Seção Benefícios -->
         <div class="beneficios-container">
@@ -357,7 +377,9 @@
         <div class="beneficios-container">
             <div class="container">
                 <div class="beneficios-title">
-                    <h3 id="beneficios-title-2" style="text-align: center; font-size: 2rem; color: var(--cor-cinza-escuro); margin-bottom: 1rem;"></h3>
+                    <h3 id="beneficios-title-2"
+                        style="text-align: center; font-size: 2rem; color: var(--cor-cinza-escuro); margin-bottom: 1rem;">
+                    </h3>
                 </div>
                 <div class="beneficios-grid">
                     <div class="beneficio-card">
@@ -461,7 +483,8 @@
 
     <!-- Custom JS -->
     <script src="script.js"></script>
-    <script src="cardsJogos.js"></script>    
+    <script src="cardsJogos.js"></script>
+    <script src="cardsJogosForaCasa.js"></script>
 </body>
 
 </html>

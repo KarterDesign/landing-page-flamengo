@@ -67,7 +67,7 @@ body {
 
 #databig {
   font-family: 'Soulcraft', sans-serif;
-  font-size: 60px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
@@ -131,19 +131,18 @@ body {
   box-shadow: 0 10px 25px rgba(198, 12, 48, 0.3);
   background: #CC1919;
   color: #FFF;
+}
 
-  .cardjogo:hover .grupo1,
+.cardjogo:hover .grupo1,
 .cardjogo:hover .grupo2 {
   color: #FFF;
 }
 
-  .btncardjogo {
-    transform: translateY(-7px);
-    transition: all 0.3s ease;
-    background: #fff;
-    color: #000;
-  }
-
+.cardjogo:hover .btncardjogo {
+  transform: translateY(-7px);
+  transition: all 0.3s ease;
+  background: #fff;
+  color: #000;
 }
 
 
@@ -1887,17 +1886,7 @@ img.lazy.loaded {
   overflow: hidden;
 }
 
-.maraca-secao::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('https://via.placeholder.com/1920x800/000000/333333?text=MARACANÃ') center/cover;
-  opacity: 0.1;
-  z-index: 1;
-}
+
 
 .maraca-secao .container {
   position: relative;
