@@ -659,7 +659,7 @@ function formatCurrency(value) {
 const pacotesData = {
     'oeste-inferior': {
         title: 'PACOTE OESTE INFERIOR',
-        banner: 'https://images.unsplash.com/photo-1577223625816-7546f13df25d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80',
+        banner: 'img/pacote oeste inferior.png',
         description: 'Desfrute de uma experiência única no setor Oeste Inferior do Maracanã. Tenha acesso privilegiado ao estádio mais icônico do Brasil, com vista incrível do campo e toda a estrutura necessária para viver momentos inesquecíveis.',
         features: [
             'Ingresso setor Oeste Inferior',
@@ -674,7 +674,7 @@ const pacotesData = {
     },
     'espaco-fla': {
         title: 'PACOTE ESPAÇO FLA+',
-        banner: 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80',
+        banner: 'img/pacote oeste inferior fla+.png',
         description: 'Viva a experiência premium no Espaço FLA+, área exclusiva para sócios-torcedores e convidados especiais. Desfrute de conforto máximo, gastronomia diferenciada e uma vista privilegiada do Maracanã.',
         features: [
             'Acesso ao Espaço FLA+',
@@ -689,7 +689,7 @@ const pacotesData = {
     },
     'camarote': {
         title: 'PACOTE CAMAROTE',
-        banner: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80',
+        banner: 'img/Soccer Stadium crowd.png',
         description: 'O máximo em experiência e exclusividade no Camarote ABSOLUT Sport. Ambiente climatizado, vista panorâmica privilegiada e serviços de primeira classe para você torcer com todo o conforto que merece.',
         features: [
             'Camarote ABSOLUT Sport',
@@ -750,11 +750,13 @@ function initPacotesModal() {
     
     // Event listener para o botão CTA
     modalCta.addEventListener('click', function() {
-        // Aqui você pode adicionar a lógica para o processo de compra
-        showNotification('Redirecionando para checkout...', 'info');
-        setTimeout(() => {
-            closePacoteModal();
-        }, 2000);
+        const pacoteId = modal.getAttribute('data-current-pacote');
+        const links = {
+            'oeste-inferior': 'https://absolut-sport.com.br/collections/flamengo',
+            'espaco-fla': 'https://absolut-sport.com.br/collections/flamengo'
+        };
+        window.open(links[pacoteId] || 'https://absolut-sport.com.br/collections/flamengo', '_blank');
+        closePacoteModal();
     });
 }
 
