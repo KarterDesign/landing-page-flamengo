@@ -50,6 +50,11 @@ function createCardJogo(jogo) {
     const card = document.createElement('div');
     card.className = 'cardjogo';
     
+    // Adicionar classe "embreve" se o texto do CTA for "Em breve"
+    if (jogo.textobtn === "Em breve") {
+        card.classList.add('embreve');
+    }
+    
     // Obter logo do campeonato
     const logoCampeonato = getLogoCampeonato(jogo.campeonato);
     

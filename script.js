@@ -973,6 +973,21 @@ const handleResize = debounce(() => {
 
 window.addEventListener('resize', handleResize);
 
+// ===== FOOTER FUNCTIONALITY =====
+// Adicionar funcionalidade para os botões "Voltar ao topo"
+document.addEventListener('DOMContentLoaded', function() {
+    const anchors = document.querySelectorAll('.ec-anchor-top');
+    anchors.forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    });
+});
+
 // ===== EXPORTAR FUNÇÕES (se necessário) =====
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
