@@ -1,7 +1,7 @@
 secao,elemento,id,tipo,conteudo_atual,observacoes
 header,logo_texto,header-logo-text,texto,Agência Oficial de Viagens e Experiências,Texto exibido ao lado do logo
-header,menu_link_1,nav-link-1,texto,Espaço FLA+,Primeiro link do menu
-header,menu_link_2,nav-link-2,texto,Oeste Inferior,Segundo link do menu
+header,menu_link_1,nav-link-1,texto,Pacote Oeste Inferior,Primeiro link do menu
+header,menu_link_2,nav-link-2,texto,Pacote Espaço Fla+,Segundo link do menu
 header,menu_link_3,nav-link-3,texto,Camarote ABSOLUT Sport,Terceiro link do menu
 header,logo_imagem,header-logo-img,imagem,img/flamengo-absolut-sport-logo-oficial-parceria.png,Logo principal do header
 hero,titulo_principal,typewriter-text,texto,FLAMENGO NAÇÃO,Título principal animado (typewriter)

@@ -11,11 +11,11 @@ const CONTEUDO_PADRAO = {
     // Header
     'header-logo-text': 'Agência Oficial de Viagens e Experiências',
     'header-logo-img': 'img/flamengo-absolut-sport-logo-oficial-parceria.png',
-    'nav-link-1': 'Espaço FLA+',
-    'nav-link-2': 'Oeste Inferior',
+    'nav-link-1': 'Pacote Oeste Inferior',
+    'nav-link-2': 'Pacote Espaço Fla+',
     'nav-link-3': 'Camarote ABSOLUT Sport',
-    'mobile-nav-link-1': 'Espaço FLA+',
-    'mobile-nav-link-2': 'Oeste Inferior',
+    'mobile-nav-link-1': 'Pacote Oeste Inferior',
+    'mobile-nav-link-2': 'Pacote Espaço Fla+',
     'mobile-nav-link-3': 'Camarote ABSOLUT Sport',
     
     // Hero

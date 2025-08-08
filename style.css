@@ -328,6 +328,14 @@ body {
   width: 100%;
 }
 
+/* ===== FONTE BARLOW PARA LINKS DO HEADER (APENAS DESKTOP) ===== */
+@media (min-width: 769px) {
+  .nav-links li a {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+  }
+}
+
 /* ===== MENU MOBILE TOGGLE ===== */
 .menu-toggle {
   display: none;
