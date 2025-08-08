@@ -88,7 +88,7 @@ const CONTEUDO_PADRAO = {
     'absolut-cta': 'Saiba mais',
     
     // Benefícios 2
-    'beneficios-title-2': 'Por que escolher a ABSOLUT Sport?',
+    'beneficios-title-2': '',
     'absolut-beneficio-1-text': 'Equipe Dedicada.',
     'absolut-beneficio-2-text': 'Atendimento e Suporte.',
     'absolut-beneficio-3-text': 'Melhores acomodações.',

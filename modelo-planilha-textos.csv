@@ -52,7 +52,7 @@ newsletter,imagem,newsletter-img,imagem,img/Jogadores.png,Imagem da newsletter
 absolut_sport,titulo,absolut-title,texto,POR QUE COMPRAR COM A<br><span style="color: #155f97;">ABSOLUT SPORT?</span>,Título da seção ABSOLUT Sport
 absolut_sport,descricao,absolut-description,texto,Na ABSOLUT Sport cada detalhe é pensado para que você viva o Flamengo do jeito que merece: sem preocupação com segurança e cercado de experiências oficiais e exclusivas. Somos a agência oficial de viagens e experiências do Clube o que garante acesso a ingressos certificados logística completa e atendimento dedicado seja no Maracanã ou em qualquer estádio do Brasil.,Descrição da seção ABSOLUT Sport
 absolut_sport,botao_cta,absolut-cta,texto,Saiba mais,Botão CTA da seção ABSOLUT Sport
-beneficios_2,titulo_secao,beneficios-title-2,texto,Por que escolher a ABSOLUT Sport?,Título da segunda seção de benefícios
+beneficios_2,titulo_secao,beneficios-title-2,texto,,Título da segunda seção de benefícios
 beneficios_2,beneficio_1,absolut-beneficio-1-text,texto,Equipe Dedicada.,Primeiro benefício da segunda seção
 beneficios_2,beneficio_2,absolut-beneficio-2-text,texto,Atendimento e Suporte.,Segundo benefício da segunda seção
 beneficios_2,beneficio_3,absolut-beneficio-3-text,texto,Melhores acomodações.,Terceiro benefício da segunda seção

@@ -2097,19 +2097,56 @@ img.lazy.loaded {
     padding: var(--espacamento-md) 0;
   }
 
-  .maraca-title {
+  .maraca-title,
+  #maraca-title-1,
+  #maraca-title-2,
+  #absolut-title,
+  #beneficios-title-1 {
+    font-family: 'Soulcraft', sans-serif;
     font-size: 2.5rem;
-    margin-bottom: var(--espacamento-sm);
+    font-weight: 900;
+    color: var(--cor-preto);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    margin-bottom: var(--espacamento-md);
+    text-align: left;
+  }
+  
+  .maraca-title > span,
+  #maraca-title-1 > span,
+  #maraca-title-2 > span,
+  #absolut-title > span {
+    font-family: 'Soulcraft', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--cor-vermelho-principal);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    margin-bottom: var(--espacamento-md);
+    text-align: left;
   }
 
-  .maraca-description {
-    font-size: 0.95rem;
-    margin: 0 auto var(--espacamento-md) auto;
+  .maraca-description,
+  #maraca-description-1,
+  #maraca-description-2,
+  #absolut-description {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--cor-preto);
+    line-height: 1.6;
+    text-align: left;
+    margin-bottom: 0;
+    text-shadow: none;
   }
 
-  .maraca-image {
+  .maraca-image,
+  .maraca-image2,
+  .maraca-image3 {
     height: 300px;
-    margin-top: var(--espacamento-md);
+    margin: var(--espacamento-md) auto 0 auto;
+    display: block;
   }
 
   .maraca-cta {
@@ -2119,18 +2156,56 @@ img.lazy.loaded {
 }
 
 @media (max-width: 576px) {
-  .maraca-title {
+  .maraca-title,
+  #maraca-title-1,
+  #maraca-title-2,
+  #absolut-title,
+  #beneficios-title-1 {
+    font-family: 'Soulcraft', sans-serif;
     font-size: 2rem;
+    font-weight: 900;
+    color: var(--cor-preto);
+    text-transform: uppercase;
     letter-spacing: 1px;
+    line-height: 1.1;
+    margin-bottom: var(--espacamento-md);
+    text-align: left;
+  }
+  
+  .maraca-title > span,
+  #maraca-title-1 > span,
+  #maraca-title-2 > span,
+  #absolut-title > span {
+    font-family: 'Soulcraft', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--cor-vermelho-principal);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    margin-bottom: var(--espacamento-md);
+    text-align: left;
   }
 
-  .maraca-description {
-    font-size: 0.9rem;
-    line-height: 1.5;
+  .maraca-description,
+  #maraca-description-1,
+  #maraca-description-2,
+  #absolut-description {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--cor-preto);
+    line-height: 1.6;
+    text-align: left;
+    margin-bottom: 0;
+    text-shadow: none;
   }
 
-  .maraca-image {
+  .maraca-image,
+  .maraca-image2,
+  .maraca-image3 {
     height: 250px;
+    margin: var(--espacamento-md) auto 0 auto;
+    display: block;
   }
 
   .maraca-cta {
