@@ -1916,7 +1916,7 @@ img.lazy.loaded {
 
 .maraca-title {
   font-family: 'Soulcraft', sans-serif;
-  font-size: 3.5rem;
+  font-size: 3.1rem;
   font-weight: 900;
   line-height: 1.1;
   margin-bottom: var(--espacamento-md);
@@ -1929,7 +1929,7 @@ img.lazy.loaded {
 .maraca-title>span {
   font-family: 'Soulcraft', sans-serif;
   color: var(--cor-vermelho-principal);
-  font-size: 3.5rem;
+  font-size: 3.1rem;
   font-weight: 900;
   line-height: 1.1;
   margin-bottom: var(--espacamento-md);

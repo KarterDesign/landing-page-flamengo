@@ -83,7 +83,7 @@ const CONTEUDO_PADRAO = {
     'newsletter-img': 'img/Jogadores.png',
     
     // Absolut Sport
-    'absolut-title': 'POR QUE COMPRAR COM A<br><span style="color: #155f97;">ABSOLUT SPORT?</span>',
+    'absolut-title': 'POR QUE COMPRAR COM A <span style="color: #155f97;">ABSOLUT SPORT?</span>',
     'absolut-description': 'Na ABSOLUT Sport, cada detalhe é pensado para que você viva o Flamengo do jeito que merece: sem preocupação, com segurança e cercado de experiências oficiais e exclusivas. Somos a agência oficial de viagens e experiências do Clube, o que garante acesso a ingressos certificados, logística completa e atendimento dedicado, seja no Maracanã ou em qualquer estádio do Brasil.',
     'absolut-cta': 'Saiba mais',
     
