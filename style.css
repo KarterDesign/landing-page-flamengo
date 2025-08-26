@@ -1917,7 +1917,7 @@ img.lazy.loaded {
 /* ===== SEÇÃO O MARACA É NOSSO ===== */
 .maraca-secao {
   position: relative;
-  padding: 5px 0;
+  padding: 40px 0;
   background: #fafafa;
   overflow: hidden;
 }
@@ -2084,7 +2084,7 @@ img.lazy.loaded {
 /* ===== RESPONSIVIDADE DA SEÇÃO MARACA ===== */
 @media (max-width: 1024px) {
   .maraca-secao {
-    padding: 60px 0;
+    padding: 80px 0;
   }
 
   .maraca-title {
@@ -2102,7 +2102,7 @@ img.lazy.loaded {
 
 @media (max-width: 768px) {
   .maraca-secao {
-    padding: 40px 0;
+    padding: 60px 0;
   }
 
   .maraca-content {
@@ -2169,6 +2169,10 @@ img.lazy.loaded {
 }
 
 @media (max-width: 576px) {
+  .maraca-secao {
+    padding: 40px 0;
+  }
+  
   .maraca-title,
   #maraca-title-1,
   #maraca-title-2,
