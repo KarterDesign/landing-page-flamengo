@@ -1945,9 +1945,10 @@ img.lazy.loaded {
 /* ===== SEÇÃO O MARACA É NOSSO ===== */
 .maraca-secao {
   position: relative;
-  padding: 40px 0;
+  padding: 20px 0;
   background: #fafafa;
   overflow: hidden;
+  margin-bottom: 0;
 }
 
 
@@ -2600,8 +2601,8 @@ img.lazy.loaded {
 
 /* ===== SEÇÃO BENEFÍCIOS ===== */
 .beneficios-container {
-  padding: 4rem 0;
-  margin-top: 3rem;
+  padding: 2rem 0;
+  margin-top: 0;
   background-color: var(--cor-cinza-claro);
 }
 
@@ -2664,8 +2665,8 @@ img.lazy.loaded {
 /* Media Queries para Benefícios */
 @media (max-width: 768px) {
   .beneficios-container {
-    padding: 3rem 0;
-    margin-top: 2rem;
+    padding: 1.5rem 0;
+    margin-top: 0;
   }
 
   .beneficios-grid {
@@ -3053,8 +3054,8 @@ img.lazy.loaded {
 	place-items: center;
 	justify-content: center;
 	gap: 45px;
-	padding: 64px 60px 36px;
-	margin-top: 64px;	
+	padding: 40px 60px 36px;
+	margin-top: 0;	
 }
 
 .ec-anchor-top {
