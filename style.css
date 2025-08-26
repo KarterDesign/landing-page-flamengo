@@ -92,7 +92,7 @@ body {
   font-family: 'Barlow', sans-serif;
   font-size: 17px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   line-height: normal;
   text-transform: uppercase;
 }
@@ -104,7 +104,7 @@ body {
   font-family: 'Barlow', sans-serif;
   font-size: 18px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: normal;
   text-transform: uppercase;
 }
@@ -224,7 +224,7 @@ body {
   font-family: Barlow;
   font-size: 21px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: normal;
   border-radius: 50px;
   background: #000;
@@ -2978,7 +2978,7 @@ img.lazy.loaded {
 
 .loading-cards {
   color: var(--cor-vermelho-principal);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .error-cards {
