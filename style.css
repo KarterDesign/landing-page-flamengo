@@ -2390,7 +2390,7 @@ img.lazy.loaded {
   color: var(--cor-branco);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .pacote-title {
