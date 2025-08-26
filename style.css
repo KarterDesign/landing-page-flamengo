@@ -2193,6 +2193,7 @@ img.lazy.loaded {
   .maraca-cta {
     padding: 0.8rem 1.5rem;
     font-size: 0.9rem;
+    letter-spacing: 2px;
   }
 }
 
@@ -2257,6 +2258,7 @@ img.lazy.loaded {
     padding: 0.7rem 1.2rem;
     font-size: 0.8rem;
     border-radius: 40px;
+    letter-spacing: 1.5px;
   }
 
   .maraca-content {
