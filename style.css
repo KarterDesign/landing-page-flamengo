@@ -1656,6 +1656,10 @@ img.lazy.loaded {
     height: 250px;
   }
 
+  .banner-content {
+    padding-left: 20px;
+  }
+
   .banner-content h1 {
     font-size: 2rem;
   }
@@ -1773,8 +1777,11 @@ img.lazy.loaded {
 }
 
 @media (max-width: 768px) {
-  .banner-content h1 {
+  .banner-content {
+    padding-left: 15px;
+  }
 
+  .banner-content h1 {
     color: #FFFFFF;
   }
 }
