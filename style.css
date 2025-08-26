@@ -2929,6 +2929,15 @@ img.lazy.loaded {
 
   .newsletter-form-container {
     padding: 30px 25px;
+    margin: 0 auto;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .newsletter-form {
+    width: 100%;
+    text-align: center;
   }
 
   .players-image {
@@ -2952,7 +2961,15 @@ img.lazy.loaded {
 
   .newsletter-form-container {
     padding: 25px 20px;
-    margin: 0 15px;
+    margin: 0 auto;
+    max-width: 280px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .newsletter-form {
+    width: 100%;
+    text-align: center;
   }
 
   .newsletter-form .form-control {
