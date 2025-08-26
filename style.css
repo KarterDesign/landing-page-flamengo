@@ -2571,6 +2571,7 @@ img.lazy.loaded {
 /* ===== SEÇÃO BENEFÍCIOS ===== */
 .beneficios-container {
   padding: 4rem 0;
+  margin-top: 3rem;
   background-color: var(--cor-cinza-claro);
 }
 
@@ -2634,6 +2635,7 @@ img.lazy.loaded {
 @media (max-width: 768px) {
   .beneficios-container {
     padding: 3rem 0;
+    margin-top: 2rem;
   }
 
   .beneficios-grid {
@@ -2657,6 +2659,7 @@ img.lazy.loaded {
 @media (max-width: 480px) {
   .beneficios-container {
     padding: 2rem 0;
+    margin-top: 1.5rem;
   }
 
   .beneficios-title p {
