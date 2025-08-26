@@ -1574,7 +1574,7 @@ img.lazy.loaded {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: rgba(198, 12, 48, 0.9);
+  background: var(--cor-vermelho-principal);
   border: none;
   color: #FFFFFF;
   font-size: 1.5rem;
@@ -1585,6 +1585,18 @@ img.lazy.loaded {
   justify-content: center;
   pointer-events: all;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  line-height: 1;
+  text-align: center;
+  padding: 0;
+  font-weight: bold;
+}
+
+.slider-btn i {
+  font-size: 1.2rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .slider-btn:hover {
