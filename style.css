@@ -2689,8 +2689,8 @@ img.lazy.loaded {
 
 @media (max-width: 480px) {
   .beneficios-container {
-    padding: 2rem 0;
-    margin-top: 1.5rem;
+    padding: 1rem 0;
+    margin-top: 0;
   }
 
   .beneficios-title p {
