@@ -1,0 +1,437 @@
+{
+    "projeto": {
+        "nome": "Landing Page Flamengo - ABSOLUT Sport Brasil",
+        "descricao": "Landing page oficial da ABSOLUT Sport Brasil como agência oficial de viagens e experiências do Flamengo, com sistema de conteúdo dinâmico via Google Sheets",
+        "tecnologias": [
+            "HTML5",
+            "CSS3",
+            "JavaScript ES6",
+            "Bootstrap 5.3.0",
+            "Font Awesome 6.0",
+            "Google Fonts",
+            "Google Sheets API"
+        ],
+        "tipo": "Landing Page Responsiva com CMS Dinâmico",
+        "imagens placeholder": "https://unsplash.com"
+    },
+    "estrutura_visual": {
+        "paleta_cores": {
+            "principal": "#C60C30 (Vermelho Flamengo)",
+            "secundaria": "#A00A28 (Vermelho Escuro)",
+            "neutra": "#000000 (Preto)",
+            "apoio": "#FFFFFF (Branco)",
+            "cinzas": [
+                "#F5F5F5",
+                "#CCCCCC",
+                "#333333",
+                "#666666"
+            ],
+            "cards": {
+                "estatico": "#890000",
+                "hover": "#CC1919",
+                "embreve": "#818181"
+            }
+        },
+        "tipografia": {
+            "titulos": "Soulcraft (Google Fonts) - Fonte display para títulos e elementos principais",
+            "textos": "Barlow (Google Fonts) - Fonte sans-serif para textos corridos com pesos 500-900",
+            "aplicacao": "Títulos em maiúsculo, textos com line-height 1.6-1.8, letter-spacing em elementos destacados"
+        },
+        "layout": {
+            "tipo": "Single Page Application (SPA)",
+            "largura_maxima": "1200px",
+            "responsividade": "Mobile-first com breakpoints em 576px, 768px, 1024px",
+            "grid_sistema": "Bootstrap Grid + CSS Grid customizado"
+        }
+    },
+    "secoes_detalhadas": {
+        "1_header": {
+            "tipo": "Header fixo responsivo",
+            "elementos": [
+                "Logo do Flamengo + ABSOLUT Sport",
+                "Texto institucional da agência",
+                "Menu desktop com 3 links para pacotes",
+                "Menu hambúrguer mobile com animação",
+                "Background preto com borda vermelha inferior"
+            ],
+            "funcionalidades": [
+                "Header transparente que fica opaco no scroll",
+                "Menu mobile com overlay full-screen",
+                "Smooth scroll para links internos",
+                "Logo responsivo que adapta tamanho"
+            ]
+        },
+        "2_hero_banner": {
+            "tipo": "Hero com vídeo background e efeito typewriter",
+            "elementos": [
+                "Vídeo em loop (intro-flamengo-nação.mp4)",
+                "Overlay escuro semi-transparente",
+                "Título com efeito máquina de escrever animado",
+                "Subtítulo institucional",
+                "CTA button com efeito shimmer"
+            ],
+            "conteudo_typewriter": [
+                "AGÊNCIA OFICIAL DE VIAGENS E EXPERIÊNCIAS DO FLAMENGO",
+                "AGÊNCIA OFICIAL DA NAÇÃO",
+                "ABSOLUT SPORT - ISSO É VIVER"
+            ],
+            "altura": "80vh desktop, 100vh mobile",
+            "animacoes": [
+                "Typewriter com cursor piscante",
+                "Fade in nos elementos de texto",
+                "Button hover com shimmer effect"
+            ]
+        },
+        "3_secao_jogos_casa": {
+            "titulo": "VOCÊ AONDE O FLAMENGO ESTIVER",
+            "tipo": "Slider horizontal de cards de jogos",
+            "background": "Imagem de torcedores com overlay",
+            "funcionalidades": [
+                "Cards dinâmicos carregados via Google Sheets",
+                "Slider com controles manuais e touch/drag",
+                "Hover effects progressivos nos cards",
+                "Estados de loading, erro e sem dados"
+            ],
+            "estrutura_card": {
+                "logo_campeonato": "Dinâmico baseado no nome (Brasileiro, Libertadores, etc.)",
+                "informacoes": [
+                    "Data pequena",
+                    "Horário",
+                    "Local"
+                ],
+                "destaque": [
+                    "Data grande",
+                    "Time 1 vs Time 2"
+                ],
+                "cta_button": "Link para compra com texto dinâmico",
+                "estados": [
+                    "Normal",
+                    "Em breve (desabilitado)",
+                    "Hover com animação"
+                ]
+            }
+        },
+        "4_agencia_oficial": {
+            "titulo": "AGÊNCIA OFICIAL DA NAÇÃO",
+            "tipo": "Seção com background de imagem",
+            "layout": "Grid 2 colunas (texto + imagem background)",
+            "background": "flamengo-agencia-oficial-absolut-sport.jpg",
+            "conteudo": "Texto explicando credenciais oficiais da ABSOLUT Sport",
+            "responsividade": "Mobile vira layout vertical com imagem separada"
+        },
+        "5_maraca_nosso": {
+            "titulo": "O MARACA É NOSSO - O LUGAR É SEU",
+            "tipo": "Seção informativa com imagem",
+            "layout": "Grid 2 colunas alternadas",
+            "imagem": "o-maraca-é-nosso-o-lugar-e-seu-absolut-sport-agencia-oficial-do-flamengo.jpg",
+            "conteudo": "Descrição da experiência no Maracanã",
+            "animacoes": [
+                "Fade in left (texto)",
+                "Fade in right (imagem)"
+            ]
+        },
+        "6_pacotes_disponiveis": {
+            "titulo": "PACOTES DISPONÍVEIS",
+            "tipo": "Grid de cards interativos com modal",
+            "pacotes": [
+                {
+                    "nome": "PACOTE OESTE INFERIOR",
+                    "imagem": "pacote oeste inferior.png",
+                    "tags": [
+                        "NA TORCIDA",
+                        "ESGOTANDO RÁPIDO",
+                        "MAIS PROCURADO"
+                    ],
+                    "modal": {
+                        "features": [
+                            "Ingresso setor Oeste Inferior",
+                            "Transfer oficial",
+                            "Embarque na Gávea",
+                            "Guia credenciado",
+                            "Seguro viagem",
+                            "Kit torcedor",
+                            "Lanche",
+                            "Suporte 24h"
+                        ]
+                    }
+                },
+                {
+                    "nome": "PACOTE ESPAÇO FLA+",
+                    "imagem": "pacote oeste inferior fla+.png",
+                    "tags": [
+                        "ESPAÇO PREMIUM",
+                        "VISÃO PRIVILEGIADA",
+                        "BUFFET LIBERADO"
+                    ],
+                    "modal": {
+                        "features": [
+                            "Acesso ao Espaço FLA+",
+                            "Buffet premium",
+                            "Bebidas liberadas",
+                            "Transfer executivo",
+                            "Estacionamento exclusivo",
+                            "Recepção VIP",
+                            "Brinde oficial",
+                            "Atendimento personalizado"
+                        ]
+                    }
+                },
+                {
+                    "nome": "PACOTE CAMAROTE",
+                    "imagem": "Soccer Stadium crowd.png",
+                    "tags": [
+                        "CAMAROTE",
+                        "VISÃO PRIVILEGIADA",
+                        "ÚLTIMAS UNIDADES"
+                    ],
+                    "modal": {
+                        "features": [
+                            "Camarote ABSOLUT Sport",
+                            "Ambiente climatizado",
+                            "Vista panorâmica",
+                            "Open bar premium",
+                            "Gastronomia gourmet",
+                            "Valet parking",
+                            "Área VIP",
+                            "Concierge",
+                            "Brinde cortesia"
+                        ]
+                    }
+                }
+            ],
+            "efeitos": [
+                "Zoom progressivo em 3 etapas no hover",
+                "Modal full-screen com informações detalhadas",
+                "Cards responsivos com aspect-ratio 1:1"
+            ]
+        },
+        "7_siga_flamengo": {
+            "titulo": "SIGA O FLAMENGO AONDE ELE FOR",
+            "tipo": "Seção informativa invertida",
+            "layout": "Grid com imagem à esquerda",
+            "imagem": "siga-o-flamengo.png"
+        },
+        "8_jogos_fora_casa": {
+            "tipo": "Segunda seção de slider de jogos",
+            "funcionalidade": "Idêntica à seção de jogos em casa, mas carrega de planilha separada",
+            "google_sheet": "Aba 'jogos-fora-casa'"
+        },
+        "9_beneficios": {
+            "titulo": "Benefícios dos Pacotes",
+            "tipo": "Grid de cards com ícones",
+            "layout": "5 colunas em desktop, responsivo",
+            "items": [
+                {
+                    "icone": "fas fa-ticket-alt",
+                    "texto": "Ingressos no setor da torcida"
+                },
+                {
+                    "icone": "fas fa-bed",
+                    "texto": "Hospedagem nos melhores hotéis"
+                },
+                {
+                    "icone": "fas fa-bus",
+                    "texto": "Matchday transfer"
+                },
+                {
+                    "icone": "fas fa-gift",
+                    "texto": "Experiências locais e brindes"
+                },
+                {
+                    "icone": "fas fa-plane",
+                    "texto": "Aéreo (sob consulta)"
+                }
+            ]
+        },
+        "10_newsletter": {
+            "titulo": "QUER SER AVISADO SOBRE OS PRÓXIMOS PACOTES?",
+            "tipo": "Formulário de cadastro com validação",
+            "layout": "Grid 3 colunas (texto + form + imagem)",
+            "background": "Gradiente escuro com efeitos",
+            "campos": [
+                "Nome",
+                "Email",
+                "Time que torce",
+                "Perfil",
+                "Captcha matemático"
+            ],
+            "validacoes": [
+                "Campos obrigatórios",
+                "Formato de email",
+                "Captcha correto"
+            ],
+            "imagem": "Jogadores.png"
+        },
+        "11_absolut_sport": {
+            "titulo": "POR QUE COMPRAR COM A ABSOLUT SPORT?",
+            "tipo": "Seção institucional + benefícios",
+            "layout": "Texto + imagem da equipe",
+            "imagem": "equipe-absolut-sport.jpg",
+            "beneficios_grid": [
+                {
+                    "icone": "fas fa-ticket-alt",
+                    "texto": "Ingressos oficiais"
+                },
+                {
+                    "icone": "fas fa-bed",
+                    "texto": "Melhores acomodações"
+                },
+                {
+                    "icone": "fas fa-bus",
+                    "texto": "Transfer oficiais"
+                },
+                {
+                    "icone": "fas fa-users",
+                    "texto": "Equipe dedicada"
+                },
+                {
+                    "icone": "fas fa-plane",
+                    "texto": "Aéreo sob cotação"
+                }
+            ]
+        },
+        "12_footer": {
+            "tipo": "Footer institucional completo",
+            "background": "#080B1E",
+            "secoes": [
+                "Links rápidos para produtos (GP Brasil, Libertadores, NFL)",
+                "Mapa do site (Libertadores, Fórmula 1, Futebol, Tênis)",
+                "Institucional (Sobre nós, Política de Privacidade)",
+                "Ajuda e suporte (FAQ, Status do Pedido)",
+                "Contato (Telefone, Email, Fale Conosco)",
+                "Redes sociais (Facebook, Instagram, YouTube, LinkedIn)",
+                "Certificados de segurança",
+                "Formas de pagamento aceitas",
+                "Botão 'Voltar ao topo' flutuante"
+            ],
+            "copyright": "© 2025 Absolut Sport - Todos os direitos reservados | Isso é Viver"
+        }
+    },
+    "sistema_cms_dinamico": {
+        "google_sheets_integration": {
+            "planilha_conteudo": {
+                "url": "Google Sheets público em formato CSV",
+                "colunas": [
+                    "id",
+                    "tipo",
+                    "conteudo_atual"
+                ],
+                "tipos_suportados": [
+                    "texto",
+                    "imagem",
+                    "video"
+                ],
+                "fallback": "Conteúdo padrão hardcoded caso a planilha falhe"
+            },
+            "planilha_jogos_casa": {
+                "url": "Aba específica para jogos em casa",
+                "colunas": [
+                    "campeonato",
+                    "datasmall",
+                    "horasmall",
+                    "localsmall",
+                    "databig",
+                    "time1",
+                    "time2",
+                    "textobtn",
+                    "link"
+                ]
+            },
+            "planilha_jogos_fora": {
+                "url": "Aba específica para jogos fora de casa",
+                "estrutura": "Idêntica aos jogos em casa"
+            }
+        },
+        "funcionalidades": [
+            "Carregamento automático na inicialização da página",
+            "Sistema de fallback para conteúdo offline",
+            "Cache local dos dados carregados",
+            "Debug mode para desenvolvimento",
+            "Função de reload manual do conteúdo"
+        ]
+    },
+    "interatividade_javascript": {
+        "funcionalidades_principais": [
+            "Efeito typewriter no hero com múltiples frases",
+            "Slider de jogos com controles manuais e touch",
+            "Modal system para detalhes dos pacotes",
+            "Menu mobile com animação hamburger",
+            "Smooth scroll para navegação interna",
+            "Validação de formulários em tempo real",
+            "Sistema de notificações toast",
+            "Lazy loading de imagens",
+            "Animações on scroll (Intersection Observer)"
+        ],
+        "efeitos_especiais": [
+            "Cards com zoom progressivo em 3 etapas",
+            "Buttons com efeito shimmer",
+            "Header que muda opacidade no scroll",
+            "Countdown timer (caso necessário)",
+            "Loading states para conteúdo dinâmico"
+        ]
+    },
+    "responsividade": {
+        "breakpoints": {
+            "mobile": "até 576px",
+            "tablet": "577px a 768px",
+            "desktop_small": "769px a 1024px",
+            "desktop_large": "1025px+"
+        },
+        "adaptacoes": [
+            "Menu desktop vira hamburger mobile",
+            "Hero mantém proporções em todas as telas",
+            "Sliders ganham touch/drag em mobile",
+            "Newsletter vira layout vertical",
+            "Cards de pacotes ficam full-width mobile",
+            "Footer reorganiza colunas responsivamente"
+        ]
+    },
+    "otimizacoes_performance": [
+        "Lazy loading de imagens não críticas",
+        "Debounce/throttle em eventos de scroll",
+        "CSS com variáveis para easy theming",
+        "JavaScript modular com funções separadas",
+        "Intersection Observer para animações",
+        "Compressão de imagens WebP quando possível"
+    ],
+    "estrutura_arquivos": {
+        "raiz": [
+            "index.html - Estrutura principal da página",
+            "style.css - Todos os estilos e responsividade",
+            "script.js - JavaScript principal com todas as funcionalidades",
+            "conteudoDinamico.js - Sistema de integração com Google Sheets",
+            "cardsJogos.js - Sistema específico para jogos em casa",
+            "cardsJogosForaCasa.js - Sistema específico para jogos fora",
+            "footer.html - HTML do rodapé (pode ser integrado)"
+        ],
+        "diretorios": {
+            "img/": "Todas as imagens do projeto (logos, backgrounds, pacotes)",
+            "vid/": "Vídeos (intro-flamengo-nação.mp4)"
+        }
+    },
+    "dependencias_externas": [
+        "Bootstrap 5.3.0 (CSS + JS)",
+        "Font Awesome 6.0 (ícones)",
+        "Google Fonts (Soulcraft + Barlow)",
+        "Google Sheets como CMS (URLs específicas fornecidas)"
+    ],
+    "instrucoes_implementacao": [
+        "1. Criar estrutura HTML completa seguindo o layout das seções",
+        "2. Implementar CSS com sistema de variáveis e responsividade mobile-first",
+        "3. Desenvolver JavaScript modular com todas as funcionalidades interativas",
+        "4. Integrar sistema de Google Sheets para conteúdo dinâmico",
+        "5. Implementar sistema de cards de jogos com dados externos",
+        "6. Adicionar todas as animações e efeitos especiais",
+        "7. Testar responsividade em todos os breakpoints",
+        "8. Otimizar performance e acessibilidade"
+    ],
+    "observacoes_especiais": [
+        "O projeto é uma landing page promocional oficial do Flamengo",
+        "Deve manter identidade visual rigorosa das cores oficiais",
+        "Sistema CMS via Google Sheets permite atualizações sem código",
+        "Cards de jogos são completamente dinâmicos e atualizados automaticamente",
+        "Modal system permite expandir informações sem sair da página",
+        "Toda a interatividade deve funcionar sem refresh de página",
+        "Design é focado em conversão para venda de pacotes de viagem"
+    ]
+}

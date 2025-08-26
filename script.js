@@ -310,9 +310,21 @@ function handlePartidaClick(card) {
 
 // Slider de Partidas
 function initMatchesSlider() {
-    const slider = document.querySelector('.matches-slider');
-    const prevBtn = document.querySelector('.slider-btn.prev');
-    const nextBtn = document.querySelector('.slider-btn.next');
+    // Inicializar slider principal (jogos em casa)
+    initSingleSlider('#matches-slider-container');
+    
+    // Inicializar slider de jogos fora de casa
+    initSingleSlider('#matches-slider-fora-casa-container');
+}
+
+// Função para inicializar um slider individual
+function initSingleSlider(containerSelector) {
+    const container = document.querySelector(containerSelector);
+    if (!container) return;
+    
+    const slider = container.querySelector('.matches-slider');
+    const prevBtn = container.querySelector('.slider-btn.prev');
+    const nextBtn = container.querySelector('.slider-btn.next');
     
     if (!slider || !prevBtn || !nextBtn) return;
     
