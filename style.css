@@ -464,6 +464,19 @@ body {
   /* Espaço para o header fixo */
 }
 
+/* ===== RESPONSIVIDADE DO BODY ===== */
+@media (max-width: 768px) {
+  body {
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    padding-top: 50px;
+  }
+}
+
 /* ===== TIPOGRAFIA ===== */
 h1,
 h2,
@@ -1008,6 +1021,11 @@ button {
     --espacamento-lg: 2rem;
   }
 
+  .hero-banner {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
   .hero-title {
     font-size: 2.5rem;
     min-height: 120px;
@@ -1050,6 +1068,11 @@ button {
     --espacamento-xl: 1.5rem;
     --espacamento-lg: 1.5rem;
     --espacamento-md: 1rem;
+  }
+
+  .hero-banner {
+    margin-top: 0;
+    padding-top: 0;
   }
 
   .hero-title {
