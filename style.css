@@ -1883,11 +1883,9 @@ img.lazy.loaded {
 
   }
 
-
-
   .agencia-title {
     font-size: 2.5rem;
-    text-align: left;
+    text-align: center;
     color: var(--cor-preto);
 
   }
@@ -1910,12 +1908,12 @@ img.lazy.loaded {
     letter-spacing: 1px;
     line-height: 1.1;
     margin-bottom: var(--espacamento-md);
-    text-align: left;
+    text-align: center;
   }
 
   .agencia-description {
     font-size: 1rem;
-    text-align: left;
+    text-align: center;
     color: var(--cor-preto);
     text-shadow: none;
   }
@@ -2146,7 +2144,7 @@ img.lazy.loaded {
     letter-spacing: 2px;
     line-height: 1.1;
     margin-bottom: var(--espacamento-md);
-    text-align: left;
+    text-align: center;
   }
   
   .maraca-title > span,
@@ -2161,7 +2159,7 @@ img.lazy.loaded {
     letter-spacing: 2px;
     line-height: 1.1;
     margin-bottom: var(--espacamento-md);
-    text-align: left;
+    text-align: center;
   }
 
   .maraca-description,
@@ -2172,7 +2170,7 @@ img.lazy.loaded {
     font-weight: 600;
     color: var(--cor-preto);
     line-height: 1.6;
-    text-align: left;
+    text-align: center;
     margin-bottom: 0;
     text-shadow: none;
   }
@@ -2209,7 +2207,7 @@ img.lazy.loaded {
     letter-spacing: 1px;
     line-height: 1.1;
     margin-bottom: var(--espacamento-md);
-    text-align: left;
+    text-align: center;
   }
   
   .maraca-title > span,
@@ -2224,7 +2222,7 @@ img.lazy.loaded {
     letter-spacing: 1px;
     line-height: 1.1;
     margin-bottom: var(--espacamento-md);
-    text-align: left;
+    text-align: center;
   }
 
   .maraca-description,
@@ -2235,7 +2233,7 @@ img.lazy.loaded {
     font-weight: 600;
     color: var(--cor-preto);
     line-height: 1.6;
-    text-align: left;
+    text-align: center;
     margin-bottom: 0;
     text-shadow: none;
   }
