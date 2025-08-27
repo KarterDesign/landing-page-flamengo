@@ -2653,6 +2653,13 @@ img.lazy.loaded {
   color: var(--cor-vermelho-principal);
 }
 
+.beneficio-icon img {
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  margin-bottom: 1.5rem;
+}
+
 .beneficio-text h4 {
   font-family: 'Barlow', sans-serif;
   font-size: 1.2rem;
@@ -2682,6 +2689,11 @@ img.lazy.loaded {
     font-size: 2.5rem;
   }
 
+  .beneficio-icon img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
   .beneficio-text h4 {
     font-size: 1.1rem;
   }
@@ -2706,6 +2718,11 @@ img.lazy.loaded {
     font-size: 2rem;
   }
 
+  .beneficio-icon img {
+    width: 2rem;
+    height: 2rem;
+  }
+
   .beneficio-text h4 {
     font-size: 1rem;
   }
@@ -2725,6 +2742,11 @@ img.lazy.loaded {
 
   .beneficio-icon i {
     font-size: 2.5rem;
+  }
+
+  .beneficio-icon img {
+    width: 2.5rem;
+    height: 2.5rem;
   }
 
   .beneficio-text h4 {
