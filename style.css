@@ -2672,6 +2672,7 @@ img.lazy.loaded {
   height: 3rem;
   object-fit: contain;
   margin-bottom: 1.5rem;
+  filter: brightness(0) saturate(100%) invert(8%) sepia(100%) saturate(7482%) hue-rotate(357deg) brightness(95%) contrast(118%);
 }
 
 .beneficio-text h4 {
@@ -2706,6 +2707,7 @@ img.lazy.loaded {
   .beneficio-icon img {
     width: 2.5rem;
     height: 2.5rem;
+    filter: brightness(0) saturate(100%) invert(8%) sepia(100%) saturate(7482%) hue-rotate(357deg) brightness(95%) contrast(118%);
   }
 
   .beneficio-text h4 {
@@ -2735,6 +2737,7 @@ img.lazy.loaded {
   .beneficio-icon img {
     width: 2rem;
     height: 2rem;
+    filter: brightness(0) saturate(100%) invert(8%) sepia(100%) saturate(7482%) hue-rotate(357deg) brightness(95%) contrast(118%);
   }
 
   .beneficio-text h4 {
@@ -2761,6 +2764,7 @@ img.lazy.loaded {
   .beneficio-icon img {
     width: 2.5rem;
     height: 2.5rem;
+    filter: brightness(0) saturate(100%) invert(8%) sepia(100%) saturate(7482%) hue-rotate(357deg) brightness(95%) contrast(118%);
   }
 
   .beneficio-text h4 {
