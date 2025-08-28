@@ -2360,6 +2360,28 @@ img.lazy.loaded {
   box-shadow: var(--sombra-hover);
 }
 
+/* Animação de destaque para cards de pacote */
+.pacote-card.pacote-highlight {
+  animation: pacoteHighlight 1s ease-in-out;
+  box-shadow: 0 0 30px rgba(181, 18, 16, 0.6);
+  transform: scale(1.05);
+}
+
+@keyframes pacoteHighlight {
+  0% {
+    transform: scale(1);
+    box-shadow: var(--sombra-card);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(181, 18, 16, 0.8);
+  }
+  100% {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(181, 18, 16, 0.6);
+  }
+}
+
 .pacote-image {
   position: absolute;
   top: 0;

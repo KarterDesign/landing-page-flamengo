@@ -31,7 +31,46 @@ function initializeApp() {
     initPacoteZoomEffect(); // Adicionado para o efeito de zoom progressivo
     initTypewriter(); // Adicionado para o efeito máquina de escrever
     
+    // Reinicializar smooth scroll após carregamento de conteúdo dinâmico
+    initDynamicContentHandlers();
+    
     console.log('✅ Landing Page Flamengo inicializada com sucesso!');
+}
+
+/**
+ * Inicializa handlers para conteúdo dinâmico
+ */
+function initDynamicContentHandlers() {
+    // Observar mudanças no DOM para reinicializar event listeners
+    const observer = new MutationObserver(function(mutations) {
+        let shouldReinit = false;
+        
+        mutations.forEach(function(mutation) {
+            if (mutation.type === 'childList') {
+                mutation.addedNodes.forEach(function(node) {
+                    if (node.nodeType === 1 && node.querySelectorAll) {
+                        const links = node.querySelectorAll('a[href^="#"]');
+                        if (links.length > 0) {
+                            shouldReinit = true;
+                        }
+                    }
+                });
+            }
+        });
+        
+        if (shouldReinit) {
+            // Aguardar um pouco para garantir que o conteúdo foi renderizado
+            setTimeout(() => {
+                initSmoothScroll();
+            }, 100);
+        }
+    });
+    
+    // Observar mudanças no body
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
 }
 
 // ===== FAQ ACCORDION =====
@@ -80,21 +119,131 @@ function toggleFAQItem(questionElement) {
 // ===== SMOOTH SCROLL =====
 /**
  * Inicializa scroll suave para links internos
+ * 
+ * Funcionalidades:
+ * - Scroll suave para seções internas
+ * - Detecção automática de links de pacotes específicos
+ * - Abertura automática de modais após navegação
+ * - Suporte a conteúdo dinâmico
+ * - Feedback visual com destaque de cards
  */
 function initSmoothScroll() {
+    // Remover event listeners existentes para evitar duplicação
+    removeSmoothScrollListeners();
+    
     const internalLinks = document.querySelectorAll('a[href^="#"]');
     
     internalLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                smoothScrollTo(targetElement);
-            }
-        });
+        link.addEventListener('click', handleSmoothScrollClick);
     });
+}
+
+/**
+ * Remove event listeners de scroll suave para evitar duplicação
+ */
+function removeSmoothScrollListeners() {
+    const internalLinks = document.querySelectorAll('a[href^="#"]');
+    
+    internalLinks.forEach(link => {
+        link.removeEventListener('click', handleSmoothScrollClick);
+    });
+}
+
+/**
+ * Handler para clique em links de scroll suave
+ */
+function handleSmoothScrollClick(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+    
+    if (targetElement) {
+        // Verificar se é um link de pacote específico
+        const pacoteId = getPacoteIdFromLink(this);
+        
+        if (pacoteId) {
+            // Navegar para a seção e abrir modal do pacote
+            smoothScrollToAndOpenModal(targetElement, pacoteId);
+        } else {
+            // Navegação normal
+            smoothScrollTo(targetElement);
+        }
+    }
+}
+
+/**
+ * Identifica o ID do pacote baseado no texto do link
+ */
+function getPacoteIdFromLink(linkElement) {
+    const linkText = linkElement.textContent.trim().toLowerCase();
+    
+    // Mapeamento dos textos dos links para os IDs dos pacotes
+    const linkToPacoteMap = {
+        'pacote oeste inferior': 'oeste-inferior',
+        'pacote espaço fla+': 'espaco-fla',
+        'pacote maracanã+': 'camarote',
+        // Fallbacks para variações de texto
+        'pacote oeste inferior': 'oeste-inferior',
+        'pacote espaço fla': 'espaco-fla',
+        'pacote maracanã': 'camarote'
+    };
+    
+    // Verificar correspondência exata primeiro
+    if (linkToPacoteMap[linkText]) {
+        return linkToPacoteMap[linkText];
+    }
+    
+    // Verificar correspondência parcial para maior flexibilidade
+    for (const [key, value] of Object.entries(linkToPacoteMap)) {
+        if (linkText.includes(key) || key.includes(linkText)) {
+            return value;
+        }
+    }
+    
+    return null;
+}
+
+/**
+ * Navega para a seção e abre o modal do pacote após um delay
+ */
+function smoothScrollToAndOpenModal(element, pacoteId) {
+    const offsetTop = element.offsetTop - 80; // Compensar header fixo
+    
+    // Fechar menu mobile se estiver aberto
+    closeMobileMenu();
+    
+    window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+    });
+    
+    // Aguardar o scroll terminar antes de abrir o modal
+    setTimeout(() => {
+        // Destacar o card do pacote antes de abrir o modal
+        highlightPacoteCard(pacoteId);
+        
+        // Abrir modal após um pequeno delay para mostrar o destaque
+        setTimeout(() => {
+            openPacoteModal(pacoteId);
+        }, 300);
+    }, 800); // Delay para permitir que o scroll suave termine
+}
+
+/**
+ * Destaca temporariamente o card do pacote
+ */
+function highlightPacoteCard(pacoteId) {
+    const pacoteCard = document.querySelector(`[data-pacote="${pacoteId}"]`);
+    
+    if (pacoteCard) {
+        // Adicionar classe de destaque
+        pacoteCard.classList.add('pacote-highlight');
+        
+        // Remover classe após animação
+        setTimeout(() => {
+            pacoteCard.classList.remove('pacote-highlight');
+        }, 1000);
+    }
 }
 
 /**
