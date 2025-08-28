@@ -1974,6 +1974,7 @@ img.lazy.loaded {
 .maraca-content {
   padding: var(--espacamento-lg) 0;
   color: var(--cor-preto);
+  margin-top: 10%
 }
 
 .maraca-title {
@@ -2151,23 +2152,19 @@ img.lazy.loaded {
   .maraca-secao .row {
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 
   .maraca-secao .col-lg-6:first-child {
     order: 2;
-    width: 100%;
   }
 
   .maraca-secao .col-lg-6:last-child {
     order: 1;
-    width: 100%;
   }
 
   .maraca-content {
     text-align: center;
     padding: var(--espacamento-md) 0;
-    width: 100%;
   }
 
   .maraca-title,
@@ -2220,8 +2217,6 @@ img.lazy.loaded {
     height: 300px;
     margin: var(--espacamento-md) auto var(--espacamento-lg) auto;
     display: block;
-    width: 100%;
-    max-width: 100%;
   }
 
   .maraca-cta {
