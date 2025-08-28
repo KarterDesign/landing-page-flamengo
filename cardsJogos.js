@@ -32,8 +32,8 @@ function parseCSV(csvText) {
  */
 function getLogoCampeonato(campeonato) {
     const logos = {
-        'Brasileiro': 'https://cdn.shopify.com/s/files/1/0920/0268/1143/files/brasileirao_logo.png?v=1756320548',
-        'CONMEBOL Libertadores': 'https://cdn.shopify.com/s/files/1/0920/0268/1143/files/libertadores_logo.png?v=1756320547',
+        'Brasileiro': 'https://libertadores.absolut-sport.com.br/images/logos-campeonatos/brasileiro.png',
+        'CONMEBOL Libertadores': 'https://libertadores.absolut-sport.com.br/images/logos-campeonatos/libertadores.png',
         'Sulamericana': 'https://webapp404138.ip-50-116-48-60.cloudezapp.io/img/img.png',
         'Copa do Brasil': 'https://libertadores.absolut-sport.com.br/images/logos-campeonatos/CopaDoBrasil.png'
     };
