@@ -2147,6 +2147,20 @@ img.lazy.loaded {
     padding: 60px 0;
   }
 
+  /* Trocar ordem dos elementos na primeira seção maraca (maraca-title-1) */
+  .maraca-secao .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .maraca-secao .col-lg-6:first-child {
+    order: 2;
+  }
+
+  .maraca-secao .col-lg-6:last-child {
+    order: 1;
+  }
+
   .maraca-content {
     text-align: center;
     padding: var(--espacamento-md) 0;
