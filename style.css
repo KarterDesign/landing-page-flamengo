@@ -3317,6 +3317,23 @@ img.lazy.loaded {
 	background-color: #FFFFFF;
 }
 
+.ec-footer-bottom-text {
+	width: 100%;
+	min-height: 52px;
+	background-color:rgba(24, 28, 48, 1);	
+	display: flex;
+	place-items: center;
+	justify-content: center;
+	gap: 12px;
+}
+
+.ec-footer-bottom-text span {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 13px;
+	color: #FFFFFF;
+}
+
 .ec-footer-certificates {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -3378,7 +3395,13 @@ img.lazy.loaded {
 	.ec-footer-other-logos:last-of-type {
 		flex-direction: row;
 	}	
-
+	.ec-footer-bottom-text {
+		padding: 24px;	
+		flex-wrap: wrap;
+		text-align: center;	
+		position: relative;
+		margin-top: 30px;
+	}
 	.ec-anchor-top {
 		display: none;
 	}
