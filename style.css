@@ -2459,10 +2459,10 @@ img.lazy.loaded {
 
 /* Botão dos pacotes */
 .pacote-cta {
-  background: rgba(255, 255, 255, 0.9);
-  color: var(--cor-preto);
+  background: linear-gradient(135deg, var(--cor-vermelho-principal) 0%, var(--cor-vermelho-escuro) 100%);
+  color: var(--cor-branco);
   border: none;
-  padding: 0.6rem 1.2rem;
+  padding: 0.4rem 1rem;
   font-size: 0.85rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -2493,9 +2493,9 @@ img.lazy.loaded {
 }
 
 .pacote-cta:hover {
-  background: var(--cor-branco);
+  background: linear-gradient(135deg, var(--cor-vermelho-escuro) 0%, var(--cor-vermelho-principal) 100%);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(198, 12, 48, 0.4);
 }
 
 .pacote-cta:active {
@@ -2651,7 +2651,7 @@ img.lazy.loaded {
   }
 
   .pacote-cta {
-    padding: 0.5rem 1rem;
+    padding: 0.3rem 0.8rem;
     font-size: 0.8rem;
   }
 
