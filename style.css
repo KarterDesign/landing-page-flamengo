@@ -3202,34 +3202,7 @@ img.lazy.loaded {
 	border: none;
 }
 
-.ec-footer-categories {
-	display: flex;
-	gap: 16px;
-	list-style-type: none;
-	margin-block-start: 0;
-	margin-block-end: 0;
-	padding-inline-start: 0;
-	margin: 0;
-	padding: 0;
-}
 
-.ec-footer-categories a {
-	background-color: #F9F9F933;
-	border-radius: 35px;
-	padding: 6px 12px;
-	font-weight: 700;
-	font-size: 12px;
-	color: #FFFFFF;
-	text-decoration: none;
-	display: flex;
-	place-items: center;
-	line-height: 15px;
-	text-align: center;
-}
-
-.ec-footer-categories a:hover {
-	background-color: #155F97;
-}
 
 .ec-footer-links {
 	width: 100%;
@@ -3356,54 +3329,11 @@ img.lazy.loaded {
 	gap: 16px;
 }
 
-.ec-footer-dev-logos {
-	display: flex;
-	place-items: center;
-	gap: 16px;
-}
 
-.ec-footer-dev-logos span {
-	color: white;
-	font-size: 14px;
-	font-weight: 500;
-}
 
-.ec-footer-dev-logos-grid {
-	display: none;
-}
 
-.ec-payment-methods {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 15px;
-}
 
-.ec-payment-text {
-	color: #828A95;
-	font-size: 12px;
-	font-weight: 500;
-	padding: 4px 8px;
-	background-color: rgba(255, 255, 255, 0.1);
-	border-radius: 4px;
-}
 
-.ec-footer-bottom-text {
-	width: 100%;
-	min-height: 52px;
-	background-color:rgba(24, 28, 48, 1);	
-	display: flex;
-	place-items: center;
-	justify-content: center;
-	gap: 12px;
-}
-
-.ec-footer-bottom-text span {
-	font-weight: 400;
-	font-size: 14px;
-	line-height: 13px;
-	color: #FFFFFF;
-}
 
 .ec-footer-certificate {
 	width: 100%;
@@ -3416,11 +3346,7 @@ img.lazy.loaded {
 		height: 65%;
 	}
 
-	.ec-footer-categories {
-		flex-wrap: wrap;
-		place-items: center;
-		justify-content: center;
-	}
+
 	.ec-footer-links {
 		flex-wrap: wrap;
 		gap: 50px 20px;
@@ -3452,13 +3378,7 @@ img.lazy.loaded {
 	.ec-footer-other-logos:last-of-type {
 		flex-direction: row;
 	}	
-	.ec-footer-bottom-text {
-		padding: 24px;	
-		flex-wrap: wrap;
-		text-align: center;	
-		position: relative;
-		margin-top: 30px;
-	}
+
 	.ec-anchor-top {
 		display: none;
 	}
@@ -3472,9 +3392,7 @@ img.lazy.loaded {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 	}
-	.ec-footer-categories {
-		gap: 12px 8px;
-	}
+
 	.ec-footer-social a {
 		width: 28px;
 		height: 28px;
@@ -3486,15 +3404,5 @@ img.lazy.loaded {
 	.ec-footer-certificates div {
 		width: 85px;
 	}
-	.ec-footer-dev-logos-flex {
-		display: none;
-	}
-	.ec-footer-dev-logos-grid {
-		display: block;
-	}
-	.ec-footer-dev-logos {
-		width: fit-content;
-		flex-direction: column;
-		margin-left: -8px;
-	}	
+	
 }
