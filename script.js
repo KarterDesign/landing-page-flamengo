@@ -871,13 +871,18 @@ const pacotesData = {
  */
 function initPacotesModal() {
     const pacoteCards = document.querySelectorAll('.pacote-card');
+    const pacoteButtons = document.querySelectorAll('.pacote-cta');
     const modal = document.getElementById('pacoteModal');
     const closeBtn = modal.querySelector('.modal-close');
     const modalCta = modal.querySelector('.modal-cta');
     
     // Event listeners para os cards
     pacoteCards.forEach(card => {
-        card.addEventListener('click', function() {
+        card.addEventListener('click', function(e) {
+            // Não abrir modal se clicou no botão
+            if (e.target.classList.contains('pacote-cta')) {
+                return;
+            }
             const pacoteId = this.getAttribute('data-pacote');
             openPacoteModal(pacoteId);
         });
@@ -889,6 +894,15 @@ function initPacotesModal() {
                 const pacoteId = this.getAttribute('data-pacote');
                 openPacoteModal(pacoteId);
             }
+        });
+    });
+    
+    // Event listeners para os botões dos pacotes
+    pacoteButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.stopPropagation(); // Prevenir que o card também seja clicado
+            const pacoteId = this.getAttribute('data-pacote');
+            openPacoteModal(pacoteId);
         });
     });
     

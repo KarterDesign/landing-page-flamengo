@@ -2443,6 +2443,7 @@ img.lazy.loaded {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  gap: var(--espacamento-sm);
 }
 
 .pacote-title {
@@ -2454,6 +2455,52 @@ img.lazy.loaded {
   line-height: 1.2;
   color: var(--cor-branco);
   /* Alteração aqui para deixar o título branco */
+}
+
+/* Botão dos pacotes */
+.pacote-cta {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--cor-preto);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  align-self: flex-start;
+  font-family: 'Barlow', sans-serif;
+}
+
+.pacote-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(198, 12, 48, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.pacote-cta:hover::before {
+  left: 100%;
+}
+
+.pacote-cta:hover {
+  background: var(--cor-branco);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.pacote-cta:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -2601,6 +2648,11 @@ img.lazy.loaded {
 
   .pacote-title {
     font-size: 1.3rem;
+  }
+
+  .pacote-cta {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
   }
 
   .modal-content {
