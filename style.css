@@ -2214,7 +2214,7 @@ img.lazy.loaded {
   .maraca-image2,
   .maraca-image3 {
     height: 300px;
-    margin: var(--espacamento-md) auto 0 auto;
+    margin: var(--espacamento-md) auto var(--espacamento-lg) auto;
     display: block;
   }
 
