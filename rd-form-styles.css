@@ -1,0 +1,390 @@
+/* Estilos específicos para o formulário do RD Station - Landing Page Flamengo */
+/* Aplicação agressiva de estilos para garantir identidade visual perfeita */
+
+/* ===== RESET COMPLETO E FORÇADO ===== */
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf *,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf *::before,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf *::after {
+  font-family: 'Barlow', sans-serif !important;
+  box-sizing: border-box !important;
+}
+
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf {
+  width: 100% !important;
+  max-width: none !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf form {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  width: 100% !important;
+}
+
+/* ===== REMOÇÃO COMPLETA DE FUNDOS BRANCOS ===== */
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf *,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf div,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf section,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-container,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-wrapper,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-field,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-field-group {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* ===== CAMPOS DE INPUT - ESTILO IDÊNTICO AO ORIGINAL ===== */
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf input[type="text"],
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf input[type="email"],
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf input[type="tel"],
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf input[type="number"],
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf input[type="password"],
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf input[type="url"],
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf select,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf textarea,
+/* Seletores genéricos para qualquer input */
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf input,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-input,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .form-input {
+  width: 100% !important;
+  padding: 12px 15px !important;
+  border: 2px solid #e0e0e0 !important;
+  border-radius: 8px !important;
+  font-size: 1rem !important;
+  font-family: 'Barlow', sans-serif !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  color: var(--cor-cinza-escuro) !important;
+  margin-bottom: 20px !important;
+  box-sizing: border-box !important;
+  outline: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  display: block !important;
+  line-height: 1.5 !important;
+  min-height: 48px !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* ===== FOCUS NOS CAMPOS - IDÊNTICO AO ORIGINAL ===== */
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf input[type="text"]:focus,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf input[type="email"]:focus,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf input[type="tel"]:focus,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf input[type="number"]:focus,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf input[type="password"]:focus,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf input[type="url"]:focus,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf select:focus,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf textarea:focus,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf input:focus,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-input:focus,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .form-input:focus {
+  outline: none !important;
+  border-color: var(--cor-vermelho-principal) !important;
+  box-shadow: 0 0 0 3px rgba(198, 12, 48, 0.1) !important;
+  transform: translateY(-1px) !important;
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* ===== LABELS - IDÊNTICO AO ORIGINAL ===== */
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf label,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-label,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .form-label,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .field-label {
+  display: block !important;
+  margin-bottom: 8px !important;
+  font-weight: 600 !important;
+  color: var(--cor-branco) !important;
+  font-size: 0.9rem !important;
+  font-family: 'Barlow', sans-serif !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  line-height: 1.4 !important;
+}
+
+/* ===== BOTÃO DE ENVIO - IDÊNTICO AO ORIGINAL ===== */
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf button[type="submit"],
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf input[type="submit"],
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-button,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .btn-submit,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .submit-button,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf button,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-submit {
+  width: 100% !important;
+  background: linear-gradient(45deg, var(--cor-vermelho-principal), var(--cor-vermelho-escuro)) !important;
+  color: var(--cor-branco) !important;
+  border: none !important;
+  padding: 15px 30px !important;
+  border-radius: 50px !important;
+  font-family: 'Barlow', sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  font-size: 1rem !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+  position: relative !important;
+  overflow: hidden !important;
+  margin-top: 10px !important;
+  letter-spacing: 0.5px !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  display: block !important;
+  line-height: 1.5 !important;
+  min-height: 48px !important;
+}
+
+/* ===== HOVER NO BOTÃO - IDÊNTICO AO ORIGINAL ===== */
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf button[type="submit"]:hover,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf input[type="submit"]:hover,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-button:hover,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .btn-submit:hover,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .submit-button:hover,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf button:hover,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-submit:hover {
+  background: linear-gradient(45deg, var(--cor-vermelho-escuro), var(--cor-vermelho-principal)) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(198, 12, 48, 0.4) !important;
+}
+
+/* ===== EFEITO DE BRILHO NO BOTÃO - IDÊNTICO AO ORIGINAL ===== */
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf button[type="submit"]::before,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf input[type="submit"]::before,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-button::before,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .btn-submit::before,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .submit-button::before,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf button::before,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-submit::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent) !important;
+  transition: left 0.5s !important;
+}
+
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf button[type="submit"]:hover::before,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf input[type="submit"]:hover::before,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-button:hover::before,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .btn-submit:hover::before,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .submit-button:hover::before,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf button:hover::before,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-submit:hover::before {
+  left: 100% !important;
+}
+
+/* ===== REMOÇÃO DE ESPAÇAMENTOS DESNECESSÁRIOS ===== */
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-field,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-field-group,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .form-group,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .field-group,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-row,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .form-row {
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+}
+
+/* ===== MENSAGENS DE ERRO ===== */
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-error,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-error-message,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .error-message,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .form-error,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .field-error {
+  font-family: 'Barlow', sans-serif !important;
+  font-size: 0.85rem !important;
+  margin-top: 5px !important;
+  padding: 8px 12px !important;
+  border-radius: 6px !important;
+  background-color: rgba(211, 47, 47, 0.1) !important;
+  color: #d32f2f !important;
+  border: 1px solid rgba(211, 47, 47, 0.3) !important;
+  display: block !important;
+}
+
+/* ===== MENSAGENS DE SUCESSO ===== */
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-success,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-success-message,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .success-message,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .form-success,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .field-success {
+  font-family: 'Barlow', sans-serif !important;
+  font-size: 0.85rem !important;
+  margin-top: 5px !important;
+  padding: 8px 12px !important;
+  border-radius: 6px !important;
+  background-color: rgba(76, 175, 80, 0.1) !important;
+  color: #4caf50 !important;
+  border: 1px solid rgba(76, 175, 80, 0.3) !important;
+  display: block !important;
+}
+
+/* ===== CHECKBOX E RADIO BUTTONS ===== */
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf input[type="checkbox"],
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf input[type="radio"] {
+  accent-color: var(--cor-vermelho-principal) !important;
+  transform: scale(1.2) !important;
+  margin-right: 8px !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+/* ===== PLACEHOLDER ===== */
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf input::placeholder,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf textarea::placeholder {
+  color: #999999 !important;
+  font-family: 'Barlow', sans-serif !important;
+  font-size: 0.9rem !important;
+  opacity: 1 !important;
+}
+
+/* ===== SELECT PERSONALIZADO ===== */
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e") !important;
+  background-position: right 12px center !important;
+  background-repeat: no-repeat !important;
+  background-size: 16px 12px !important;
+  padding-right: 40px !important;
+}
+
+/* ===== TEXTAREA ===== */
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf textarea {
+  min-height: 100px !important;
+  resize: vertical !important;
+  line-height: 1.5 !important;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf input[type="text"],
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf input[type="email"],
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf input[type="tel"],
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf input[type="number"],
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf input[type="password"],
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf input[type="url"],
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf select,
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf textarea,
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf input,
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-input,
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf .form-input {
+    padding: 10px 12px !important;
+    font-size: 0.95rem !important;
+  }
+
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf button[type="submit"],
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf input[type="submit"],
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-button,
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf .btn-submit,
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf .submit-button,
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf button,
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-submit {
+    padding: 12px 25px !important;
+    font-size: 0.95rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf input[type="text"],
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf input[type="email"],
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf input[type="tel"],
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf input[type="number"],
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf input[type="password"],
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf input[type="url"],
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf select,
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf textarea,
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf input,
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-input,
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf .form-input {
+    padding: 8px 10px !important;
+    font-size: 0.9rem !important;
+  }
+
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf button[type="submit"],
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf input[type="submit"],
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-button,
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf .btn-submit,
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf .submit-button,
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf button,
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-submit {
+    padding: 10px 20px !important;
+    font-size: 0.9rem !important;
+  }
+
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf label,
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-label,
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf .form-label,
+  #lp_flamengo_2025-4f56e3c9837e4f3a08cf .field-label {
+    font-size: 0.85rem !important;
+  }
+}
+
+/* ===== FORÇAR ESTILOS IMPORTANTES PARA SOBRESCREVER QUALQUER CSS INLINE ===== */
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf * {
+  font-family: 'Barlow', sans-serif !important;
+}
+
+/* ===== REMOÇÃO DE QUALQUER ESTILO DE FUNDO OU BORDA QUE POSSA VIR DO RD STATION ===== */
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* ===== ESTILOS ESPECÍFICOS PARA ELEMENTOS DO RD STATION ===== */
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-container,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-wrapper {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-title,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-description {
+  display: none !important;
+}
+
+/* ===== GARANTIR QUE TODOS OS ELEMENTOS TENHAM A FONTE CORRETA ===== */
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf div,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf span,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf p,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf h1,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf h2,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf h3,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf h4,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf h5,
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf h6 {
+  font-family: 'Barlow', sans-serif !important;
+}
+
+/* ===== ESTILOS ADICIONAIS PARA GARANTIR COMPATIBILIDADE ===== */
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf .rd-form-loaded * {
+  font-family: 'Barlow', sans-serif !important;
+}
+
+/* ===== SOBRESCREVER QUALQUER ESTILO INLINE ===== */
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf [style*="font-family"] {
+  font-family: 'Barlow', sans-serif !important;
+}
+
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf [style*="background"] {
+  background: transparent !important;
+}
+
+#lp_flamengo_2025-4f56e3c9837e4f3a08cf [style*="border"] {
+  border: none !important;
+}

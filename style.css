@@ -3458,6 +3458,137 @@ img.lazy.loaded {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
+/* Estilos para o formulário do RD Station */
+.rd-form-wrapper {
+  width: 100%;
+}
+
+/* Reset dos estilos padrão do RD Station */
+.rd-form-wrapper form {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Campos de input do RD Station */
+.rd-form-wrapper input[type="text"],
+.rd-form-wrapper input[type="email"],
+.rd-form-wrapper input[type="tel"],
+.rd-form-wrapper input[type="number"],
+.rd-form-wrapper select,
+.rd-form-wrapper textarea {
+  width: 100% !important;
+  padding: 12px 15px !important;
+  border: 2px solid #e0e0e0 !important;
+  border-radius: 8px !important;
+  font-size: 1rem !important;
+  font-family: 'Barlow', sans-serif !important;
+  transition: all 0.3s ease !important;
+  background-color: var(--cor-branco) !important;
+  color: var(--cor-cinza-escuro) !important;
+  margin-bottom: 20px !important;
+  box-sizing: border-box !important;
+}
+
+.rd-form-wrapper input[type="text"]:focus,
+.rd-form-wrapper input[type="email"]:focus,
+.rd-form-wrapper input[type="tel"]:focus,
+.rd-form-wrapper input[type="number"]:focus,
+.rd-form-wrapper select:focus,
+.rd-form-wrapper textarea:focus {
+  outline: none !important;
+  border-color: var(--cor-vermelho-principal) !important;
+  box-shadow: 0 0 0 3px rgba(198, 12, 48, 0.1) !important;
+}
+
+/* Labels do RD Station */
+.rd-form-wrapper label {
+  display: block !important;
+  margin-bottom: 8px !important;
+  font-weight: 600 !important;
+  color: var(--cor-branco) !important;
+  font-size: 0.9rem !important;
+  font-family: 'Barlow', sans-serif !important;
+}
+
+/* Botão de envio do RD Station */
+.rd-form-wrapper button[type="submit"],
+.rd-form-wrapper input[type="submit"] {
+  width: 100% !important;
+  background: linear-gradient(45deg, var(--cor-vermelho-principal), var(--cor-vermelho-escuro)) !important;
+  color: var(--cor-branco) !important;
+  border: none !important;
+  padding: 15px 30px !important;
+  border-radius: 50px !important;
+  font-family: 'Barlow', sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  font-size: 1rem !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+  position: relative !important;
+  overflow: hidden !important;
+  margin-top: 10px !important;
+}
+
+.rd-form-wrapper button[type="submit"]:hover,
+.rd-form-wrapper input[type="submit"]:hover {
+  background: linear-gradient(45deg, var(--cor-vermelho-escuro), var(--cor-vermelho-principal)) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(198, 12, 48, 0.4) !important;
+}
+
+/* Efeito de brilho no botão */
+.rd-form-wrapper button[type="submit"]::before,
+.rd-form-wrapper input[type="submit"]::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent) !important;
+  transition: left 0.5s !important;
+}
+
+.rd-form-wrapper button[type="submit"]:hover::before,
+.rd-form-wrapper input[type="submit"]:hover::before {
+  left: 100% !important;
+}
+
+/* Remover espaçamentos desnecessários */
+.rd-form-wrapper .rd-form-field {
+  margin-bottom: 0 !important;
+}
+
+.rd-form-wrapper .rd-form-field-group {
+  margin-bottom: 0 !important;
+}
+
+/* Estilo para mensagens de erro/sucesso */
+.rd-form-wrapper .rd-form-error,
+.rd-form-wrapper .rd-form-success {
+  font-family: 'Barlow', sans-serif !important;
+  font-size: 0.9rem !important;
+  margin-top: 5px !important;
+  padding: 8px 12px !important;
+  border-radius: 6px !important;
+}
+
+.rd-form-wrapper .rd-form-error {
+  background-color: rgba(211, 47, 47, 0.1) !important;
+  color: #d32f2f !important;
+  border: 1px solid rgba(211, 47, 47, 0.3) !important;
+}
+
+.rd-form-wrapper .rd-form-success {
+  background-color: rgba(76, 175, 80, 0.1) !important;
+  color: #4caf50 !important;
+  border: 1px solid rgba(76, 175, 80, 0.3) !important;
+}
+
 .newsletter-form .form-group {
   margin-bottom: 20px;
 }
@@ -3650,6 +3781,23 @@ img.lazy.loaded {
     font-size: 1rem;
   }
 
+  /* Responsividade do formulário RD Station */
+  .rd-form-wrapper input[type="text"],
+  .rd-form-wrapper input[type="email"],
+  .rd-form-wrapper input[type="tel"],
+  .rd-form-wrapper input[type="number"],
+  .rd-form-wrapper select,
+  .rd-form-wrapper textarea {
+    padding: 10px 12px !important;
+    font-size: 0.95rem !important;
+  }
+
+  .rd-form-wrapper button[type="submit"],
+  .rd-form-wrapper input[type="submit"] {
+    padding: 12px 25px !important;
+    font-size: 0.95rem !important;
+  }
+
   .newsletter-form-container {
     padding: 30px 25px;
     margin: 0 auto;
@@ -3703,6 +3851,27 @@ img.lazy.loaded {
 
   .btn-newsletter {
     padding: 12px 25px;
+  }
+
+  /* Responsividade do formulário RD Station para mobile pequeno */
+  .rd-form-wrapper input[type="text"],
+  .rd-form-wrapper input[type="email"],
+  .rd-form-wrapper input[type="tel"],
+  .rd-form-wrapper input[type="number"],
+  .rd-form-wrapper select,
+  .rd-form-wrapper textarea {
+    padding: 8px 10px !important;
+    font-size: 0.9rem !important;
+  }
+
+  .rd-form-wrapper button[type="submit"],
+  .rd-form-wrapper input[type="submit"] {
+    padding: 10px 20px !important;
+    font-size: 0.9rem !important;
+  }
+
+  .rd-form-wrapper label {
+    font-size: 0.85rem !important;
   }
 
   .players-image {

@@ -14,6 +14,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="rd-form-styles.css">
     <script src="conteudoDinamico.js"></script>
 </head>
 
@@ -301,36 +302,7 @@
                 </div>
 
                 <div class="newsletter-form-container">
-                    <form class="newsletter-form" id="newsletter-form">
-                        <div class="form-group">
-                            <label id="newsletter-label-nome" for="nome" class="form-label"></label>
-                            <input type="text" class="form-control" id="nome" name="nome" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label id="newsletter-label-email" for="email" class="form-label"></label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label id="newsletter-label-time" for="time" class="form-label"></label>
-                            <input type="text" class="form-control" id="time" name="time" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label id="newsletter-label-perfil" for="perfil" class="form-label"></label>
-                            <input type="text" class="form-control" id="perfil" name="perfil" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label id="newsletter-label-captcha" for="captcha" class="form-label"></label>
-                            <input type="number" class="form-control" id="captcha" name="captcha" required>
-                        </div>
-
-                        <div class="form-group">
-                            <button id="newsletter-submit" type="submit" class="btn-newsletter"></button>
-                        </div>
-                    </form>
+                    <div role="main" id="lp_flamengo_2025-4f56e3c9837e4f3a08cf" class="rd-form-wrapper"></div>
                 </div>
 
                 <div class="newsletter-image">
@@ -566,6 +538,81 @@
     <script src="script.js"></script>
     <script src="cardsJogos.js"></script>
     <script src="cardsJogosForaCasa.js"></script>
+    
+    <!-- RD Station Forms -->
+    <script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script>
+    <script type="text/javascript">
+        // Criar o formulário do RD Station
+        new RDStationForms('lp_flamengo_2025-4f56e3c9837e4f3a08cf', 'UA-205113243-1').createForm();
+        
+        // Função para aplicar estilos personalizados
+        function applyCustomStyles() {
+            const rdForm = document.querySelector('#lp_flamengo_2025-4f56e3c9837e4f3a08cf');
+            if (rdForm) {
+                // Adicionar classe para estilos específicos
+                rdForm.classList.add('rd-form-loaded');
+                
+                // Forçar aplicação de estilos em todos os elementos
+                const allElements = rdForm.querySelectorAll('*');
+                allElements.forEach(element => {
+                    // Remover estilos inline que possam interferir
+                    element.style.fontFamily = 'Barlow, sans-serif !important';
+                    
+                                         // Aplicar estilos específicos baseados no tipo de elemento
+                     if (element.tagName === 'INPUT' || element.tagName === 'SELECT' || element.tagName === 'TEXTAREA') {
+                         element.style.border = '2px solid #e0e0e0 !important';
+                         element.style.borderRadius = '8px !important';
+                         element.style.padding = '12px 15px !important';
+                         element.style.fontSize = '1rem !important';
+                         element.style.backgroundColor = 'rgba(255, 255, 255, 0.9) !important';
+                         element.style.color = '#333333 !important';
+                         element.style.transition = 'all 0.3s ease !important';
+                         element.style.backdropFilter = 'blur(10px) !important';
+                     }
+                    
+                    if (element.tagName === 'LABEL') {
+                        element.style.color = '#FFFFFF !important';
+                        element.style.fontWeight = '600 !important';
+                        element.style.fontSize = '0.9rem !important';
+                    }
+                    
+                    if (element.tagName === 'BUTTON' && element.type === 'submit') {
+                        element.style.background = 'linear-gradient(45deg, #B51210, #A00A28) !important';
+                        element.style.color = '#FFFFFF !important';
+                        element.style.border = 'none !important';
+                        element.style.borderRadius = '50px !important';
+                        element.style.fontWeight = '700 !important';
+                        element.style.textTransform = 'uppercase !important';
+                    }
+                });
+                
+                console.log('Estilos personalizados aplicados com sucesso!');
+            }
+        }
+        
+        // Aplicar estilos imediatamente e depois de intervalos
+        setTimeout(applyCustomStyles, 500);
+        setTimeout(applyCustomStyles, 1000);
+        setTimeout(applyCustomStyles, 2000);
+        setTimeout(applyCustomStyles, 3000);
+        
+        // Observar mudanças no DOM para aplicar estilos quando novos elementos forem adicionados
+        const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+                    setTimeout(applyCustomStyles, 100);
+                }
+            });
+        });
+        
+        // Iniciar observação quando o formulário estiver disponível
+        setTimeout(function() {
+            const rdForm = document.querySelector('#lp_flamengo_2025-4f56e3c9837e4f3a08cf');
+            if (rdForm) {
+                observer.observe(rdForm, { childList: true, subtree: true });
+            }
+        }, 1000);
+    </script>
 </body>
 
 </html>
