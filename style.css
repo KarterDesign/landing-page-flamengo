@@ -1436,6 +1436,11 @@ img.lazy.loaded {
   .banner-container {
     background: url('img/ONDE ESTIVER ESTAREMOS MOBILE.jpg') top/cover;
   }
+  
+  /* Escurecimento suave de 20% para mobile */
+  .banner-container::before {
+    background: rgba(0, 0, 0, 0.2);
+  }
 }
 
 .banner-container::before {
