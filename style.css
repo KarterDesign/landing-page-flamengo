@@ -2828,80 +2828,86 @@ img.lazy.loaded {
     font-size: 0.8rem;
   }
 
-  /* MODAL RESPONSIVO */
+  /* MODAL RESPONSIVO - OTIMIZADO */
   .modal-overlay {
-    padding: 15px;
+    padding: 12px;
   }
 
   .modal-content {
     width: 100%;
-    max-height: 90vh;
-    border-radius: 15px;
+    max-height: 92vh;
+    border-radius: 18px;
+    margin: 0 auto;
   }
 
   .modal-banner {
-    height: 200px;
+    height: 180px;
     object-position: center 25%;
   }
 
   .modal-body {
-    padding: 20px;
-    max-height: calc(90vh - 200px - 70px);
+    padding: 25px 20px;
+    max-height: calc(92vh - 180px - 80px);
   }
 
   .modal-body h2 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
+    font-size: 1.6rem;
+    margin-bottom: 18px;
+    line-height: 1.3;
   }
 
   .modal-body p {
     font-size: 1rem;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
+    line-height: 1.5;
   }
 
   .modal-features {
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 22px 18px;
+    margin-bottom: 25px;
+    border-radius: 12px;
   }
 
   .modal-features ul {
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 12px;
   }
 
   .modal-features li {
     font-size: 0.95rem;
-    padding: 6px 0;
+    padding: 8px 0;
+    line-height: 1.4;
   }
 
   .modal-features li::before {
-    width: 20px;
-    height: 20px;
-    font-size: 1rem;
-    margin-right: 10px;
+    width: 22px;
+    height: 22px;
+    font-size: 0.9rem;
+    margin-right: 12px;
   }
 
   /* CTA MOBILE OTIMIZADO */
   .modal-cta-container {
     margin: 0 -20px -20px -20px;
-    padding: 20px;
+    padding: 22px 20px;
     position: sticky;
     bottom: 0;
   }
 
   .modal-cta {
     min-width: 100%;
-    padding: 16px 30px;
+    padding: 18px 32px;
     font-size: 1.1rem;
     letter-spacing: 1.5px;
+    border-radius: 45px;
   }
 
   .modal-close {
-    top: 15px;
-    right: 15px;
-    width: 40px;
-    height: 40px;
-    font-size: 1.6rem;
+    top: 12px;
+    right: 12px;
+    width: 42px;
+    height: 42px;
+    font-size: 1.5rem;
   }
 }
 
@@ -2918,70 +2924,75 @@ img.lazy.loaded {
     font-size: 1.2rem;
   }
 
-  /* MODAL MOBILE PEQUENO */
+  /* MODAL MOBILE PEQUENO - OTIMIZADO */
   .modal-overlay {
-    padding: 10px;
+    padding: 8px;
   }
 
   .modal-content {
-    max-height: 95vh;
-    border-radius: 12px;
+    max-height: 96vh;
+    border-radius: 16px;
   }
 
   .modal-banner {
-    height: 160px;
+    height: 150px;
     object-position: center 20%;
   }
 
   .modal-body {
-    padding: 15px;
-    max-height: calc(95vh - 160px - 60px);
+    padding: 20px 16px;
+    max-height: calc(96vh - 150px - 70px);
   }
 
   .modal-body h2 {
-    font-size: 1.5rem;
-    margin-bottom: 12px;
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+    line-height: 1.3;
   }
 
   .modal-body p {
     font-size: 0.95rem;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
+    line-height: 1.5;
   }
 
   .modal-features {
-    padding: 15px;
-    margin-bottom: 15px;
+    padding: 18px 16px;
+    margin-bottom: 20px;
+    border-radius: 10px;
   }
 
   .modal-features li {
     font-size: 0.9rem;
-    padding: 5px 0;
+    padding: 7px 0;
+    line-height: 1.4;
   }
 
   .modal-features li::before {
-    width: 18px;
-    height: 18px;
-    font-size: 0.9rem;
-    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+    font-size: 0.85rem;
+    margin-right: 10px;
   }
 
   .modal-cta-container {
-    margin: 0 -15px -15px -15px;
-    padding: 15px;
+    margin: 0 -16px -16px -16px;
+    padding: 18px 16px;
   }
 
   .modal-cta {
-    padding: 14px 25px;
+    padding: 16px 28px;
     font-size: 1rem;
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
+    border-radius: 40px;
   }
 
   .modal-close {
-    top: 10px;
-    right: 10px;
-    width: 35px;
-    height: 35px;
-    font-size: 1.4rem;
+    top: 8px;
+    right: 8px;
+    width: 38px;
+    height: 38px;
+    font-size: 1.3rem;
   }
 }
 
@@ -3053,6 +3064,39 @@ img.lazy.loaded {
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  /* MELHORIAS ADICIONAIS PARA MOBILE */
+  .modal-content {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  }
+
+  .modal-body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--cor-vermelho-principal) transparent;
+  }
+
+  .modal-body::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .modal-body::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .modal-body::-webkit-scrollbar-thumb {
+    background: var(--cor-vermelho-principal);
+    border-radius: 3px;
+  }
+
+  .modal-cta-container {
+    backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, rgba(181, 18, 16, 0.95) 0%, rgba(160, 10, 40, 0.95) 100%);
+  }
+
+  .modal-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1) rotate(90deg);
   }
 }
 
