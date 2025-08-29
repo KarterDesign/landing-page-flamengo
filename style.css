@@ -1431,6 +1431,13 @@ img.lazy.loaded {
   background: url('img/torcedor-flameng-absolut-sport-agencia-oficial.jpg') top/cover;
 }
 
+/* Imagem específica para mobile */
+@media (max-width: 768px) {
+  .banner-container {
+    background: url('img/ONDE ESTIVER ESTAREMOS MOBILE.jpg') top/cover;
+  }
+}
+
 .banner-container::before {
   content: '';
   position: absolute;
