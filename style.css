@@ -3766,6 +3766,9 @@ img.lazy.loaded {
 	color: #FFFFFF;
 	background-color: #080B1E;
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .ec-footer-upper-div {
@@ -3776,8 +3779,11 @@ img.lazy.loaded {
 	place-items: center;
 	justify-content: center;
 	gap: 45px;
-	padding: 40px 60px 36px;
-	margin-top: 0;	
+	padding: 40px 0 36px;
+	margin-top: 0;
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .ec-anchor-top {
@@ -3835,6 +3841,7 @@ img.lazy.loaded {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
+	padding: 0 60px;
 }
 
 .ec-footer-links-container {
@@ -3952,6 +3959,7 @@ img.lazy.loaded {
 	place-items: center;
 	justify-content: center;
 	gap: 12px;
+	max-width: 1200px;
 }
 
 .ec-footer-bottom-text span {
@@ -4002,12 +4010,14 @@ img.lazy.loaded {
 	.ec-footer-upper-div {			
 		padding: 36px 25px;
 		gap: 50px;
+		max-width: 100%;
 	}	
 	.ec-footer-upper-div hr {
 		display: none;
 	}
 	.ec-footer-links {
-		justify-content: center;		
+		justify-content: center;
+		padding: 0 25px;
 	}
 	.ec-footer-links h3 {
 		font-size: 14px;
@@ -4028,6 +4038,7 @@ img.lazy.loaded {
 		text-align: center;	
 		position: relative;
 		margin-top: 30px;
+		max-width: 100%;
 	}
 	.ec-anchor-top {
 		display: none;
@@ -4041,6 +4052,7 @@ img.lazy.loaded {
 	.ec-footer-links {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
+		padding: 0 15px;
 	}
 
 	.ec-footer-social a {
