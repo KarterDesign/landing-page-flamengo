@@ -16,7 +16,7 @@ const CONTEUDO_PADRAO = {
     'nav-link-3': 'Camarote ABSOLUT Sport',
     'mobile-nav-link-1': 'Pacote Oeste Inferior',
     'mobile-nav-link-2': 'Pacote Espaço Fla+',
-    'mobile-nav-link-3': 'Camarote ABSOLUT Sport',
+    'mobile-nav-link-3': 'PACOTE MARACANÃ MAIS',
     
     // Hero
     'hero-video': 'vid/intro-flamengo-nação.mp4',
@@ -50,7 +50,7 @@ const CONTEUDO_PADRAO = {
     'pacote-2-tag-2': 'VISÃO PRIVILEGIADA',
     'pacote-2-tag-3': 'BUFFET LIBERADO',
     'pacote-3-img': 'img/Soccer Stadium crowd.png',
-    'pacote-3-title': 'PACOTE<br>CAMAROTE',
+    'pacote-3-title': 'PACOTE<br>MARACANÃ MAIS',
     'pacote-3-tag-1': 'CAMAROTE',
     'pacote-3-tag-2': 'VISÃO PRIVILEGIADA',
     'pacote-3-tag-3': 'ULTIMAS UNIDADES',

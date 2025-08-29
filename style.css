@@ -44,6 +44,13 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Correção para mobile - desabilitar scroll suave que pode causar problemas */
+@media (max-width: 768px) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   font-family: 'Barlow', sans-serif;
   font-weight: 500;
@@ -359,6 +366,9 @@ body {
   border: none;
   position: relative;
   z-index: 1001;
+  /* Correções para mobile */
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .menu-toggle span {
@@ -395,6 +405,9 @@ body {
   padding: var(--espacamento-xl) var(--espacamento-md);
   padding-top: 100px;
   /* Espaço para o header */
+  /* Correções para mobile */
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
 }
 
 .mobile-menu.open {
@@ -455,6 +468,25 @@ body {
 
   .header-content {
     padding: var(--espacamento-xs) 0;
+  }
+  
+  /* Correções específicas para mobile */
+  body {
+    /* Prevenir scroll indesejado no mobile */
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    /* Desabilitar scroll suave no mobile para evitar problemas */
+    scroll-behavior: auto;
+  }
+  
+  /* Prevenir zoom indesejado no mobile */
+  .mobile-menu {
+    touch-action: pan-y;
+  }
+  
+  .mobile-nav-links a {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
   }
 }
 

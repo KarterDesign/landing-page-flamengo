@@ -182,6 +182,7 @@ function getPacoteIdFromLink(linkElement) {
         'pacote oeste inferior': 'oeste-inferior',
         'pacote espaço fla+': 'espaco-fla',
         'pacote maracanã+': 'camarote',
+        'pacote maracanã mais': 'camarote',
         // Fallbacks para variações de texto
         'pacote oeste inferior': 'oeste-inferior',
         'pacote espaço fla': 'espaco-fla',
@@ -619,7 +620,10 @@ function toggleMobileMenu() {
     if (isMenuOpen) {
         mobileMenu.classList.add('open');
         menuToggle.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        // Correção para mobile - usar position fixed em vez de overflow hidden
+        document.body.style.position = 'fixed';
+        document.body.style.width = '100%';
+        document.body.style.top = `-${window.scrollY}px`;
     } else {
         closeMobileMenu();
     }
@@ -635,7 +639,15 @@ function closeMobileMenu() {
     isMenuOpen = false;
     mobileMenu.classList.remove('open');
     menuToggle.classList.remove('active');
-    document.body.style.overflow = '';
+    
+    // Restaurar scroll position no mobile
+    if (document.body.style.position === 'fixed') {
+        const scrollY = document.body.style.top;
+        document.body.style.position = '';
+        document.body.style.width = '';
+        document.body.style.top = '';
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    }
 }
 
 // ===== COUNTDOWN TIMER =====
@@ -849,7 +861,7 @@ const pacotesData = {
         ]
     },
     'camarote': {
-        title: 'PACOTE CAMAROTE',
+        title: 'PACOTE MARACANÃ MAIS',
         banner: 'img/Soccer Stadium crowd.png',
         description: 'O máximo em experiência e exclusividade no Camarote ABSOLUT Sport. Ambiente climatizado, vista panorâmica privilegiada e serviços de primeira classe para você torcer com todo o conforto que merece.',
         features: [
