@@ -4279,6 +4279,7 @@ img.lazy.loaded {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		padding: 0 15px;
+		gap: 20px;
 	}
 
 	.ec-footer-social a {
@@ -4291,6 +4292,13 @@ img.lazy.loaded {
 	}
 	.ec-footer-certificates div {
 		width: 85px;
+	}
+
+	/* Alinhar Certificados com Acompanhe-nos */
+	.ec-footer-other-logos:last-of-type {
+		grid-column: 2;
+		grid-row: 2;
+		align-self: start;
 	}
 	
 }
