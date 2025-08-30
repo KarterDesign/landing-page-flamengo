@@ -2326,6 +2326,11 @@ img.lazy.loaded {
     margin-bottom: var(--espacamento-md);
     text-align: center;
   }
+
+  /* Forçar cor preta para beneficios-title-1 no mobile */
+  #beneficios-title-1 {
+    color: #000000 !important;
+  }
   
   .maraca-title > span,
   #maraca-title-1 > span,
