@@ -4150,14 +4150,15 @@ img.lazy.loaded {
 }
 
 .ec-footer-bottom-text {
-	width: 100%;
+	width: 100vw;
 	min-height: 52px;
 	background-color:rgba(24, 28, 48, 1);	
 	display: flex;
 	place-items: center;
 	justify-content: center;
 	gap: 12px;
-	max-width: 1200px;
+	margin-left: calc(-50vw + 50%);
+	margin-right: calc(-50vw + 50%);
 }
 
 .ec-footer-bottom-text span {
@@ -4236,7 +4237,9 @@ img.lazy.loaded {
 		text-align: center;	
 		position: relative;
 		margin-top: 30px;
-		max-width: 100%;
+		width: 100vw;
+		margin-left: calc(-50vw + 50%);
+		margin-right: calc(-50vw + 50%);
 	}
 	.ec-anchor-top {
 		display: none;
