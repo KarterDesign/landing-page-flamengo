@@ -2331,6 +2331,11 @@ img.lazy.loaded {
   #beneficios-title-1 {
     color: #000000 !important;
   }
+
+  /* Forçar cor preta para beneficios-title-2 no mobile */
+  #beneficios-title-2 {
+    color: #000000 !important;
+  }
   
   .maraca-title > span,
   #maraca-title-1 > span,
