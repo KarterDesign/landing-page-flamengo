@@ -4294,15 +4294,16 @@ img.lazy.loaded {
 		width: 85px;
 	}
 
-	/* Layout correto baseado na imagem: CERTIFICADOS e ACOMPANHE-NOS lado a lado */
+	/* Alinhar Certificados na mesma altura de Acompanhe-nos */
 	.ec-footer-other-logos:first-of-type {
 		grid-column: 1;
-		grid-row: 2;
+		grid-row: 1;
 	}
 	
 	.ec-footer-other-logos:last-of-type {
 		grid-column: 2;
-		grid-row: 2;
+		grid-row: 1;
+		align-self: start;
 	}
 	
 }
