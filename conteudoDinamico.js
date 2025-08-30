@@ -34,7 +34,7 @@ const CONTEUDO_PADRAO = {
     
     // Maracanã 1
     'maraca-title-1': 'O MARACA É NOSSO<br><span>O LUGAR É SEU.</span>',
-    'maraca-description-1': 'Do embarque na Gávea ao apito final no Maracanã, seu jogo começa antes com conforto, segurança e Transfer Oficial do Flamengo.',
+    'maraca-description-1': 'Da saída da Gávea ao apito final, viva a emoção do Maracanã com tudo resolvido: transporte oficial para o estádio, segurança, comodidade e a energia única da Nação.',
     'maraca-cta-1': 'Saiba Mais',
     
     // Pacotes
