@@ -2072,7 +2072,7 @@ img.lazy.loaded {
 
 .maraca-description {
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.6;
   margin-bottom: var(--espacamento-lg);
   color: var(--cor-cinza-escuro);
@@ -2283,7 +2283,7 @@ img.lazy.loaded {
   #maraca-description-2,
   #absolut-description {
     font-size: 1.1rem;
-    font-weight: 500;
+    font-weight: 400;
     color: var(--cor-preto);
     line-height: 1.6;
     text-align: center;
@@ -2365,7 +2365,7 @@ img.lazy.loaded {
   #maraca-description-2,
   #absolut-description {
     font-size: 0.95rem;
-    font-weight: 500;
+    font-weight: 400;
     color: var(--cor-preto);
     line-height: 1.6;
     text-align: center;
