@@ -3910,6 +3910,21 @@ img.lazy.loaded {
 
   .players-image {
     max-width: 250px;
+    position: relative;
+  }
+
+  /* Fade transparente para suavizar transição entre jogadores e fundo no mobile */
+  .players-image::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30%;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.2) 100%);
+    pointer-events: none;
+    z-index: 1;
+    border-radius: 0 0 0 0;
   }
 }
 
