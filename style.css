@@ -4278,6 +4278,7 @@ img.lazy.loaded {
 	.ec-footer-links {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto;
 		padding: 0 15px;
 		gap: 20px;
 	}
@@ -4294,15 +4295,27 @@ img.lazy.loaded {
 		width: 85px;
 	}
 
-	/* Alinhar Certificados na mesma altura de Acompanhe-nos */
-	.ec-footer-other-logos:first-of-type {
-		grid-column: 1;
+	/* Estrutura do grid para mobile:
+	   Linha 1: Institucional (ocupa ambas as colunas)
+	   Linha 2: Atendimento (coluna 1) | Acompanhe-nos + Certificados (coluna 2)
+	*/
+	
+	/* Institucional - Ocupa ambas as colunas na primeira linha */
+	.ec-footer-links-2.ec-footer-column {
+		grid-column: 1 / span 2;
 		grid-row: 1;
 	}
 	
+	/* Atendimento - Coluna 1, Linha 2 */
+	.ec-footer-other-logos:first-of-type {
+		grid-column: 1;
+		grid-row: 2;
+	}
+	
+	/* Certificados - Coluna 2, Linha 2 (ao lado de Acompanhe-nos) */
 	.ec-footer-other-logos:last-of-type {
 		grid-column: 2;
-		grid-row: 1;
+		grid-row: 2;
 		align-self: start;
 	}
 	
