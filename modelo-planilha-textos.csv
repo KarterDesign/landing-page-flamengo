@@ -12,7 +12,7 @@ secao_aonde,titulo,secao-aonde-title,texto,VOCÊ AONDE O<br>FLAMENGO ESTIVER,Tí
 agencia_oficial,titulo,agencia-title,texto,AGÊNCIA OFICIAL <span>DA NAÇÃO</span>,Título da seção agência oficial
 agencia_oficial,descricao,agencia-description,texto,Porque somos a agência oficial do Flamengo oferecendo experiência 100% oficial logística completa e suporte total para você só se preocupar em torcer dentro e fora de casa.,Descrição da agência oficial
 agencia_oficial,imagem,agencia-img,imagem,img/flamengo-agencia-oficial-absolut-sport-mobile.jpg,Imagem da seção agência oficial
-maraca_1,titulo,maraca-title-1,texto,O MARACA É NOSSO<br><span>O LUGAR É SEU.</span>,Título da primeira seção do Maracanã
+maraca_1,titulo,maraca-title-1,texto,,Título da primeira seção do Maracanã (removido - agora está no HTML)
 maraca_1,descricao,maraca-description-1,texto,Do embarque na Gávea ao apito final no Maracanã seu jogo começa antes com conforto segurança e Transfer Oficial do Flamengo.,Descrição da primeira seção do Maracanã
 maraca_1,botao_cta,maraca-cta-1,texto,LOREM IPSUM DOLOR AMET,Botão CTA da primeira seção do Maracanã
 pacotes,titulo_secao,pacotes-title,texto,PACOTES DISPONÍVEIS,Título da seção de pacotes

@@ -33,7 +33,7 @@ const CONTEUDO_PADRAO = {
     'agencia-description': 'Porque somos a agência oficial do Flamengo, oferecendo experiência 100% oficial, logística completa e suporte total para você só se preocupar em torcer dentro e fora de casa.',
     
     // Maracanã 1
-    'maraca-title-1': 'O MARACA É NOSSO<br><span>O LUGAR É SEU.</span>',
+    // 'maraca-title-1': 'O MARACA É NOSSO<br><span>O LUGAR É SEU.</span>', // Removido - agora está no HTML
     'maraca-description-1': 'Da saída da Gávea ao apito final, viva a emoção do Maracanã com tudo resolvido: transporte oficial para o estádio, segurança, comodidade e a energia única da Nação.',
     'maraca-cta-1': 'Saiba Mais',
     
@@ -203,6 +203,12 @@ function carregarConteudoPadrao() {
     console.log('🔄 Carregando conteúdo padrão...');
     
     Object.keys(CONTEUDO_PADRAO).forEach(id => {
+        // Pular maraca-title-1 pois agora está no HTML estático
+        if (id === 'maraca-title-1') {
+            if (DEBUG_MODE) console.log(`⏭️ Pulando ${id} - conteúdo estático no HTML`);
+            return;
+        }
+        
         const conteudo = CONTEUDO_PADRAO[id];
         
         // Determinar o tipo baseado no conteúdo
@@ -232,6 +238,12 @@ function aplicarConteudo(item) {
     
     // Converter ID para formato usado no HTML (substituir underscore por hífen)
     const elementId = id.replace(/_/g, '-');
+    
+    // Pular maraca-title-1 pois agora está no HTML estático
+    if (elementId === 'maraca-title-1') {
+        if (DEBUG_MODE) console.log(`⏭️ Pulando ${elementId} - conteúdo estático no HTML`);
+        return;
+    }
     
     if (DEBUG_MODE) console.log(`🔄 Aplicando conteúdo: ${id} → ${elementId} (${tipo || 'auto'})`);
     

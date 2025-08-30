@@ -2260,6 +2260,24 @@ img.lazy.loaded {
     text-align: center;
   }
 
+  /* Estilos específicos para o novo layout de 3 linhas do maraca-title-1 */
+  #maraca-title-1 {
+    line-height: 1.2;
+    margin-bottom: var(--espacamento-lg);
+    display: block;
+  }
+
+  #maraca-title-1 br {
+    display: block;
+    content: "";
+    margin: 0.2rem 0;
+  }
+
+  /* Garantir que o span mantenha a cor vermelha */
+  #maraca-title-1 > span {
+    color: var(--cor-vermelho-principal) !important;
+  }
+
   .maraca-description,
   #maraca-description-1,
   #maraca-description-2,
@@ -2322,6 +2340,24 @@ img.lazy.loaded {
     line-height: 1.1;
     margin-bottom: var(--espacamento-md);
     text-align: center;
+  }
+
+  /* Estilos específicos para o novo layout de 3 linhas do maraca-title-1 - Mobile */
+  #maraca-title-1 {
+    line-height: 1.2;
+    margin-bottom: var(--espacamento-md);
+    display: block;
+  }
+
+  #maraca-title-1 br {
+    display: block;
+    content: "";
+    margin: 0.15rem 0;
+  }
+
+  /* Garantir que o span mantenha a cor vermelha no mobile */
+  #maraca-title-1 > span {
+    color: var(--cor-vermelho-principal) !important;
   }
 
   .maraca-description,
