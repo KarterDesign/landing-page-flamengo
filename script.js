@@ -962,6 +962,8 @@ function openPacoteModal(pacoteId) {
     // Preencher conteúdo do modal
     document.getElementById('modalTitle').textContent = pacoteData.title;
     document.getElementById('modalDescription').textContent = pacoteData.description;
+    document.getElementById('modalImage').src = pacoteData.banner;
+    document.getElementById('modalImage').alt = pacoteData.title;
     
     // Preencher features
     const featuresList = document.getElementById('modalFeatures');

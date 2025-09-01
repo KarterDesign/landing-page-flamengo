@@ -2643,7 +2643,7 @@ img.lazy.loaded {
   background-color: var(--cor-branco);
   border-radius: 20px;
   overflow: hidden;
-  max-width: 650px;
+  max-width: 900px;
   width: 100%;
   max-height: 85vh;
   position: relative;
@@ -2652,7 +2652,7 @@ img.lazy.loaded {
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
   border: 2px solid rgba(198, 12, 48, 0.1);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .modal-overlay.active .modal-content {
@@ -2689,6 +2689,28 @@ img.lazy.loaded {
 
 
 
+/* Modal Left - Imagem */
+.modal-left {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Modal Right - Conteúdo */
+.modal-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--cor-branco);
+}
+
 .modal-body {
   padding: 40px 30px 30px;
   position: relative;
@@ -2699,11 +2721,13 @@ img.lazy.loaded {
 
 .modal-body h2 {
   font-family: 'Barlow', sans-serif;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   font-weight: 700;
   color: var(--cor-preto);
-  margin-bottom: 15px;
-  line-height: 1.3;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .modal-body p {
@@ -2716,10 +2740,7 @@ img.lazy.loaded {
 
 .modal-features {
   margin-bottom: 30px;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  border-radius: 15px;
-  padding: 25px;
-  border: 1px solid rgba(198, 12, 48, 0.1);
+  padding: 25px 0;
 }
 
 .modal-features ul {
@@ -2727,29 +2748,32 @@ img.lazy.loaded {
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
 }
 
 .modal-features li {
   display: flex;
   align-items: center;
   color: var(--cor-cinza-escuro);
-  font-weight: 600;
-  font-size: 1rem;
-  padding: 8px 0;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 8px 12px;
   position: relative;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
 }
 
 .modal-features li::before {
   content: "✓";
   color: var(--cor-vermelho-principal);
   font-weight: bold;
-  margin-right: 12px;
-  font-size: 1.1rem;
+  margin-right: 10px;
+  font-size: 1rem;
   background: rgba(198, 12, 48, 0.1);
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -2759,34 +2783,30 @@ img.lazy.loaded {
 
 /* CTA PROMINENTE - POSICIONADO ESTRATEGICAMENTE */
 .modal-cta-container {
-  position: sticky;
-  bottom: 0;
-  background: linear-gradient(135deg, var(--cor-vermelho-principal) 0%, var(--cor-vermelho-escuro) 100%);
-  margin: 0 -30px -30px -30px;
-  padding: 25px 30px;
+  background: var(--cor-branco);
+  padding: 30px;
   text-align: center;
-  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
-  border-top: 3px solid rgba(255, 255, 255, 0.2);
   flex-shrink: 0;
   z-index: 10;
+  border-top: 1px solid #e9ecef;
 }
 
 .modal-cta {
-  background: var(--cor-branco);
-  color: var(--cor-vermelho-principal);
+  background: var(--cor-vermelho-principal);
+  color: var(--cor-branco);
   border: none;
   padding: 18px 40px;
-  font-size: 1.2rem;
-  font-weight: 800;
+  font-size: 1.1rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  border-radius: 50px;
+  letter-spacing: 1px;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(198, 12, 48, 0.3);
   position: relative;
   overflow: hidden;
-  min-width: 280px;
+  width: 100%;
   font-family: 'Barlow', sans-serif;
 }
 
@@ -2806,10 +2826,10 @@ img.lazy.loaded {
 }
 
 .modal-cta:hover {
-  background: var(--cor-branco);
-  color: var(--cor-vermelho-escuro);
-  transform: translateY(-3px);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+  background: var(--cor-vermelho-escuro);
+  color: var(--cor-branco);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(198, 12, 48, 0.4);
 }
 
 .modal-cta:active {
@@ -2850,13 +2870,13 @@ img.lazy.loaded {
 /* INDICADOR VISUAL DE AÇÃO */
 .modal-cta::after {
   content: '→';
-  margin-left: 10px;
-  font-size: 1.3rem;
+  margin-left: 8px;
+  font-size: 1.1rem;
   transition: transform 0.3s ease;
 }
 
 .modal-cta:hover::after {
-  transform: translateX(5px);
+  transform: translateX(3px);
 }
 
 /* ===== MEDIA QUERIES PARA PACOTES ===== */
@@ -2890,6 +2910,16 @@ img.lazy.loaded {
     max-height: 94vh;
     border-radius: 16px;
     margin: 0 auto;
+    flex-direction: column;
+  }
+
+  .modal-left {
+    flex: none;
+    height: 200px;
+  }
+
+  .modal-right {
+    flex: 1;
   }
 
   .modal-body {
@@ -2918,6 +2948,15 @@ img.lazy.loaded {
   .modal-features ul {
     grid-template-columns: 1fr;
     gap: 10px;
+  }
+
+  .modal-cta-container {
+    padding: 20px 16px;
+  }
+
+  .modal-cta {
+    padding: 16px 28px;
+    font-size: 1rem;
   }
 
   .modal-features li {
@@ -2979,6 +3018,16 @@ img.lazy.loaded {
   .modal-content {
     max-height: 98vh;
     border-radius: 12px;
+    flex-direction: column;
+  }
+
+  .modal-left {
+    flex: none;
+    height: 180px;
+  }
+
+  .modal-right {
+    flex: 1;
   }
 
   .modal-body {
@@ -3155,16 +3204,11 @@ img.lazy.loaded {
 /* DESKTOP LARGE - OTIMIZAÇÕES */
 @media (min-width: 1200px) {
   .modal-content {
-    max-width: 700px;
-  }
-
-  .modal-banner {
-    height: 280px;
-    object-position: center 35%;
+    max-width: 1000px;
   }
 
   .modal-body {
-    padding: 35px;
+    padding: 40px;
   }
 
   .modal-body h2 {
@@ -3172,7 +3216,7 @@ img.lazy.loaded {
   }
 
   .modal-features {
-    padding: 30px;
+    padding: 30px 0;
   }
 
   .modal-features ul {
@@ -3180,13 +3224,12 @@ img.lazy.loaded {
   }
 
   .modal-cta-container {
-    padding: 30px 35px;
+    padding: 35px 40px;
   }
 
   .modal-cta {
-    min-width: 320px;
     padding: 20px 45px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -3204,6 +3247,21 @@ img.lazy.loaded {
     to {
       opacity: 1;
       transform: translateY(0) scale(1);
+    }
+  }
+
+  .modal-overlay.active .modal-left {
+    animation: modalImageSlideIn 0.5s ease 0.1s both;
+  }
+
+  @keyframes modalImageSlideIn {
+    from {
+      opacity: 0;
+      transform: scale(1.1);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
     }
   }
 
