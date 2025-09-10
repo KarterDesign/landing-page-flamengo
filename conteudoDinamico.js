@@ -29,12 +29,12 @@ const CONTEUDO_PADRAO = {
     
     // Agência
     'agencia-img': 'img/flamengo-agencia-oficial-absolut-sport-mobile.jpg',
-    'agencia-title': 'AGÊNCIA OFICIAL <span>DA NAÇÃO</span>',
-    'agencia-description': 'Porque somos a agência oficial do Flamengo, oferecendo experiência 100% oficial, logística completa e suporte total para você só se preocupar em torcer dentro e fora de casa.',
+    'agencia-title': 'A ABSOLUT Sport é a <span>Parceira do Clube de Regatas do Flamengo.</span>',
+    'agencia-description': 'Com o Visto Rubro-Negro, você vive o Maracanã com a tranquilidade de quem tem tudo planejado: segurança, conforto, comodidade e suporte em cada detalhe. Uma experiência pensada para que você aproveite o jogo sem preocupações e com a excelência que só a ABSOLUT Sport oferece.',
     
     // Maracanã 1
     // 'maraca-title-1': 'O MARACA É NOSSO<br><span>O LUGAR É SEU.</span>', // Removido - agora está no HTML
-    'maraca-description-1': 'Da saída da Gávea ao apito final, viva a emoção do Maracanã com tudo resolvido: transporte oficial para o estádio, segurança, comodidade e a energia única da Nação.',
+    'maraca-description-1': 'Com o Visto Rubro-Negro, um dia de jogo do Flamengo vai muito além dos 90 minutos. Você garante ingressos nos setores mais premium do Maracanã e transfers oficiais com pontos de encontro, que levam a torcida direto para dentro do estádio e, ao final da partida, de volta aos mesmos pontos.',
     'maraca-cta-1': 'Saiba Mais',
     
     // Pacotes
