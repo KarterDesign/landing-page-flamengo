@@ -9,7 +9,7 @@ const GOOGLE_SHEETS_CONTEUDO_URL = 'https://docs.google.com/spreadsheets/d/e/2PA
 // Valores padrão para fallback
 const CONTEUDO_PADRAO = {
     // Header
-    'header-logo-text': 'Agência Oficial de Hospitalidade e Experiências',
+    'header-logo-text': '',
     'header-logo-img': 'img/flamengo-absolut-sport-logo-oficial-parceria.png',
     'nav-link-1': 'Pacote Oeste Inferior',
     'nav-link-2': 'Pacote Espaço Fla+',
