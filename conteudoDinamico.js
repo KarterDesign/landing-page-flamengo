@@ -61,26 +61,26 @@ const CONTEUDO_PADRAO = {
     'maraca-cta-2': 'Saiba Mais',
     
     // Benefícios 1
-    'beneficios-title-1': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta faucibus.',
-    'beneficio-1-text': 'Ingressos no setor da torcida do Flamengo.',
-    'beneficio-2-text': 'Hospedagem nos melhores hotéis.',
-    'beneficio-3-text': 'Matchday transfer.',
-    'beneficio-4-text': 'Experiências locais, brindes e suporte.',
-    'beneficio-5-text': 'Aéreo (sob consulta)',
+    'beneficios-title-1': '',
+    'beneficio-1-text': '',
+    'beneficio-2-text': '',
+    'beneficio-3-text': '',
+    'beneficio-4-text': '',
+    // 'beneficio-5-text': 'Aéreo (sob consulta)',
     
     // Modal
     'modal-cta': 'COMPRAR AGORA',
     
     // Newsletter
-    'newsletter-title': 'QUER SER AVISADO<br>SOBRE OS PRÓXIMOS<br>PACOTES?',
-    'newsletter-description': 'Deixe seu contato e garanta prioridade no acesso às melhores experiências nos jogos do Flamengo. Viva o Flamengo como protagonista!',
-    'newsletter-label-nome': 'Nome*',
-    'newsletter-label-email': 'Email*',
-    'newsletter-label-time': 'Qual time você torce*',
-    'newsletter-label-perfil': 'Eu sou um(a):*',
-    'newsletter-label-captcha': '80 + 1 = ?',
-    'newsletter-submit': 'Quero ser avisado!',
-    'newsletter-img': 'img/Jogadores.png',
+    'newsletter-title': '',
+    'newsletter-description': '',
+    'newsletter-label-nome': '',
+    'newsletter-label-email': '',
+    'newsletter-label-time': '',
+    'newsletter-label-perfil': '',
+    'newsletter-label-captcha': '',
+    'newsletter-submit': '',
+    'newsletter-img': '',
     
     // Absolut Sport
     'absolut-title': 'POR QUE COMPRAR COM A <span style="color: #155f97;">ABSOLUT SPORT?</span>',
@@ -89,12 +89,12 @@ const CONTEUDO_PADRAO = {
     
     // Benefícios 2
     'beneficios-title-2': '',
-    'absolut-beneficio-1-text': 'Equipe Dedicada.',
-    'absolut-beneficio-2-text': 'Atendimento e Suporte.',
-    'absolut-beneficio-3-text': 'Melhores acomodações.',
-    'absolut-beneficio-4-text': 'Transfer oficiais.',
-    'absolut-beneficio-5-text': 'Aéreo sob cotação.',
-    'absolut-beneficio-6-text': 'Ingressos oficiais.',
+    'absolut-beneficio-1-text': '',
+    'absolut-beneficio-2-text': '',
+    'absolut-beneficio-3-text': '',
+    'absolut-beneficio-4-text': '',
+    'absolut-beneficio-5-text': '',
+    'absolut-beneficio-6-text': '',
     
     // FAQ
     'faq-title': 'Perguntas Frequentes',

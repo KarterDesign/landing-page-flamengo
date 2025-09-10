@@ -833,16 +833,14 @@ const pacotesData = {
     'oeste-inferior': {
         title: 'PACOTE OESTE INFERIOR',
         banner: 'img/pacote oeste inferior.png',
-        description: 'Desfrute de uma experiência única no setor Oeste Inferior do Maracanã. Tenha acesso privilegiado ao estádio mais icônico do Brasil, com vista incrível do campo e toda a estrutura necessária para viver momentos inesquecíveis.',
+        description: 'O calor da maior torcida, no estádio mais icônico do Mundo, onde a paixão pulsa mais forte a cada lance. Com vista incrível do campo e toda a estrutura necessária, você vive de perto a energia que transforma cada jogo em uma lembrança inesquecível.',
         features: [
-            'Ingresso setor Oeste Inferior',
-            'Transfer oficial do Flamengo',
-            'Embarque na Gávea',
-            'Guia credenciado',
-            'Seguro viagem',
-            'Kit torcedor oficial',
-            'Lanche no trajeto',
-            'Suporte 24h'
+            'Ingresso para setor Oeste Inferior ',
+            'Experiência de arquibancada',
+            'Transfer Oficial Ida e Volta',
+            'Estacionamento dentro do Maracanã',
+            'Suporte Especializado ABSOLUT Sport'
+
         ]
     },
     'espaco-fla': {
