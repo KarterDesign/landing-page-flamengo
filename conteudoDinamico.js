@@ -56,8 +56,8 @@ const CONTEUDO_PADRAO = {
     'pacote-3-tag-3': 'ULTIMAS UNIDADES',
     
     // Maracanã 2
-    'maraca-title-2': 'SIGA O FLAMENGO<br><span>AONDE ELE FOR</span>',
-    'maraca-description-2': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta faucibus tellus vitae semper. Morbi vulputate viverra dui, nec bibendum est tincidunt lacinia. Donec iaculis orci eget tortor venenatis posuere.',
+    'maraca-title-2': 'Visto <br><span>RURO-NEGRO</span>',
+    'maraca-description-2': 'A ABSOLUT Sport te leva pra ver o Mengão no Maraca. Nossa equipe cuida de toda a logística para você viver uma experiência completa com segurança e comodidade. ',
     'maraca-cta-2': 'Saiba Mais',
     
     // Benefícios 1

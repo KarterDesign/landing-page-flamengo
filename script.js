@@ -848,32 +848,29 @@ const pacotesData = {
     'espaco-fla': {
         title: 'PACOTE ESPAÇO FLA+',
         banner: 'img/pacote oeste inferior fla+.png',
-        description: 'Viva a experiência premium no Espaço FLA+, área exclusiva para sócios-torcedores e convidados especiais. Desfrute de conforto máximo, gastronomia diferenciada e uma vista privilegiada do Maracanã.',
+        description: 'Viva a experiência premium do Espaço Fla+. Sem perder a emoção da arquibancada, o torcedor deixa de ser um espectador e se sente dentro de campo. Tudo isso com conforto, buffet completo, chopp liberado, comodidade e um serviço premium de atendimento.',
         features: [
-            'Acesso ao Espaço FLA+',
-            'Buffet premium incluído',
-            'Bebidas liberadas',
-            'Transfer executivo',
-            'Estacionamento exclusivo',
-            'Recepção VIP',
-            'Brinde oficial do Flamengo',
-            'Atendimento personalizado'
+            'Ingresso para setor Oeste Inferior',
+            'Experiência de arquibancada',
+            'Acesso a espaço premium Fla+',
+            'Buffet completo',
+            'Chopp Liberado',
+            'Transfer Oficial Ida e Volta',
+            'Estacionamento dentro do Maracanã',
+            'Suporte Especializado ABSOLUT Sport'
         ]
     },
     'camarote': {
         title: 'PACOTE MARACANÃ MAIS',
         banner: 'img/Soccer Stadium crowd.png',
-        description: 'O máximo em experiência e exclusividade no Camarote ABSOLUT Sport. Ambiente climatizado, vista panorâmica privilegiada e serviços de primeira classe para você torcer com todo o conforto que merece.',
+        description: 'No Maracanã Mais, você testemunha a história sendo escrita sob a perspectiva do seu assento marcado com a melhor vista do gramado! Tudo isso com direito à buffet, transfer de ida e volta, suporte local e todo o conforto que você merece para torcer com comodidade.',
         features: [
-            'Camarote ABSOLUT Sport',
-            'Ambiente climatizado',
-            'Vista panorâmica privilegiada',
-            'Open bar premium',
-            'Gastronomia gourmet',
-            'Valet parking',
-            'Acesso a área VIP',
-            'Concierge exclusivo',
-            'Brinde de cortesia'
+            'Ingresso para setor Maracanã Mais',
+            'Assento marcado',
+            'Buffet completo',
+            'Transfer Oficial Ida e Volta',
+            'Estacionamento dentro do Maracanã ',
+            'Suporte Especializado ABSOLUT Sport'
         ]
     }
 };
