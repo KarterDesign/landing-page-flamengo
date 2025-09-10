@@ -1062,9 +1062,9 @@ function initTypewriter() {
     }
     
     const sentences = [
-        "AGÊNCIA OFICIAL DE VIAGENS E EXPERIÊNCIAS DO FLAMENGO",
-        "AGÊNCIA OFICIAL DA NAÇÃO",
-        "ABSOLUT SPORT  ISSO É VIVER"
+        "O LUGAR É SEU.",
+        "A PAIXÃO É SUA.",
+
     ];
     
     let currentSentenceIndex = 0;

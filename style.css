@@ -651,11 +651,11 @@ button {
 
 .hero-content {
   padding-bottom: 60px;
-  max-width: 700px;
 }
 
 .hero-title {
   font-family: 'Soulcraft', sans-serif;
+  width: 100%;
   font-size: 2.7rem;
   font-weight: 900;
   margin-bottom: var(--espacamento-sm);
@@ -739,29 +739,31 @@ button {
   }
 }
 
-#typewriter-text {
+/* #typewriter-text {
   display: inline-block;
   font-family: 'Soulcraft', 'Barlow', sans-serif;
   font-weight: 600; /* Semibold para melhor legibilidade */
-  color: var(--cor-branco);
-  transition: all 0.3s ease;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-}
+  /* color: var(--cor-branco); */
+  /* transition: all 0.3s ease; */
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); */
+/* } */ 
 
 /* Redução gradual do peso da fonte para mobile */
-@media (max-width: 768px) {
-  #typewriter-text {
+/* @media (max-width: 768px) { */
+  /* #typewriter-text {
     font-weight: 500; /* Medium para mobile */
-    font-size: 0.95em; /* Redução sutil do tamanho */
-  }
-}
+    /* font-size: 0.95em; Redução sutil do tamanho */
+  /* } */
+/* } */
 
-@media (max-width: 480px) {
-  #typewriter-text {
-    font-weight: 400; /* Regular para telas muito pequenas */
-    font-size: 0.9em; /* Redução adicional do tamanho */
-  }
-}
+
+ /* @media (max-width: 480px) { */
+  /* #typewriter-text { */
+    /* font-weight: 400; Regular para telas muito pequenas */
+    /* font-size: 0.9em; Redução adicional do tamanho */
+  /* } */
+/* }  */
+
 
 /* Responsive para vídeo */
 @media (max-width: 768px) {
