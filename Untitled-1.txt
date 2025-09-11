@@ -1,0 +1,14 @@
+Seção sobre nós:
+Remover botção e colocar o link para o site
+
+POR QUE COMPRAR COM A ABSOLUT SPORT?
+trocar copy
+
+Por que escolher a ABSOLUT Sport?
+colocar cards passando igual a sessão de paises copa america
+
+                       <h2  id="maraca-title-1" class="maraca-title">
+                            O MARACA<br>
+                            É NOSSO<br>
+                            <span id="typewriter-text"></span>
+                        </h2>
