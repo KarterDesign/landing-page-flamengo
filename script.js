@@ -106,7 +106,10 @@ function renderFAQItems(faqItems) {
     // Limpar conteúdo existente
     faqAccordion.innerHTML = '';
     
-    faqItems.forEach((item, index) => {
+    // Limitar a apenas as primeiras 4 perguntas para a página principal
+    const limitedItems = faqItems.slice(0, 4);
+    
+    limitedItems.forEach((item, index) => {
         const accordionItem = createFAQAccordionItem(item, index);
         faqAccordion.appendChild(accordionItem);
     });
