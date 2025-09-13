@@ -313,6 +313,100 @@
                 html += `<p>${resposta.credenciais}</p>`;
             }
             
+            // Processo (para personalização)
+            if (resposta.processo) {
+                html += `<p><strong>Como fazer:</strong> ${resposta.processo}</p>`;
+            }
+            
+            // Restrições
+            if (resposta.restricoes) {
+                html += `<p><strong>Importante:</strong> ${resposta.restricoes}</p>`;
+            }
+            
+            // Disponibilidade
+            if (resposta.disponibilidade) {
+                html += `<p><strong>Disponibilidade:</strong> ${resposta.disponibilidade}</p>`;
+            }
+            
+            // Passo a passo (como array)
+            if (resposta.passo_a_passo && Array.isArray(resposta.passo_a_passo)) {
+                html += '<div class="faq-highlight">';
+                html += '<h6 style="color:"fff">Passo a passo:</h6>';
+                html += '<ol>';
+                resposta.passo_a_passo.forEach(passo => {
+                    html += `<li>${passo}</li>`;
+                });
+                html += '</ol>';
+                html += '</div>';
+            }
+            
+            // No dia do jogo
+            if (resposta.no_dia_do_jogo) {
+                html += `<p><strong>No dia do jogo:</strong> ${resposta.no_dia_do_jogo}</p>`;
+            }
+            
+            // Prazo
+            if (resposta.prazo) {
+                html += `<p><strong>Prazo:</strong> ${resposta.prazo}</p>`;
+            }
+            
+            // Serviços (diferentes de servicos_inclusos)
+            if (resposta.servicos) {
+                html += `<p><strong>Serviços:</strong> ${resposta.servicos}</p>`;
+            }
+            
+            // Meeting Point - Maracanã
+            if (resposta.maracana) {
+                html += `<p><strong>Jogos no Maracanã:</strong> ${resposta.maracana}</p>`;
+            }
+            
+            // Meeting Point - Jogos fora
+            if (resposta.jogos_fora) {
+                html += `<p><strong>Jogos fora de casa:</strong> ${resposta.jogos_fora}</p>`;
+            }
+            
+            // Horário
+            if (resposta.horario) {
+                html += `<p><strong>Horário:</strong> ${resposta.horario}</p>`;
+            }
+            
+            // Direito de arrependimento
+            if (resposta.direito_arrependimento) {
+                html += `<p><strong>Direito de arrependimento:</strong> ${resposta.direito_arrependimento}</p>`;
+            }
+            
+            // Reembolso parcial
+            if (resposta.reembolso_parcial) {
+                html += `<p><strong>Reembolso parcial:</strong> ${resposta.reembolso_parcial}</p>`;
+            }
+            
+            // Formas disponíveis (para pagamento)
+            if (resposta.formas_disponveis && Array.isArray(resposta.formas_disponveis)) {
+                html += '<div class="faq-highlight">';
+                html += '<h6>Formas de pagamento disponíveis:</h6>';
+                html += '<ul>';
+                resposta.formas_disponveis.forEach(forma => {
+                    html += `<li>${forma}</li>`;
+                });
+                html += '</ul>';
+                html += '</div>';
+            }
+            
+            // Processo (para pagamento)
+            if (resposta.processo && !resposta.formas_disponveis) {
+                html += `<p><strong>Processo:</strong> ${resposta.processo}</p>`;
+            }
+            
+            // Antes do jogo
+            if (resposta.antes_do_jogo) {
+                html += `<p><strong>Antes do jogo:</strong> ${resposta.antes_do_jogo}</p>`;
+            }
+            
+            // Dia do jogo
+            if (resposta.dia_do_jogo) {
+                html += `<p><strong>No dia do jogo:</strong> ${resposta.dia_do_jogo}</p>`;
+            }
+            
             // Serviços inclusos
             if (resposta.servicos_inclusos) {
                 html += '<div class="faq-highlight">';

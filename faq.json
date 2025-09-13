@@ -89,6 +89,114 @@
           }
         ]
       }
+    },
+    {
+      "id": 4,
+      "pergunta": "Posso personalizar?",
+      "resposta": {
+        "descricao": "Sim, é possível personalizar seu pacote antes da compra.",
+        "processo": "Para isso, envie um e-mail para flamengo@absolut-sport.com.br informando: jogo desejado, necessidade de hospedagem, quantidade de pessoas e cotação aérea (com a cidade de embarque).",
+        "restricoes": "Após a confirmação da compra, não será possível realizar alterações. Caso precise modificar algo, será necessário cancelar o pedido atual e efetuar uma nova compra, conforme as condições vigentes de cancelamento."
+      }
+    },
+    {
+      "id": 5,
+      "pergunta": "Quero saber de ingresso",
+      "resposta": {
+        "descricao": "Todos os ingressos são digitais e vinculados ao sistema de reconhecimento facial do Maracanã — essa é a única forma de acesso ao estádio. Por isso, o cadastro prévio é indispensável.",
+        "disponibilidade": "Não comercializamos ingressos avulsos: eles estão disponíveis apenas como parte dos pacotes, que incluem diversos serviços pensados para oferecer uma experiência completa do evento."
+      }
+    },
+    {
+      "id": 6,
+      "pergunta": "Como cadastro a facial?",
+      "resposta": {
+        "passo_a_passo": [
+          "Acesse: biometria.flamengo.com.br",
+          "Faça login ou crie sua conta",
+          "Envie uma foto do seu documento oficial",
+          "Capture sua biometria facial com a câmera do celular",
+          "Aguarde a confirmação por e-mail"
+        ],
+        "no_dia_do_jogo": "No dia do jogo, basta se dirigir à catraca. O reconhecimento facial será sua forma de acesso.",
+        "prazo": "O cadastro deve ser feito com pelo menos 24 horas de antecedência em relação ao horário da partida."
+      }
+    },
+    {
+      "id": 7,
+      "pergunta": "O que é o FLA+?",
+      "resposta": {
+        "descricao": "O Espaço Fla+ é um espaço privado, que oferece serviço premium e exclusivo, localizado nos setores Leste e Oeste, dependendo da competição do dia do jogo.",
+        "servicos": "O local conta com chopp liberado desde o pré-jogo até os 15 minutos do segundo tempo (incluindo o intervalo da partida), buffet e fácil acesso à arquibancada do setor."
+      }
+    },
+    {
+      "id": 8,
+      "pergunta": "O que é o Meeting Point?",
+      "resposta": {
+        "descricao": "O Meeting Point é o ponto de encontro oficial definido pela ABSOLUT Sport para os torcedores participantes de nossos pacotes de experiência.",
+        "maracana": "Nos jogos no Maracanã, o Meeting Point acontece na sede da Gávea, onde oferecemos uma estrutura completa com transporte executivo até o estádio, suporte da nossa equipe, acesso ao Museu do Flamengo (quando aplicável) e loja oficial.",
+        "jogos_fora": "Jogos fora: local informado por e-mail."
+      }
+    },
+    {
+      "id": 9,
+      "pergunta": "Posso ir sem o grupo?",
+      "resposta": {
+        "descricao": "Sim, se preferir é possível ir sem o grupo, mas perdendo o direito do transporte de volta.",
+        "restricoes": "Não há reembolso do valor do transfer não utilizado."
+      }
+    },
+    {
+      "id": 10,
+      "pergunta": "O transfer é exclusivo?",
+      "resposta": {
+        "descricao": "Sim, somente para clientes ABSOLUT Sport."
+      }
+    },
+    {
+      "id": 11,
+      "pergunta": "Se atrasar, perde o bus?",
+      "resposta": {
+        "descricao": "Sim, por respeito a todos os torcedores e para não comprometer o horário de chegada ao estádio, não há tolerância de atraso.",
+        "horario": "O embarque é pontual, sempre 2 horas antes do horário da partida. Chegue com antecedência."
+      }
+    },
+    {
+      "id": 12,
+      "pergunta": "Há meia-entrada?",
+      "resposta": {
+        "descricao": "Não. Por se tratar de pacotes especiais com serviços agregados, os ingressos são vendidos sempre como inteira."
+      }
+    },
+    {
+      "id": 13,
+      "pergunta": "Quero cancelar, pode?",
+      "resposta": {
+        "restricoes": "Compras realizadas com até 48 horas de antecedência ao jogo não são reembolsáveis.",
+        "direito_arrependimento": "O direito de arrependimento é garantido por até 7 dias após a data da compra, com reembolso integral.",
+        "reembolso_parcial": "Para compras efetuadas entre 7 dias e 48 horas antes da partida, aplica-se reembolso de 50% do valor pago."
+      }
+    },
+    {
+      "id": 14,
+      "pergunta": "Métodos de pagamento?",
+      "resposta": {
+        "formas_disponveis": [
+          "PIX com 5% de desconto imediato",
+          "Cartão de crédito: 2x sem juros ou até 8x com juros",
+          "Cartão de débito"
+        ],
+        "processo": "O pagamento é feito no momento do pedido, e seu ingresso ficará reservado assim que o pagamento for confirmado."
+      }
+    },
+    {
+      "id": 15,
+      "pergunta": "Preciso de ajuda",
+      "resposta": {
+        "antes_do_jogo": "Caso precise de ajuda em relação ao seu pacote em dias anteriores à partida, sua dúvida pode ser enviada através do e-mail flamengo@absolut-sport.com.br.",
+        "dia_do_jogo": "No dia do jogo, uma equipe da ABSOLUT Sport te acompanhará desde o meeting point até o final da experiência, garantindo que você tenha todo tipo de assistência necessária, para que sua única preocupação seja curtir e torcer pelo Mengão."
+      }
     }
    ]
 }

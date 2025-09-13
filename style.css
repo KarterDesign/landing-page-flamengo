@@ -531,7 +531,7 @@ h5,
 h6 {
   font-family: 'Soulcraft', sans-serif;
   font-weight: bold;
-  color: var(--cor-preto);
+  color: var(--cor-branco);
   margin-bottom: var(--espacamento-sm);
 }
 
