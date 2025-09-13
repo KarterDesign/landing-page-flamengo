@@ -1054,16 +1054,15 @@ const pacotesData = {
     'espaco-fla': {
         title: 'PACOTE ESPAÇO FLA+',
         banner: 'img/pacote oeste inferior fla+.png',
-        description: 'Viva a experiência premium do Espaço Fla+. Sem perder a emoção da arquibancada, o torcedor deixa de ser um espectador e se sente dentro de campo. Tudo isso com conforto, buffet completo, chopp liberado, comodidade e um serviço premium de atendimento.',
+        description: 'Viva o premium do Espaço Fla+: perto da arquibancada, mas com conforto, buffet completo, chopp liberado e atendimento exclusivo.',
         features: [
             'Ingresso para setor Oeste Inferior',
             'Experiência de arquibancada',
             'Acesso a espaço premium Fla+',
-            'Buffet completo',
-            'Chopp Liberado',
+            'Buffet completo + Chopp Liberado',
             'Transfer Oficial Ida e Volta',
-            'Estacionamento dentro do Maracanã',
-            'Suporte Especializado ABSOLUT Sport'
+            'Estacionamento dentro do Maracanã'
+            
         ]
     },
     'camarote': {
