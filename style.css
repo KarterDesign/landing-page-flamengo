@@ -4494,6 +4494,50 @@ img.lazy.loaded {
   font-size: 1.1rem;
 }
 
+/* Botão FAQ Completo */
+.faq-complete-btn {
+  background: transparent !important;
+  border: 2px solid var(--cor-branco) !important;
+  color: var(--cor-branco) !important;
+  font-family: 'Barlow', sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  padding: 15px 35px !important;
+  border-radius: 50px !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.faq-complete-btn::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent) !important;
+  transition: left 0.5s ease !important;
+}
+
+.faq-complete-btn:hover::before {
+  left: 100% !important;
+}
+
+.faq-complete-btn:hover {
+  background: var(--cor-branco) !important;
+  color: var(--cor-preto) !important;
+  border-color: var(--cor-branco) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3) !important;
+}
+
+.faq-complete-btn:active {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2) !important;
+}
+
 /* Responsividade do FAQ */
 @media (max-width: 768px) {
   .faq-title {
@@ -4512,6 +4556,11 @@ img.lazy.loaded {
 
   .faq-accordion .accordion-body p {
     font-size: 0.95rem;
+  }
+
+  .faq-complete-btn {
+    padding: 12px 25px !important;
+    font-size: 0.95rem !important;
   }
 }
 
@@ -4537,5 +4586,11 @@ img.lazy.loaded {
   .faq-accordion .accordion-body .faq-highlight {
     padding: 12px;
     margin: 10px 0;
+  }
+
+  .faq-complete-btn {
+    padding: 10px 20px !important;
+    font-size: 0.9rem !important;
+    letter-spacing: 0.8px !important;
   }
 }
