@@ -75,44 +75,155 @@ function initDynamicContentHandlers() {
 
 // ===== FAQ ACCORDION =====
 /**
- * Inicializa o sistema de FAQ accordion
+ * Inicializa o sistema de FAQ accordion carregando dados do faq.json
  */
-function initFAQ() {
-    const faqQuestions = document.querySelectorAll('.faq-question');
-    
-    faqQuestions.forEach(question => {
-        question.addEventListener('click', function() {
-            toggleFAQItem(this);
-        });
+async function initFAQ() {
+    try {
+        const response = await fetch('faq.json');
+        const faqData = await response.json();
         
-        // Adicionar suporte a teclado
-        question.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                toggleFAQItem(this);
-            }
-        });
-    });
+        if (faqData && faqData.faq) {
+            renderFAQItems(faqData.faq);
+        }
+    } catch (error) {
+        console.error('Erro ao carregar FAQ:', error);
+        // Fallback: mostrar mensagem de erro ou FAQ padrão
+        showFAQError();
+    }
 }
 
 /**
- * Toggle FAQ item (abrir/fechar)
+ * Renderiza os itens do FAQ no accordion
  */
-function toggleFAQItem(questionElement) {
-    const faqItem = questionElement.parentElement;
-    const isActive = faqItem.classList.contains('active');
+function renderFAQItems(faqItems) {
+    const faqAccordion = document.getElementById('faqAccordion');
     
-    // Fechar todos os itens
-    document.querySelectorAll('.faq-item').forEach(item => {
-        item.classList.remove('active');
-        item.querySelector('.faq-answer').style.maxHeight = '0';
+    if (!faqAccordion) {
+        console.error('Container do FAQ não encontrado');
+        return;
+    }
+    
+    // Limpar conteúdo existente
+    faqAccordion.innerHTML = '';
+    
+    faqItems.forEach((item, index) => {
+        const accordionItem = createFAQAccordionItem(item, index);
+        faqAccordion.appendChild(accordionItem);
     });
     
-    // Abrir o item clicado se não estava ativo
-    if (!isActive) {
-        faqItem.classList.add('active');
-        const answer = faqItem.querySelector('.faq-answer');
-        answer.style.maxHeight = answer.scrollHeight + 'px';
+    // Adicionar classe CSS para estilização do FAQ
+    faqAccordion.classList.add('faq-accordion');
+}
+
+/**
+ * Cria um item do accordion Bootstrap para o FAQ
+ */
+function createFAQAccordionItem(faqItem, index) {
+    const accordionDiv = document.createElement('div');
+    accordionDiv.className = 'accordion-item';
+    
+    const headingId = `faqHeading${faqItem.id}`;
+    const collapseId = `faqCollapse${faqItem.id}`;
+    
+    accordionDiv.innerHTML = `
+        <h2 class="accordion-header" id="${headingId}">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                    data-bs-target="#${collapseId}" aria-expanded="false" aria-controls="${collapseId}">
+                ${faqItem.pergunta}
+            </button>
+        </h2>
+        <div id="${collapseId}" class="accordion-collapse collapse" aria-labelledby="${headingId}" 
+             data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                ${formatFAQAnswer(faqItem.resposta)}
+            </div>
+        </div>
+    `;
+    
+    return accordionDiv;
+}
+
+/**
+ * Formata a resposta do FAQ baseado na estrutura do JSON
+ */
+function formatFAQAnswer(resposta) {
+    if (typeof resposta === 'string') {
+        return `<p>${resposta}</p>`;
+    }
+    
+    let html = '';
+    
+    // Apresentação
+    if (resposta.apresentacao) {
+        html += `<p><strong>${resposta.apresentacao}</strong></p>`;
+    }
+    
+    // Descrição
+    if (resposta.descricao) {
+        html += `<p>${resposta.descricao}</p>`;
+    }
+    
+    // Compromisso
+    if (resposta.compromisso) {
+        html += `<p>${resposta.compromisso}</p>`;
+    }
+    
+    // Experiência
+    if (resposta.experiencia) {
+        html += `<p>${resposta.experiencia}</p>`;
+    }
+    
+    // Credenciais
+    if (resposta.credenciais) {
+        html += `<p>${resposta.credenciais}</p>`;
+    }
+    
+    // Serviços inclusos
+    if (resposta.servicos_inclusos) {
+        html += '<div class="faq-highlight">';
+        html += '<h5>Serviços Inclusos:</h5>';
+        html += '<ul>';
+        resposta.servicos_inclusos.forEach(servico => {
+            html += `<li>${servico}</li>`;
+        });
+        html += '</ul>';
+        html += '</div>';
+    }
+    
+    // Pacotes
+    if (resposta.pacotes) {
+        html += '<div class="faq-highlight">';
+        html += '<h5>Nossos Pacotes:</h5>';
+        resposta.pacotes.forEach(pacote => {
+            html += `<div style="margin-bottom: 20px;">`;
+            html += `<h6 style="color: var(--cor-vermelho-principal); margin-bottom: 10px;">${pacote.nome}</h6>`;
+            html += '<ul>';
+            pacote.inclui.forEach(item => {
+                html += `<li>${item}</li>`;
+            });
+            html += '</ul>';
+            html += '</div>';
+        });
+        html += '</div>';
+    }
+    
+    return html;
+}
+
+/**
+ * Mostra erro quando não consegue carregar o FAQ
+ */
+function showFAQError() {
+    const faqAccordion = document.getElementById('faqAccordion');
+    
+    if (faqAccordion) {
+        faqAccordion.innerHTML = `
+            <div class="alert alert-warning text-center" role="alert">
+                <h5>FAQ temporariamente indisponível</h5>
+                <p>Não foi possível carregar as perguntas frequentes no momento. 
+                   Entre em contato conosco através dos nossos canais de atendimento.</p>
+            </div>
+        `;
     }
 }
 

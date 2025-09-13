@@ -4380,3 +4380,162 @@ img.lazy.loaded {
 	}
 	
 }
+
+/* ===== ESTILOS DO FAQ ===== */
+.faq-section {
+  background-color: var(--cor-preto);
+  color: var(--cor-branco);
+}
+
+.faq-title {
+  font-family: 'Soulcraft', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--cor-branco);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--espacamento-lg);
+}
+
+.faq-accordion .accordion-item {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px !important;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.faq-accordion .accordion-button {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--cor-branco);
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: none;
+  padding: 20px 25px;
+  transition: all 0.3s ease;
+}
+
+.faq-accordion .accordion-button:not(.collapsed) {
+  background-color: var(--cor-vermelho-principal);
+  color: var(--cor-branco);
+  box-shadow: none;
+}
+
+.faq-accordion .accordion-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--cor-branco);
+}
+
+.faq-accordion .accordion-button:not(.collapsed):hover {
+  background-color: var(--cor-vermelho-escuro);
+}
+
+.faq-accordion .accordion-button:focus {
+  box-shadow: none;
+  border-color: var(--cor-vermelho-principal);
+}
+
+.faq-accordion .accordion-button::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  transition: transform 0.3s ease;
+}
+
+.faq-accordion .accordion-body {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: var(--cor-branco);
+  padding: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.faq-accordion .accordion-body p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+}
+
+.faq-accordion .accordion-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.faq-accordion .accordion-body li {
+  padding: 8px 0;
+  padding-left: 25px;
+  position: relative;
+  color: var(--cor-branco);
+  line-height: 1.5;
+}
+
+.faq-accordion .accordion-body li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--cor-vermelho-principal);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.faq-accordion .accordion-body .faq-highlight {
+  background: rgba(198, 12, 48, 0.2);
+  padding: 15px;
+  border-left: 4px solid var(--cor-vermelho-principal);
+  margin: 15px 0;
+  border-radius: 5px;
+}
+
+.faq-accordion .accordion-body .faq-highlight h5 {
+  color: var(--cor-branco);
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+/* Responsividade do FAQ */
+@media (max-width: 768px) {
+  .faq-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .faq-accordion .accordion-button {
+    font-size: 1rem;
+    padding: 15px 20px;
+  }
+
+  .faq-accordion .accordion-body {
+    padding: 20px;
+  }
+
+  .faq-accordion .accordion-body p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .faq-title {
+    font-size: 1.8rem;
+    margin-bottom: var(--espacamento-md);
+  }
+
+  .faq-accordion .accordion-button {
+    font-size: 0.95rem;
+    padding: 12px 15px;
+  }
+
+  .faq-accordion .accordion-body {
+    padding: 15px;
+  }
+
+  .faq-accordion .accordion-body p {
+    font-size: 0.9rem;
+  }
+
+  .faq-accordion .accordion-body .faq-highlight {
+    padding: 12px;
+    margin: 10px 0;
+  }
+}

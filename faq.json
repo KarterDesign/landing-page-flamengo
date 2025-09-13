@@ -1,0 +1,94 @@
+{
+  "faq": [
+    {
+      "id": 1,
+      "pergunta": "Quem é a ABSOLUT Sport?",
+      "resposta": {
+        "apresentacao": "Fala Nação! 🔴⚫",
+        "descricao": "Somos a parceira do Clube de Regatas do Flamengo",
+        "compromisso": "Nosso compromisso é levar o torcedor do Mengão para as melhores experiências junto ao clube. A ABSOLUT Sport nasceu para transformar a paixão esportiva em memórias inesquecíveis.",
+        "experiencia": "Desde 2007, já levamos mais de 500.000 torcedores aos maiores espetáculos do mundo: Finais da Libertadores, Copa América, Super Bowl e outros.",
+        "credenciais": "Fomos Agência Oficial da CONMEBOL de 2021 a 2024 para todas as Finais da Libertadores e Sul-Americana, além da Copa América 2024, com operação completa."
+      }
+    },
+    {
+      "id": 2,
+      "pergunta": "Flamengo e ABSOLUT Sport: o que é?",
+      "resposta": {
+        "descricao": "Como parceira do Flamengo garantimos pacotes oficiais para acompanhar o Flamengo onde ele estiver!",
+        "servicos_inclusos": [
+          "Ingressos oficiais",
+          "Transporte credenciado",
+          "Curadoria de Hospedagem (quando aplicável)",
+          "Atendimento integral, do primeiro clique ao apito final!"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "pergunta": "Quais são os pacotes?",
+      "resposta": {
+        "pacotes": [
+          {
+            "nome": "Pacote Maracanã - Oeste + Transfer",
+            "id": 1,
+            "inclui": [
+              "Ingresso Oficial (Oeste Inferior)",
+              "Transfer Gávea–Maracanã–Gávea",
+              "Brinde",
+              "Assistência in-loco"
+            ]
+          },
+          {
+            "nome": "Pacote Maracanã - Fla+",
+            "id": 2,
+            "inclui": [
+              "Ingresso Oficial (Oeste Inferior)",
+              "Transfer Gávea–Maracanã–Gávea",
+              "Espaço Fla+",
+              "Chopp liberado até o 2º tempo",
+              "Buffet",
+              "Copo personalizado",
+              "Brindes",
+              "Assistência in-loco"
+            ]
+          },
+          {
+            "nome": "Pacote Camarote ABSOLUT Sport",
+            "id": 3,
+            "inclui": [
+              "Ingresso para o Camarote",
+              "Buffet",
+              "Ambiente climatizado",
+              "Banheiro privativo",
+              "Brinde",
+              "Atendimento exclusivo"
+            ]
+          },
+          {
+            "nome": "Pacote Setor Visitante",
+            "id": 4,
+            "inclui": [
+              "Ingresso setor visitante",
+              "Hospedagem (quando aplicável)",
+              "Transfer hotel–estádio–hotel",
+              "Aéreo sob demanda",
+              "Assistência in-loco"
+            ]
+          },
+          {
+            "nome": "Pacote Libertadores",
+            "id": 5,
+            "inclui": [
+              "Ingresso Oficial Libertadores",
+              "Hospedagem",
+              "Transfer hotel–estádio–hotel",
+              "Aéreo sob demanda",
+              "Assistência in-loco"
+            ]
+          }
+        ]
+      }
+    }
+   ]
+}
