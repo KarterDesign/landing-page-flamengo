@@ -1,0 +1,426 @@
+/* ===== PRODUTOS PAGE - CUSTOM CSS ===== */
+
+/* Hero Section Produtos */
+.produtos-hero {
+    background: linear-gradient(135deg, var(--cor-vermelho-principal) 0%, var(--cor-vermelho-escuro) 100%);
+    padding: 120px 0 60px;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.produtos-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../img/Soccer Stadium crowd.png') center/cover no-repeat;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.produtos-hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.produtos-title {
+    font-family: 'Barlow', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.produtos-title i {
+    margin-right: 15px;
+    color: var(--cor-branco);
+}
+
+.produtos-subtitle {
+    font-size: 1.25rem;
+    font-weight: 500;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .produtos-hero {
+        padding: 100px 0 40px;
+    }
+    
+    .produtos-title {
+        font-size: 2.5rem;
+    }
+    
+    .produtos-subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+/* Seção de Filtros */
+.filtros-section {
+    background: var(--cor-preto);
+    padding: 40px 0;
+    border-bottom: 3px solid var(--cor-vermelho-principal);
+}
+
+.filtros-container {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.filtro-group {
+    height: 100%;
+}
+
+.filtro-label {
+    color: var(--cor-branco);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filtro-label i {
+    margin-right: 8px;
+    color: var(--cor-vermelho-principal);
+}
+
+.filtro-select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--cor-branco);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.filtro-select:focus {
+    outline: none;
+    border-color: var(--cor-vermelho-principal);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 3px rgba(181, 18, 16, 0.3);
+}
+
+.filtro-select option {
+    background: var(--cor-preto);
+    color: var(--cor-branco);
+    padding: 10px;
+}
+
+/* Filtro Checkbox */
+.filtro-check {
+    margin-top: 32px;
+}
+
+.filtro-check .form-check-input {
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.filtro-check .form-check-input:checked {
+    background: var(--cor-vermelho-principal);
+    border-color: var(--cor-vermelho-principal);
+}
+
+.filtro-check .form-check-input:focus {
+    box-shadow: 0 0 0 3px rgba(181, 18, 16, 0.3);
+}
+
+.filtro-check-label {
+    color: var(--cor-branco);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-left: 8px;
+}
+
+.filtro-check-label i {
+    margin-right: 8px;
+    color: var(--cor-vermelho-principal);
+}
+
+/* Botão Limpar Filtros */
+.btn-limpar-filtros {
+    width: 100%;
+    padding: 12px 20px;
+    background: transparent;
+    color: var(--cor-branco);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    margin-top: 32px;
+}
+
+.btn-limpar-filtros:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--cor-branco);
+    color: var(--cor-branco);
+}
+
+.btn-limpar-filtros i {
+    margin-right: 8px;
+}
+
+/* Seção de Jogos */
+.jogos-grid-section {
+    background: var(--cor-preto);
+    padding: 50px 0;
+    min-height: 60vh;
+}
+
+.jogos-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.jogos-contador {
+    color: var(--cor-branco);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.jogos-contador span {
+    color: var(--cor-vermelho-principal);
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.loading-spinner {
+    color: var(--cor-vermelho-principal);
+    font-weight: 600;
+    display: none;
+}
+
+.loading-spinner.active {
+    display: block;
+}
+
+.loading-spinner i {
+    margin-right: 8px;
+}
+
+/* Grid de Jogos */
+.jogos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(322px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .jogos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 20px;
+    }
+}
+
+/* Estados Vazios */
+.empty-state,
+.error-state {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--cor-branco);
+}
+
+.empty-state-content,
+.error-state-content {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.empty-state i,
+.error-state i {
+    font-size: 4rem;
+    color: var(--cor-vermelho-principal);
+    margin-bottom: 20px;
+    opacity: 0.7;
+}
+
+.empty-state h3,
+.error-state h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--cor-branco);
+}
+
+.empty-state p,
+.error-state p {
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.empty-state .btn,
+.error-state .btn {
+    border-color: var(--cor-vermelho-principal);
+    color: var(--cor-vermelho-principal);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 12px 25px;
+    transition: all 0.3s ease;
+}
+
+.empty-state .btn:hover,
+.error-state .btn:hover {
+    background: var(--cor-vermelho-principal);
+    color: var(--cor-branco);
+    transform: translateY(-2px);
+}
+
+/* Animações */
+.cardjogo {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.cardjogo:nth-child(odd) {
+    animation-delay: 0.1s;
+}
+
+.cardjogo:nth-child(even) {
+    animation-delay: 0.2s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Filtro ativo indicator */
+.filtro-select.active {
+    border-color: var(--cor-vermelho-principal);
+    background: rgba(181, 18, 16, 0.1);
+}
+
+.filtro-check .form-check-input:checked + .filtro-check-label {
+    color: var(--cor-vermelho-principal);
+}
+
+/* Loading skeleton animation */
+.skeleton-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    width: 322px;
+    height: 420px;
+    position: relative;
+    overflow: hidden;
+}
+
+.skeleton-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    animation: skeleton-loading 1.5s infinite;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .filtros-section {
+        padding: 30px 0;
+    }
+    
+    .filtros-container {
+        padding: 20px;
+    }
+    
+    .filtro-check {
+        margin-top: 25px;
+    }
+    
+    .btn-limpar-filtros {
+        margin-top: 25px;
+    }
+    
+    .jogos-status {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+/* Smooth transitions para filtros */
+.jogos-grid .cardjogo {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.jogos-grid .cardjogo.filtering-out {
+    opacity: 0;
+    transform: scale(0.9);
+    pointer-events: none;
+}
+
+/* Badge para indicar filtros ativos */
+.filtros-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--cor-vermelho-principal);
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.filtros-container {
+    position: relative;
+}

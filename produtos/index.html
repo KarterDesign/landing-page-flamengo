@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <title>Produtos - Jogos do Flamengo | ABSOLUT Sport Brasil</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src="https://absolut-sport.com.br/stape/7besbphaous.js?"+i;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','36pq=GhFSJjw9TzhGODsvPio1VQVIXU9ZVgYdThQNEgccFwdeBh8OGgRMEBwYQQMaVhEcA0hAEhwREhY%3D');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="produtos.css">
+    <script src="../conteudoDinamico.js"></script>
+</head>
+
+<body style="overflow-x: hidden;">
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo e Texto -->
+                <div class="header-left">
+                    <a href="../#top" class="logo-link" title="Voltar ao início">
+                        <div class="logo">
+                            <img src="../img/flamengo-absolut-sport-logo-oficial-parceria.png" alt="Flamengo" class="logo-img">
+                            <span class="logo-text">AGÊNCIA PARCEIRA OFICIAL</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Links Desktop -->
+                <nav class="header-nav">
+                    <ul class="nav-links">
+                        <li><a href="../#pacotes-secao">Pacotes</a></li>
+                        <li><a href="../#voce-aonde-flamengo">Jogos</a></li>
+                        <li><a href="../#newsletter-secao">Newsletter</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Menu Mobile Toggle -->
+                <button class="menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu Mobile -->
+        <nav class="mobile-menu">
+            <ul class="mobile-nav-links">
+                <li><a href="../#pacotes-secao">Pacotes</a></li>
+                <li><a href="../#voce-aonde-flamengo">Jogos</a></li>
+                <li><a href="../#newsletter-secao">Newsletter</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section Produtos -->
+    <section class="produtos-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="produtos-hero-content">
+                        <h1 class="produtos-title">
+                            <i class="fas fa-futbol"></i>
+                            TODOS OS JOGOS DO FLAMENGO
+                        </h1>
+                        <p class="produtos-subtitle">
+                            Encontre o jogo perfeito para sua experiência inesquecível
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Filtros -->
+    <section class="filtros-section">
+        <div class="container">
+            <div class="filtros-container">
+                <div class="row g-3 align-items-center">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="filtro-group">
+                            <label for="filtro-campeonato" class="filtro-label">
+                                <i class="fas fa-trophy"></i>
+                                Campeonato
+                            </label>
+                            <select id="filtro-campeonato" class="filtro-select">
+                                <option value="">Todos os campeonatos</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="filtro-group">
+                            <label for="filtro-estadio" class="filtro-label">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Estádio
+                            </label>
+                            <select id="filtro-estadio" class="filtro-select">
+                                <option value="">Todos os estádios</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="filtro-group">
+                            <div class="form-check filtro-check">
+                                <input class="form-check-input" type="checkbox" id="filtro-disponiveis">
+                                <label class="form-check-label filtro-check-label" for="filtro-disponiveis">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Apenas disponíveis para compra
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="filtro-group">
+                            <button id="limpar-filtros" class="btn-limpar-filtros">
+                                <i class="fas fa-eraser"></i>
+                                Limpar Filtros
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Resultados -->
+    <section class="jogos-grid-section">
+        <div class="container">
+            <div class="jogos-status">
+                <div class="jogos-contador">
+                    <span id="total-jogos">0</span> jogos encontrados
+                </div>
+                <div class="loading-spinner" id="loading-spinner">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    Carregando jogos...
+                </div>
+            </div>
+
+            <div class="jogos-grid" id="jogos-grid">
+                <!-- Os cards de jogos serão inseridos dinamicamente aqui -->
+            </div>
+
+            <!-- Estado vazio -->
+            <div class="empty-state" id="empty-state" style="display: none;">
+                <div class="empty-state-content">
+                    <i class="fas fa-search"></i>
+                    <h3>Nenhum jogo encontrado</h3>
+                    <p>Tente ajustar os filtros ou limpar todos os filtros para ver mais jogos.</p>
+                    <button onclick="limparTodosFiltros()" class="btn btn-outline-light">
+                        <i class="fas fa-eraser"></i>
+                        Limpar Filtros
+                    </button>
+                </div>
+            </div>
+
+            <!-- Estado de erro -->
+            <div class="error-state" id="error-state" style="display: none;">
+                <div class="error-state-content">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>Erro ao carregar jogos</h3>
+                    <p>Não foi possível carregar os jogos. Tente recarregar a página.</p>
+                    <button onclick="window.location.reload()" class="btn btn-outline-light">
+                        <i class="fas fa-refresh"></i>
+                        Recarregar Página
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="ec-footer">
+        <div class="ec-footer-upper-div page-width-desktop">
+            <hr>
+
+            <div class="ec-footer-links">
+                <div class="ec-footer-links-2 ec-footer-column">
+                    <h3>Institucional</h3>
+                    <ul class="ec-footer-links-container">
+                        <li>
+                            <a href="../pages/sobre-nos">
+                                Sobre nós
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../pages/politica-de-privacidade">
+                                Política de Privacidade
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="ec-footer-column ec-footer-other-logos">
+                    <div class="ec-footer-contacts-container">
+                        <h3>atendimento</h3>
+                        <a href="tel:+2138023850">
+                            (21) 3802-3850
+                        </a>
+                        <a href="mailto:atendimento@absolut-sport.com.br">
+                            atendimento@absolut-sport.com.br
+                        </a>
+                        <a href="../pages/fale-conosco">
+                            Fale Conosco
+                        </a>
+                    </div>
+                    <div>
+                        <h3>acompanhe-nos</h3>
+                        <div class="ec-footer-social">
+                            <a href="https://www.facebook.com/ABSOLUTsportBrasil">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="http://instagram.com/absolutsportbr">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@absolutsportbr">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/company/absolut-sport/">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ec-footer-column ec-footer-other-logos">
+                    <div>
+                        <h3>certificados</h3>
+                        <div class="ec-footer-certificates">
+                            <img class="ec-footer-certificate"
+                                src="//absolut-sport.com.br/cdn/shop/files/Group_2299.png?v=1747403513&amp;width=100"
+                                alt="Certificado 1" width="65%" height="65%">
+                            <img class="ec-footer-certificate"
+                                src="//absolut-sport.com.br/cdn/shop/files/Mask_group_1.png?v=1747403522&amp;width=100"
+                                alt="Certificado 2" width="65%" height="65%">
+                            <img class="ec-footer-certificate"
+                                src="//absolut-sport.com.br/cdn/shop/files/Group_2298.png?v=1747403519&amp;width=100"
+                                alt="Certificado 1" width="65%" height="65%">
+                            <img class="ec-footer-certificate"
+                                src="//absolut-sport.com.br/cdn/shop/files/Mask_group_2.png?v=1747403525&amp;width=100"
+                                alt="Certificado 2" width="65%" height="65%">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ec-footer-bottom-text">
+            <span>
+                © 2025 Absolut Sport - Todos os direitos reservados
+                &nbsp; | &nbsp;
+                Isso é Viver
+            </span>
+            <a class="ec-anchor-top ec-anchor-top-mobile" href="#top" title="Voltar ao topo">
+                ↑
+            </a>
+        </div>
+
+        <a class="ec-anchor-top" href="#top" title="Voltar ao topo">
+            ↑
+        </a>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="../cardsJogos.js"></script>
+    <script src="produtos.js"></script>
+</body>
+
+</html>
