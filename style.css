@@ -4681,7 +4681,7 @@ img.lazy.loaded {
 .intro-video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 /* Para caso use GIF ao invés de vídeo */
@@ -4761,11 +4761,6 @@ img.lazy.loaded {
 @media (max-width: 768px) {
     .preloader-logo {
         width: 150px;
-    }
-    
-    .intro-video {
-        object-fit: contain;
-        max-height: 100vh;
     }
     
     .skip-intro-btn {
