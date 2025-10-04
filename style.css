@@ -73,6 +73,28 @@ html {
 @media (max-width: 768px) {
   html {
     scroll-behavior: auto;
+    overflow-x: hidden;
+    max-width: 100%;
+    position: relative;
+  }
+  
+  body {
+    overflow-x: hidden;
+    max-width: 100%;
+    position: relative;
+  }
+  
+  /* Garantir que todos os containers respeitem a largura da tela */
+  .container,
+  .hero-banner,
+  .agencia-oficial-secao,
+  .maraca-secao,
+  .pacotes-secao,
+  .beneficios-container,
+  .newsletter-section,
+  .ec-footer {
+    max-width: 100%;
+    overflow-x: hidden;
   }
 }
 

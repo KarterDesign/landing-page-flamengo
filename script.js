@@ -10,6 +10,12 @@ let slideInterval;
 
 // ===== INICIALIZAÇÃO =====
 document.addEventListener('DOMContentLoaded', function() {
+    // Prevenir scroll horizontal no mobile
+    if (window.innerWidth <= 768) {
+        document.documentElement.style.overflowX = 'hidden';
+        document.body.style.overflowX = 'hidden';
+    }
+    
     initializeApp();
 });
 
@@ -855,6 +861,10 @@ function closeMobileMenu() {
         document.body.style.width = '';
         document.body.style.top = '';
         window.scrollTo(0, parseInt(scrollY || '0') * -1);
+        // Manter overflow-x hidden no mobile
+        if (window.innerWidth <= 768) {
+            document.body.style.overflowX = 'hidden';
+        }
     }
 }
 
@@ -1179,6 +1189,10 @@ function openPacoteModal(pacoteId) {
     // Abrir modal
     modal.classList.add('active');
     document.body.style.overflow = 'hidden'; // Prevenir scroll da página
+    // Manter overflow-x hidden no mobile
+    if (window.innerWidth <= 768) {
+        document.body.style.overflowX = 'hidden';
+    }
     
     // Focar no botão de fechar para acessibilidade
     modal.querySelector('.modal-close').focus();
@@ -1191,6 +1205,10 @@ function closePacoteModal() {
     const modal = document.getElementById('pacoteModal');
     modal.classList.remove('active');
     document.body.style.overflow = ''; // Restaurar scroll da página
+    // Manter overflow-x hidden no mobile
+    if (window.innerWidth <= 768) {
+        document.body.style.overflowX = 'hidden';
+    }
 }
 
 /**
