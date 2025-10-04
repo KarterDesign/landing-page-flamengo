@@ -4763,6 +4763,11 @@ img.lazy.loaded {
         width: 150px;
     }
     
+    .intro-video {
+        object-fit: contain;
+        max-height: 100vh;
+    }
+    
     .skip-intro-btn {
         bottom: 20px;
         right: 20px;
