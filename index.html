@@ -24,6 +24,28 @@
 
 <body id="top" style="overflow-x: hidden;">
 
+    <!-- Preloader e Vídeo de Introdução -->
+    <div id="preloader-overlay" class="preloader-overlay">
+        <!-- Preloader com logo e loading -->
+        <div id="preloader" class="preloader">
+            <div class="preloader-content">
+                <img src="img/flamengo-absolut-sport-logo-oficial-parceria.png" alt="Flamengo Logo" class="preloader-logo">
+                <div class="loader"></div>
+                <p class="preloader-text">Carregando...</p>
+            </div>
+        </div>
+
+        <!-- Vídeo de Introdução -->
+        <div id="intro-video-container" class="intro-video-container" style="display: none;">
+            <video id="intro-video" class="intro-video" autoplay muted playsinline>
+                <source src="vid/intro-flamengo-nação.mp4" type="video/mp4">
+                <!-- Se preferir usar GIF, comente o vídeo acima e use a tag abaixo -->
+                <!-- <img src="img/intro-animation.gif" alt="Intro" class="intro-gif"> -->
+            </video>
+            <button id="skip-intro" class="skip-intro-btn">PULAR INTRO →</button>
+        </div>
+    </div>
+
     <!-- Header -->
     <header class="header">
         <div class="container">
@@ -542,6 +564,83 @@
     <script src="cardsJogos.js"></script>
     <script src="cardsJogosForaCasa.js"></script>
     
+    <!-- Script do Preloader -->
+    <script>
+        // Configurações
+        const PRELOADER_DURATION = 2000; // Duração mínima do preloader em ms
+        const SHOW_INTRO_VIDEO = true; // Mudar para false se não quiser mostrar o vídeo
+        
+        // Elementos
+        const preloaderOverlay = document.getElementById('preloader-overlay');
+        const preloader = document.getElementById('preloader');
+        const introVideoContainer = document.getElementById('intro-video-container');
+        const introVideo = document.getElementById('intro-video');
+        const skipIntroBtn = document.getElementById('skip-intro');
+        
+        // Controlar se já foi exibido (usando sessionStorage para não repetir na mesma sessão)
+        const hasSeenIntro = sessionStorage.getItem('hasSeenIntro');
+        
+        // Função para esconder o preloader e mostrar o vídeo
+        function hidePreloaderShowVideo() {
+            preloader.style.display = 'none';
+            introVideoContainer.style.display = 'flex';
+        }
+        
+        // Função para esconder tudo e mostrar a landing page
+        function showLandingPage() {
+            preloaderOverlay.classList.add('fade-out');
+            document.body.style.overflow = 'auto';
+            
+            // Remover o overlay do DOM após a animação
+            setTimeout(() => {
+                preloaderOverlay.style.display = 'none';
+            }, 500);
+        }
+        
+        // Se já viu a intro nesta sessão, pular direto
+        if (hasSeenIntro === 'true') {
+            showLandingPage();
+        } else {
+            // Bloquear scroll enquanto o preloader está ativo
+            document.body.style.overflow = 'hidden';
+            
+            // Aguardar o carregamento da página
+            window.addEventListener('load', () => {
+                // Esperar o tempo mínimo do preloader
+                setTimeout(() => {
+                    if (SHOW_INTRO_VIDEO) {
+                        // Mostrar vídeo de introdução
+                        hidePreloaderShowVideo();
+                        
+                        // Quando o vídeo terminar, mostrar a landing page
+                        introVideo.addEventListener('ended', () => {
+                            sessionStorage.setItem('hasSeenIntro', 'true');
+                            showLandingPage();
+                        });
+                        
+                        // Botão para pular o vídeo
+                        skipIntroBtn.addEventListener('click', () => {
+                            sessionStorage.setItem('hasSeenIntro', 'true');
+                            showLandingPage();
+                        });
+                    } else {
+                        // Pular direto para a landing page
+                        sessionStorage.setItem('hasSeenIntro', 'true');
+                        showLandingPage();
+                    }
+                }, PRELOADER_DURATION);
+            });
+        }
+        
+        // Prevenir erro se o vídeo não carregar
+        if (introVideo) {
+            introVideo.addEventListener('error', () => {
+                console.warn('Erro ao carregar vídeo de introdução, pulando...');
+                showLandingPage();
+            });
+        }
+    </script>
+
     <!-- RD Station Forms -->
     <script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script>
     <script type="text/javascript">
