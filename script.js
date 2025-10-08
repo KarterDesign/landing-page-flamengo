@@ -36,6 +36,7 @@ function initializeApp() {
     initPacotesModal(); // Adicionado para o modal dos pacotes
     initPacoteZoomEffect(); // Adicionado para o efeito de zoom progressivo
     initTypewriter(); // Adicionado para o efeito máquina de escrever
+    initScrollVideo(); // Adicionado para o vídeo com scroll animation (mobile)
 
     // Reinicializar smooth scroll após carregamento de conteúdo dinâmico
     initDynamicContentHandlers();
@@ -1334,6 +1335,68 @@ function initTypewriter() {
 
     // Iniciar o efeito
     typewriter();
+}
+
+// ===== VÍDEO COM SCROLL ANIMATION (MOBILE) =====
+/**
+ * Inicializa o vídeo com scroll animation frame a frame (apenas mobile)
+ */
+function initScrollVideo() {
+    // Verificar se está em mobile
+    if (window.innerWidth > 768) {
+        return;
+    }
+
+    const video = document.getElementById('hero-video-scroll');
+    const heroSection = document.querySelector('.hero-banner');
+    
+    if (!video || !heroSection) {
+        return;
+    }
+
+    // Garantir que o vídeo está carregado
+    video.addEventListener('loadedmetadata', function() {
+        // Configurar o vídeo para começar no primeiro frame
+        video.currentTime = 0;
+        
+        // Função para atualizar o vídeo baseado no scroll
+        function updateVideoOnScroll() {
+            // Pegar a posição do scroll
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // Altura da hero section
+            const heroHeight = heroSection.offsetHeight;
+            
+            // Calcular o progresso do scroll dentro da hero section (0 a 1)
+            const scrollProgress = Math.min(Math.max(scrollTop / heroHeight, 0), 1);
+            
+            // Calcular o tempo do vídeo baseado no progresso
+            // Se o vídeo tem 5 segundos, vai de 0 a 5 conforme o scroll
+            const videoTime = scrollProgress * video.duration;
+            
+            // Atualizar o tempo do vídeo
+            video.currentTime = videoTime;
+        }
+        
+        // Adicionar listener de scroll otimizado
+        let ticking = false;
+        
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    updateVideoOnScroll();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+        
+        // Inicializar o vídeo na posição correta
+        updateVideoOnScroll();
+    });
+
+    // Tentar carregar o vídeo
+    video.load();
 }
 
 // ===== EVENTOS GLOBAIS =====

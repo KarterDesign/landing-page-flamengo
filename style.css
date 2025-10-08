@@ -812,22 +812,54 @@ button {
 /* }  */
 
 
+/* Vídeo desktop - ocultar no mobile */
+.hero-video-desktop {
+  display: block;
+}
+
+.hero-video-scroll {
+  display: none;
+}
+
 /* Responsive para vídeo */
 @media (max-width: 768px) {
   .hero-banner {
     height: 100vh;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     text-align: center;
+  }
+
+  /* Ocultar vídeo desktop e mostrar vídeo de scroll no mobile */
+  .hero-video-desktop {
+    display: none;
+  }
+
+  .hero-video-scroll {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  /* Ocultar título, subtítulo e CTA no mobile */
+  .hero-title-desktop,
+  .hero-subtitle-desktop,
+  .hero-cta-desktop {
+    display: none !important;
   }
 
   .hero-content {
     max-width: 100%;
     padding: 0 20px;
+    display: none;
   }
 
   .hero-overlay {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.3);
   }
 }
 

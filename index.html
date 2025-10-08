@@ -89,21 +89,26 @@
     <!-- Hero Banner -->
     <section class="hero-banner">
         <div class="hero-video-container">
-            <video id="hero-video" class="hero-video" autoplay muted loop playsinline>
+            <!-- Vídeo padrão (desktop) -->
+            <video id="hero-video" class="hero-video hero-video-desktop" autoplay muted loop playsinline>
                 <source src="" type="video/mp4">
+            </video>
+            <!-- Vídeo scroll (mobile) -->
+            <video id="hero-video-scroll" class="hero-video hero-video-scroll" muted playsinline>
+                <source src="vid/scroll-video.mp4" type="video/mp4">
             </video>
             <div class="hero-overlay"></div>
         </div>
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title" color="#fff">
+                <h1 class="hero-title hero-title-desktop" color="#fff">
                     <span style="color: #fff;" class="hero-title">VENHA COM A AGÊNCIA <BR> PARCEIRA DO FLAMENGO</span>
                     <!-- <span id="typewriter-text"></span> -->
                     
                     <!-- <span class="cursor"></span> -->
                 </h1>
-                <p id="hero-subtitle" class="hero-subtitle"></p>
-                <button id="hero-cta" class="hero-cta" onclick="window.location.href='#voce-aonde-flamengo'"></button>
+                <p id="hero-subtitle" class="hero-subtitle hero-subtitle-desktop"></p>
+                <button id="hero-cta" class="hero-cta hero-cta-desktop" onclick="window.location.href='#voce-aonde-flamengo'"></button>
             </div>
         </div>
     </section>
