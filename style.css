@@ -189,6 +189,15 @@ body {
   background: var(--cor-card-embreve);
 }
 
+.cardjogo.embreve img {
+  filter: invert(0);
+}
+
+.cardjogo.embreve .btncardjogo {
+  background: #adadad;
+  color: #c8c8c8;
+}
+
 .embreve:hover {
   background: var(--cor-card-embreve) !important;
 }
@@ -239,6 +248,7 @@ body {
   align-items: flex-start;
   gap: 10px;
   align-self: stretch;
+  
 }
 
 .logocampeonato img {
@@ -246,6 +256,8 @@ body {
   height: 60px;
   object-fit: contain;
   aspect-ratio: 1/1;
+  filter: invert(1);
+  
 }
 
 .infos1cardjogo {
