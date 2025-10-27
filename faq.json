@@ -2,201 +2,107 @@
   "faq": [
     {
       "id": 1,
-      "pergunta": "Quem é a ABSOLUT Sport?",
+      "pergunta": "O que está incluso nos Pacotes ABSOLUT Sport?",
       "resposta": {
-        "apresentacao": "Fala Nação!",
-        "descricao": "A ABSOLUT Sport é parceira do Clube de Regatas do Flamengo",
-        "compromisso": "Nosso compromisso é levar o torcedor do Mengão para as melhores experiências junto ao clube. A ABSOLUT Sport nasceu para transformar a paixão esportiva em memórias inesquecíveis.",
-        "experiencia": "Desde 2007, já levamos mais de 500.000 torcedores aos maiores espetáculos do mundo: Finais da Libertadores, Copa América, Super Bowl e outros.",
-        "credenciais": "Fomos Agência Oficial da CONMEBOL de 2021 a 2024 para todas as Finais da Libertadores e Sul-Americana, além da Copa América 2024, com operação completa."
+        "descricao": "Cada pacote inclui itens diferentes conforme o tipo de experiência. Os pacotes podem contar com:",
+        "itens": [
+          "Ingressos oficiais para os melhores setores do Maracanã",
+          "Transporte MatchDay (ida e volta)",
+          "Brindes e colecionáveis",
+          "Assistência in-loco com equipe ABSOLUT Sport"
+        ]
       }
     },
     {
       "id": 2,
-      "pergunta": "Flamengo e ABSOLUT Sport: o que é?",
+      "pergunta": "Posso comprar só o ingresso com vocês?",
       "resposta": {
-        "descricao": "Como parceira do Flamengo garantimos pacotes oficiais para acompanhar o Flamengo onde ele estiver!",
-        "servicos_inclusos": [
-          "Ingressos oficiais",
-          "Transporte credenciado",
-          "Curadoria de Hospedagem (quando aplicável)",
-          "Atendimento integral, do primeiro clique ao apito final!"
-        ]
+        "descricao": "Não. Os ingressos são parte integrante dos pacotes de experiência e não são vendidos separadamente pela ABSOLUT Sport."
       }
     },
     {
       "id": 3,
-      "pergunta": "Quais são os pacotes?",
+      "pergunta": "Os pacotes são vendidos para todos os jogos?",
       "resposta": {
-        "pacotes": [
-          {
-            "nome": "Pacote Maracanã - Oeste + Transfer",
-            "id": 1,
-            "inclui": [
-              "Ingresso Oficial (Oeste Inferior)",
-              "Transfer Gávea–Maracanã–Gávea",
-              "Brinde",
-              "Assistência in-loco"
-            ]
-          },
-          {
-            "nome": "Pacote Maracanã - Fla+",
-            "id": 2,
-            "inclui": [
-              "Ingresso Oficial (Oeste Inferior)",
-              "Transfer Gávea–Maracanã–Gávea",
-              "Espaço Fla+",
-              "Chopp liberado até o 2º tempo",
-              "Buffet",
-              "Copo personalizado",
-              "Brindes",
-              "Assistência in-loco"
-            ]
-          },
-          {
-            "nome": "Pacote Camarote ABSOLUT Sport",
-            "id": 3,
-            "inclui": [
-              "Ingresso para o Camarote",
-              "Buffet",
-              "Ambiente climatizado",
-              "Banheiro privativo",
-              "Brinde",
-              "Atendimento exclusivo"
-            ]
-          },
-          {
-            "nome": "Pacote Setor Visitante",
-            "id": 4,
-            "inclui": [
-              "Ingresso setor visitante",
-              "Hospedagem (quando aplicável)",
-              "Transfer hotel–estádio–hotel",
-              "Aéreo sob demanda",
-              "Assistência in-loco"
-            ]
-          },
-          {
-            "nome": "Pacote Libertadores",
-            "id": 5,
-            "inclui": [
-              "Ingresso Oficial Libertadores",
-              "Hospedagem",
-              "Transfer hotel–estádio–hotel",
-              "Aéreo sob demanda",
-              "Assistência in-loco"
-            ]
-          }
-        ]
+        "descricao": "Atuamos com pacotes para jogos do Flamengo como mandante (no Maracanã). Os jogos disponíveis variam conforme calendário oficial, liberação de ingressos e operação logística. Sempre consulte a disponibilidade atualizada em nossa plataforma."
       }
     },
     {
       "id": 4,
-      "pergunta": "Posso personalizar?",
+      "pergunta": "Posso contratar hospedagem com vocês?",
       "resposta": {
-        "descricao": "Sim, é possível personalizar seu pacote antes da compra.",
-        "processo": "Para isso, envie um e-mail para flamengo@absolut-sport.com.br informando: jogo desejado, necessidade de hospedagem, quantidade de pessoas e cotação aérea (com a cidade de embarque).",
-        "restricoes": "Após a confirmação da compra, não será possível realizar alterações. Caso precise modificar algo, será necessário cancelar o pedido atual e efetuar uma nova compra, conforme as condições vigentes de cancelamento."
+        "descricao": "Hospedagens variam conforme a disponibilidade. Sempre consultar na descrição do produto."
       }
     },
     {
       "id": 5,
-      "pergunta": "Quero saber de ingresso",
+      "pergunta": "O que é o Meeting Point?",
       "resposta": {
-        "descricao": "Todos os ingressos são digitais e vinculados ao sistema de reconhecimento facial do Maracanã — essa é a única forma de acesso ao estádio. Por isso, o cadastro prévio é indispensável.",
-        "disponibilidade": "Não comercializamos ingressos avulsos: eles estão disponíveis apenas como parte dos pacotes, que incluem diversos serviços pensados para oferecer uma experiência completa do evento."
-      }
-    },
-    {
-      "id": 6,
-      "pergunta": "Como cadastro a facial?",
-      "resposta": {
-        "passo_a_passo": [
-          "Acesse: biometria.flamengo.com.br",
-          "Faça login ou crie sua conta",
-          "Envie uma foto do seu documento oficial",
-          "Capture sua biometria facial com a câmera do celular",
-          "Aguarde a confirmação por e-mail"
-        ],
-        "no_dia_do_jogo": "No dia do jogo, basta se dirigir à catraca. O reconhecimento facial será sua forma de acesso.",
-        "prazo": "O cadastro deve ser feito com pelo menos 24 horas de antecedência em relação ao horário da partida."
+        "descricao": "Nos jogos no Maracanã, teremos pontos de encontro espalhados pela cidade. Esses são os meeting points. Lá oferecemos o embarque do transporte credenciado, com suporte ABSOLUT Sport durante o trajeto. O destino? O estacionamento Célio de Barros, localizado no Complexo do Maracanã."
       }
     },
     {
       "id": 7,
-      "pergunta": "O que é o FLA+?",
+      "pergunta": "E o transporte terrestre?",
       "resposta": {
-        "descricao": "O Espaço Fla+ é um espaço privado, que oferece serviço premium e exclusivo, localizado nos setores Leste e Oeste, dependendo da competição do dia do jogo.",
-        "servicos": "O local conta com chopp liberado desde o pré-jogo até os 15 minutos do segundo tempo (incluindo o intervalo da partida), buffet e fácil acesso à arquibancada do setor."
+        "descricao": "Todos os pacotes contam com transporte MatchDay (ida e volta) com operação dedicada e segurança. Em jogos no Maracanã, o transporte parte de diferentes meeting points, que serão comunicados na hora da compra."
       }
     },
     {
       "id": 8,
-      "pergunta": "O que é o Meeting Point?",
+      "pergunta": "Posso ir por conta própria ao estádio?",
       "resposta": {
-        "descricao": "O Meeting Point é o ponto de encontro oficial definido pela ABSOLUT Sport para os torcedores participantes de nossos pacotes de experiência.",
-        "maracana": "Nos jogos no Maracanã, o Meeting Point acontece na sede da Gávea, onde oferecemos uma estrutura completa com transporte executivo até o estádio, suporte da nossa equipe, acesso ao Museu do Flamengo (quando aplicável) e loja oficial.",
-        "jogos_fora": "Jogos fora: local informado por e-mail."
+        "descricao": "Sim, mas não recomendamos. A experiência completa ABSOLUT Sport inclui o MatchDay Transfer, que garante comodidade, segurança e integração com o grupo, tanto na ida, quanto na volta."
       }
     },
     {
       "id": 9,
-      "pergunta": "Posso ir sem o grupo?",
+      "pergunta": "Os ingressos são oficiais?",
       "resposta": {
-        "descricao": "Sim, se preferir é possível ir sem o grupo, mas perdendo o direito do transporte de volta.",
-        "restricoes": "Não há reembolso do valor do transfer não utilizado."
-      }
-    },
-    {
-      "id": 10,
-      "pergunta": "O transfer é exclusivo?",
-      "resposta": {
-        "descricao": "Sim, somente para clientes ABSOLUT Sport."
+        "descricao": "Sim. A ABSOLUT Sport é Agência Credenciada do Clube de Regatas do Flamengo e todos os ingressos são oficiais, adquiridos diretamente junto ao Clube e autenticados."
       }
     },
     {
       "id": 11,
-      "pergunta": "Se atrasar, perde o bus?",
+      "pergunta": "Quero ir com amigos. Ficaremos juntos?",
       "resposta": {
-        "descricao": "Sim, por respeito a todos os torcedores e para não comprometer o horário de chegada ao estádio, não há tolerância de atraso.",
-        "horario": "O embarque é pontual, sempre 2 horas antes do horário da partida. Chegue com antecedência."
-      }
-    },
-    {
-      "id": 12,
-      "pergunta": "Há meia-entrada?",
-      "resposta": {
-        "descricao": "Não. Por se tratar de pacotes especiais com serviços agregados, os ingressos são vendidos sempre como inteira."
+        "descricao": "A possibilidade de marcar assentos depende do pacote. No Maracanã Mais, por exemplo, os assentos são marcados, permitindo que você e seus amigos reservem lugares lado a lado, caso comprem ingressos juntos. No entanto, nos demais setores, os assentos não podem ser reservados antecipadamente."
       }
     },
     {
       "id": 13,
-      "pergunta": "Quero cancelar, pode?",
+      "pergunta": "Como faço para comprar um pacote?",
       "resposta": {
-        "restricoes": "Compras realizadas com até 48 horas de antecedência ao jogo não são reembolsáveis.",
-        "direito_arrependimento": "O direito de arrependimento é garantido por até 7 dias após a data da compra, com reembolso integral.",
-        "reembolso_parcial": "Para compras efetuadas entre 7 dias e 48 horas antes da partida, aplica-se reembolso de 50% do valor pago."
+        "descricao": "Acesse o site oficial da ABSOLUT Sport, escolha o jogo desejado e selecione o pacote ideal para você. Caso prefira, também atendemos pelo contato +55 (21) 3802-3850."
       }
     },
     {
       "id": 14,
-      "pergunta": "Métodos de pagamento?",
+      "pergunta": "Quais formas de pagamento são aceitas?",
       "resposta": {
-        "formas_disponveis": [
-          "PIX com 5% de desconto imediato",
-          "Cartão de crédito: 2x sem juros ou até 8x com juros",
-          "Cartão de débito"
-        ],
-        "processo": "O pagamento é feito no momento do pedido, e seu ingresso ficará reservado assim que o pagamento for confirmado."
+        "descricao": "Aceitamos cartões de crédito, PIX e boleto bancário."
       }
     },
     {
       "id": 15,
-      "pergunta": "Preciso de ajuda",
+      "pergunta": "Posso cancelar minha compra?",
       "resposta": {
-        "antes_do_jogo": "Caso precise de ajuda em relação ao seu pacote em dias anteriores à partida, sua dúvida pode ser enviada através do e-mail flamengo@absolut-sport.com.br.",
-        "dia_do_jogo": "No dia do jogo, uma equipe da ABSOLUT Sport te acompanhará desde o meeting point até o final da experiência, garantindo que você tenha todo tipo de assistência necessária, para que sua única preocupação seja curtir e torcer pelo Mengão."
+        "descricao": "As políticas de cancelamento variam conforme o produto e a proximidade do evento. Consulte sempre os Termos e Condições na hora da compra."
+      }
+    },
+    {
+      "id": 17,
+      "pergunta": "Sou Sócio-Torcedor. Tenho algum benefício especial?",
+      "resposta": {
+        "descricao": "Não. Nossos pacotes não oferecem benefícios para sócios-torcedores."
+      }
+    },
+    {
+      "id": 21,
+      "pergunta": "E se algo der errado no dia do jogo?",
+      "resposta": {
+        "descricao": "Você terá o respaldo do suporte ABSOLUT Sport desde o pré-jogo, treinado e presente durante toda a jornada. Nosso compromisso é garantir que sua única preocupação seja torcer pelo Mais Querido!"
       }
     }
-   ]
+  ]
 }

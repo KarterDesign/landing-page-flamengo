@@ -172,6 +172,15 @@ function formatFAQAnswer(resposta) {
         html += `<p>${resposta.descricao}</p>`;
     }
 
+    // Itens (lista de características do pacote, por exemplo)
+    if (resposta.itens && Array.isArray(resposta.itens)) {
+        html += '<ul>';
+        resposta.itens.forEach(item => {
+            html += `<li>${item}</li>`;
+        });
+        html += '</ul>';
+    }
+
     // Compromisso
     if (resposta.compromisso) {
         html += `<p>${resposta.compromisso}</p>`;

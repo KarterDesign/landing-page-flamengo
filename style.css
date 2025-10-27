@@ -4501,20 +4501,22 @@ img.lazy.loaded {
   line-height: 1.6;
   font-family: 'Barlow', sans-serif;
   font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .faq-accordion .accordion-body ul {
   list-style: none;
   padding: 0;
-  margin: 15px 0;
+  margin: 15px 0 0 0;
 }
 
 .faq-accordion .accordion-body li {
-  padding: 8px 0;
-  padding-left: 25px;
+  padding: 10px 0 10px 30px;
   position: relative;
-  color: var(--cor-branco);
-  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
 }
 
 .faq-accordion .accordion-body li::before {
@@ -4524,6 +4526,17 @@ img.lazy.loaded {
   color: var(--cor-vermelho-principal);
   font-weight: bold;
   font-size: 1.1rem;
+  top: 10px;
+}
+
+/* Estilo para quando há descrição seguida de lista */
+.faq-accordion .accordion-body p + ul {
+  margin-top: 20px;
+}
+
+/* Garantir que o último item não tenha margem inferior */
+.faq-accordion .accordion-body li:last-child {
+  padding-bottom: 0;
 }
 
 .faq-accordion .accordion-body .faq-highlight {
