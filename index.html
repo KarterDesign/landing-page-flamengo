@@ -633,7 +633,6 @@
         // Prevenir erro se o vídeo não carregar
         if (introVideo) {
             introVideo.addEventListener('error', () => {
-                console.warn('Erro ao carregar vídeo de introdução, pulando...');
                 showLandingPage();
             });
         }
@@ -685,8 +684,6 @@
                         element.style.textTransform = 'uppercase !important';
                     }
                 });
-                
-                console.log('Estilos personalizados aplicados com sucesso!');
             }
         }
         

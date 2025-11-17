@@ -107,7 +107,7 @@ const CONTEUDO_PADRAO = {
 };
 
 // Variável global para debug
-let DEBUG_MODE = true;
+let DEBUG_MODE = false;
 
 /**
  * Função para converter CSV em array de objetos
@@ -115,28 +115,19 @@ let DEBUG_MODE = true;
  * @returns {Array} Array de objetos com os dados
  */
 function parseCSVConteudo(csvText) {
-    if (DEBUG_MODE) console.log('📝 Parseando CSV...', csvText.substring(0, 200) + '...');
-    
     const lines = csvText.trim().split('\n');
     const headers = lines[0].split(',').map(header => header.trim());
     
-    if (DEBUG_MODE) console.log('📋 Headers encontrados:', headers);
-    
-    const dados = lines.slice(1).map((line, index) => {
+    const dados = lines.slice(1).map((line) => {
         const values = line.split(',').map(value => value.trim());
         const obj = {};
         headers.forEach((header, headerIndex) => {
             obj[header] = values[headerIndex] || '';
         });
         
-        if (DEBUG_MODE && index < 3) {
-            console.log(`📄 Linha ${index + 1}:`, obj);
-        }
-        
         return obj;
     });
     
-    if (DEBUG_MODE) console.log(`✅ ${dados.length} linhas parseadas`);
     return dados;
 }
 
@@ -149,9 +140,6 @@ function aplicarTexto(id, conteudo) {
     const elemento = document.getElementById(id);
     if (elemento) {
         elemento.innerHTML = conteudo;
-        if (DEBUG_MODE) console.log(`✅ Texto aplicado em #${id}:`, conteudo.substring(0, 50) + (conteudo.length > 50 ? '...' : ''));
-    } else {
-        if (DEBUG_MODE) console.warn(`⚠️ Elemento não encontrado: #${id}`);
     }
 }
 
@@ -169,9 +157,6 @@ function aplicarImagem(id, src) {
         } else {
             elemento.style.backgroundImage = `url('${src}')`;
         }
-        if (DEBUG_MODE) console.log(`✅ Imagem aplicada em #${id}:`, src);
-    } else {
-        if (DEBUG_MODE) console.warn(`⚠️ Elemento não encontrado: #${id}`);
     }
 }
 
@@ -190,9 +175,6 @@ function aplicarVideo(id, src) {
                 elemento.load(); // Recarrega o vídeo
             }
         }
-        if (DEBUG_MODE) console.log(`✅ Vídeo aplicado em #${id}:`, src);
-    } else {
-        if (DEBUG_MODE) console.warn(`⚠️ Elemento de vídeo não encontrado: #${id}`);
     }
 }
 
@@ -200,12 +182,9 @@ function aplicarVideo(id, src) {
  * Função para carregar conteúdo padrão
  */
 function carregarConteudoPadrao() {
-    console.log('🔄 Carregando conteúdo padrão...');
-    
     Object.keys(CONTEUDO_PADRAO).forEach(id => {
         // Pular maraca-title-1 pois agora está no HTML estático
         if (id === 'maraca-title-1') {
-            if (DEBUG_MODE) console.log(`⏭️ Pulando ${id} - conteúdo estático no HTML`);
             return;
         }
         
@@ -220,8 +199,6 @@ function carregarConteudoPadrao() {
             aplicarTexto(id, conteudo);
         }
     });
-    
-    console.log('✅ Conteúdo padrão carregado!');
 }
 
 /**
@@ -232,7 +209,6 @@ function aplicarConteudo(item) {
     const { id, tipo, conteudo_atual } = item;
     
     if (!id || !conteudo_atual) {
-        if (DEBUG_MODE) console.warn('⚠️ Item inválido:', item);
         return;
     }
     
@@ -241,11 +217,8 @@ function aplicarConteudo(item) {
     
     // Pular maraca-title-1 pois agora está no HTML estático
     if (elementId === 'maraca-title-1') {
-        if (DEBUG_MODE) console.log(`⏭️ Pulando ${elementId} - conteúdo estático no HTML`);
         return;
     }
-    
-    if (DEBUG_MODE) console.log(`🔄 Aplicando conteúdo: ${id} → ${elementId} (${tipo || 'auto'})`);
     
     switch (tipo) {
         case 'texto':
@@ -275,30 +248,17 @@ function aplicarConteudo(item) {
  */
 function aplicarConteudoDinamico(dados) {
     if (!dados || dados.length === 0) {
-        console.warn('⚠️ Nenhum dado da planilha disponível, usando conteúdo padrão');
         return;
     }
     
-    console.log('🔄 Aplicando conteúdo da planilha...');
-    if (DEBUG_MODE) console.log('📊 Dados recebidos:', dados);
-    
     // Filtrar dados válidos
     const dadosValidos = dados.filter(item => {
-        const valido = item.id && item.conteudo_atual;
-        if (DEBUG_MODE && !valido) {
-            console.log('❌ Item inválido descartado:', item);
-        }
-        return valido;
+        return item.id && item.conteudo_atual;
     });
     
-    if (DEBUG_MODE) console.log(`📋 ${dadosValidos.length} itens válidos de ${dados.length} total`);
-    
-    dadosValidos.forEach((item, index) => {
-        if (DEBUG_MODE) console.log(`📝 Aplicando item ${index + 1}/${dadosValidos.length}:`, item);
+    dadosValidos.forEach((item) => {
         aplicarConteudo(item);
     });
-    
-    console.log(`✅ ${dadosValidos.length} itens da planilha aplicados!`);
 }
 
 /**
@@ -306,28 +266,18 @@ function aplicarConteudoDinamico(dados) {
  */
 async function testarPlanilha() {
     try {
-        console.log('🧪 Testando conexão com planilha...');
-        console.log('🔗 URL:', GOOGLE_SHEETS_CONTEUDO_URL);
-        
         const response = await fetch(GOOGLE_SHEETS_CONTEUDO_URL);
-        console.log('📡 Response status:', response.status);
-        console.log('📡 Response headers:', [...response.headers.entries()]);
         
         if (!response.ok) {
             throw new Error(`Erro HTTP: ${response.status}`);
         }
         
         const text = await response.text();
-        console.log('📄 CSV recebido (primeiros 500 chars):', text.substring(0, 500));
-        console.log('📏 Tamanho total do CSV:', text.length);
-        
         const dados = parseCSVConteudo(text);
-        console.log('✅ Teste concluído com sucesso!');
         
         return dados;
         
     } catch (error) {
-        console.error('❌ Erro no teste da planilha:', error);
         return null;
     }
 }
@@ -337,14 +287,10 @@ async function testarPlanilha() {
  */
 async function carregarConteudoDinamico() {
     try {
-        console.log('🔄 Iniciando carregamento de conteúdo dinâmico...');
-        
         // Primeiro, carregar conteúdo padrão
         carregarConteudoPadrao();
         
         // Tentar carregar dados da planilha
-        console.log('🔄 Tentando carregar dados da planilha...');
-        
         const response = await fetch(GOOGLE_SHEETS_CONTEUDO_URL);
         
         if (!response.ok) {
@@ -352,18 +298,13 @@ async function carregarConteudoDinamico() {
         }
         
         const csvText = await response.text();
-        if (DEBUG_MODE) console.log('📄 CSV carregado, tamanho:', csvText.length);
-        
         const dados = parseCSVConteudo(csvText);
         
         // Aplicar conteúdo da planilha (sobrescrevendo o padrão onde disponível)
         aplicarConteudoDinamico(dados);
         
-        console.log('✅ Carregamento de conteúdo dinâmico concluído!');
-        
     } catch (error) {
-        console.warn('⚠️ Erro ao carregar conteúdo da planilha:', error);
-        console.log('✅ Usando conteúdo padrão como fallback');
+        // Usar conteúdo padrão como fallback
     }
 }
 
@@ -371,7 +312,6 @@ async function carregarConteudoDinamico() {
  * Função para recarregar o conteúdo
  */
 function recarregarConteudo() {
-    console.log('🔄 Recarregando conteúdo...');
     carregarConteudoDinamico();
 }
 
@@ -400,8 +340,6 @@ function iniciarTypewriter() {
 
 // Inicializar quando o DOM estiver pronto
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🚀 DOM carregado, iniciando sistema de conteúdo dinâmico...');
-    
     // Carregar conteúdo imediatamente
     carregarConteudoDinamico().then(() => {
         // Iniciar typewriter após carregar o conteúdo
@@ -414,6 +352,6 @@ window.conteudoDinamico = {
     carregar: carregarConteudoDinamico,
     recarregar: recarregarConteudo,
     testar: testarPlanilha,
-    debug: () => { DEBUG_MODE = !DEBUG_MODE; console.log('Debug mode:', DEBUG_MODE); },
+    debug: () => { DEBUG_MODE = !DEBUG_MODE; },
     padrao: CONTEUDO_PADRAO
 }; 

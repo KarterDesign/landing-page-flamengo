@@ -203,7 +203,6 @@
                     renderCompleteFAQ(faqData.faq);
                 }
             } catch (error) {
-                console.error('Erro ao carregar FAQ:', error);
                 showFAQError();
             }
         }
@@ -213,7 +212,6 @@
             const faqAccordion = document.getElementById('faqCompleteAccordion');
             
             if (!faqAccordion) {
-                console.error('Container do FAQ não encontrado');
                 return;
             }
             

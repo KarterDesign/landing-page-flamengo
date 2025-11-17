@@ -99,7 +99,6 @@ function createCardJogoForaCasa(jogo) {
  */
 function abrirDetalhesJogoForaCasa(time1, time2, data) {
     // Implementar ação do botão "Saiba Mais"
-    console.log(`Detalhes do jogo fora de casa: ${time1} vs ${time2} em ${data}`);
     // Aqui você pode adicionar lógica para abrir modal, redirecionar, etc.
 }
 
@@ -111,7 +110,6 @@ async function carregarCardsJogosForaCasa() {
         // Mostrar indicador de carregamento
         const slider = document.querySelector('#matches-slider-fora-casa');
         if (!slider) {
-            console.error('Container #matches-slider-fora-casa não encontrado');
             return;
         }
         
@@ -148,11 +146,7 @@ async function carregarCardsJogosForaCasa() {
             slider.appendChild(card);
         });
         
-        console.log(`✅ ${jogosValidos.length} cards de jogos fora de casa carregados com sucesso!`);
-        console.log('Dados carregados (fora de casa):', jogosValidos);
-        
     } catch (error) {
-        console.error('Erro ao carregar cards de jogos fora de casa:', error);
         const slider = document.querySelector('#matches-slider-fora-casa');
         if (slider) {
             slider.innerHTML = '<div class="error-cards">Erro ao carregar jogos fora de casa. Tente novamente mais tarde.</div>';

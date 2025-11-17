@@ -39,8 +39,6 @@ function initializeApp() {
 
     // Reinicializar smooth scroll após carregamento de conteúdo dinâmico
     initDynamicContentHandlers();
-
-    console.log('✅ Landing Page Flamengo inicializada com sucesso!');
 }
 
 /**
@@ -92,7 +90,6 @@ async function initFAQ() {
             renderFAQItems(faqData.faq);
         }
     } catch (error) {
-        console.error('Erro ao carregar FAQ:', error);
         // Fallback: mostrar mensagem de erro ou FAQ padrão
         showFAQError();
     }
@@ -105,7 +102,6 @@ function renderFAQItems(faqItems) {
     const faqAccordion = document.getElementById('faqAccordion');
 
     if (!faqAccordion) {
-        console.error('Container do FAQ não encontrado');
         return;
     }
 
@@ -677,7 +673,6 @@ function handlePartidaClick(card) {
     // Simular redirecionamento
     setTimeout(() => {
         // window.location.href = `/ingressos/${partidaData}-${partidaMes}`;
-        console.log('Redirecionamento simulado para página de ingressos');
     }, 1500);
 }
 
@@ -1174,7 +1169,6 @@ function openPacoteModal(pacoteId) {
     const pacoteData = pacotesData[pacoteId];
 
     if (!pacoteData) {
-        console.error('Pacote não encontrado:', pacoteId);
         return;
     }
 

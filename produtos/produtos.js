@@ -22,8 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
  */
 async function initializeProdutosPage() {
     try {
-        console.log('🚀 Inicializando página de produtos...');
-        
         // Inicializar componentes
         initMobileMenu();
         initScrollToTop();
@@ -32,10 +30,7 @@ async function initializeProdutosPage() {
         // Carregar jogos
         await carregarTodosOsJogos();
         
-        console.log('✅ Página de produtos inicializada com sucesso!');
-        
     } catch (error) {
-        console.error('❌ Erro ao inicializar página de produtos:', error);
         mostrarEstadoErro();
     }
 }
@@ -61,8 +56,6 @@ async function carregarTodosOsJogos() {
         // Filtrar jogos válidos
         todosOsJogos = jogos.filter(jogo => jogo.time1 && jogo.time2);
         
-        console.log(`📊 ${todosOsJogos.length} jogos carregados`);
-        
         // Inicializar filtros com dados
         popularFiltros();
         
@@ -70,7 +63,6 @@ async function carregarTodosOsJogos() {
         aplicarFiltros();
         
     } catch (error) {
-        console.error('❌ Erro ao carregar jogos:', error);
         mostrarEstadoErro();
     } finally {
         mostrarLoading(false);
@@ -104,9 +96,6 @@ function popularFiltros() {
         option.textContent = estadio;
         selectEstadio.appendChild(option);
     });
-    
-    console.log(`🏆 ${campeonatos.length} campeonatos encontrados:`, campeonatos);
-    console.log(`🏟️ ${estadios.length} estádios encontrados:`, estadios);
 }
 
 /**
@@ -163,8 +152,6 @@ function aplicarFiltros() {
     jogosFiltrados = jogos;
     renderizarJogos();
     atualizarContador();
-    
-    console.log(`🔍 Filtros aplicados: ${jogosFiltrados.length} jogos encontrados`);
 }
 
 /**
@@ -226,8 +213,6 @@ function limparTodosFiltros() {
     
     // Aplicar filtros (sem filtros = todos os jogos)
     aplicarFiltros();
-    
-    console.log('🧹 Todos os filtros foram limpos');
 }
 
 /**
@@ -412,7 +397,6 @@ function createCardJogo(jogo) {
  * Função para abrir detalhes do jogo (do cardsJogos.js)
  */
 function abrirDetalhesJogo(time1, time2, data) {
-    console.log(`Detalhes do jogo: ${time1} vs ${time2} em ${data}`);
     // Aqui você pode adicionar lógica para abrir modal, redirecionar, etc.
 }
 

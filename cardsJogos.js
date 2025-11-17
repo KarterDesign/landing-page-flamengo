@@ -99,7 +99,6 @@ function createCardJogo(jogo) {
  */
 function abrirDetalhesJogo(time1, time2, data) {
     // Implementar ação do botão "Saiba Mais"
-    console.log(`Detalhes do jogo: ${time1} vs ${time2} em ${data}`);
     // Aqui você pode adicionar lógica para abrir modal, redirecionar, etc.
 }
 
@@ -111,7 +110,6 @@ async function carregarCardsJogos() {
         // Mostrar indicador de carregamento
         const slider = document.querySelector('.matches-slider');
         if (!slider) {
-            console.error('Container .matches-slider não encontrado');
             return;
         }
         
@@ -148,11 +146,7 @@ async function carregarCardsJogos() {
             slider.appendChild(card);
         });
         
-        console.log(`✅ ${jogosValidos.length} cards de jogos carregados com sucesso!`);
-        console.log('Dados carregados:', jogosValidos);
-        
     } catch (error) {
-        console.error('Erro ao carregar cards de jogos:', error);
         const slider = document.querySelector('.matches-slider');
         if (slider) {
             slider.innerHTML = '<div class="error-cards">Erro ao carregar jogos. Tente novamente mais tarde.</div>';
