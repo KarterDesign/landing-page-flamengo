@@ -21,3 +21,4 @@ jobs:
           local_path: './*'        # O que será enviado (tudo na raiz)
           remote_path: '/srv/app576.3274303c.configr.cloud/www' # Pasta de destino no seu servidor
           sftp_only: true
+          
