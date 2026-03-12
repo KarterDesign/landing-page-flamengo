@@ -45,7 +45,9 @@ function initializeApp() {
  * Inicializa handlers para conteúdo dinâmico
  */
 function initDynamicContentHandlers() {
-    // Observar mudanças no DOM para reinicializar event listeners
+    let reinitCount = 0;
+    const MAX_REINITS = 20;
+
     const observer = new MutationObserver(function (mutations) {
         let shouldReinit = false;
 
@@ -63,18 +65,25 @@ function initDynamicContentHandlers() {
         });
 
         if (shouldReinit) {
-            // Aguardar um pouco para garantir que o conteúdo foi renderizado
+            reinitCount++;
             setTimeout(() => {
                 initSmoothScroll();
             }, 100);
+
+            if (reinitCount >= MAX_REINITS) {
+                observer.disconnect();
+            }
         }
     });
 
-    // Observar mudanças no body
     observer.observe(document.body, {
         childList: true,
         subtree: true
     });
+
+    setTimeout(() => {
+        observer.disconnect();
+    }, 30000);
 }
 
 // ===== FAQ ACCORDION =====
@@ -210,7 +219,7 @@ function formatFAQAnswer(resposta) {
     // Passo a passo (como array)
     if (resposta.passo_a_passo && Array.isArray(resposta.passo_a_passo)) {
         html += '<div class="faq-highlight">';
-        html += '<h6 style="color:"fff">Passo a passo:</h6>';
+        html += '<h6 style="color:#fff">Passo a passo:</h6>';
         html += '<ol>';
         resposta.passo_a_passo.forEach(passo => {
             html += `<li>${passo}</li>`;
@@ -891,40 +900,56 @@ function initCountdownTimer() {
  * Inicia contagem regressiva
  */
 function startCountdown(element, targetDate) {
-    const timer = setInterval(() => {
-        const now = new Date().getTime();
-        const distance = targetDate - now;
+    const countdownObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (!element._countdownTimer) {
+                    element._countdownTimer = setInterval(() => updateCountdown(element, targetDate), 1000);
+                    updateCountdown(element, targetDate);
+                }
+            } else if (element._countdownTimer) {
+                clearInterval(element._countdownTimer);
+                element._countdownTimer = null;
+            }
+        });
+    });
+    countdownObserver.observe(element);
+    updateCountdown(element, targetDate);
+}
 
-        if (distance < 0) {
-            clearInterval(timer);
-            element.innerHTML = '<span>Evento iniciado!</span>';
-            return;
-        }
+function updateCountdown(element, targetDate) {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
 
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    if (distance < 0) {
+        if (element._countdownTimer) clearInterval(element._countdownTimer);
+        element.innerHTML = '<span>Evento iniciado!</span>';
+        return;
+    }
 
-        element.innerHTML = `
-            <div class="countdown-item">
-                <span class="countdown-number">${days}</span>
-                <span class="countdown-label">Dias</span>
-            </div>
-            <div class="countdown-item">
-                <span class="countdown-number">${hours}</span>
-                <span class="countdown-label">Horas</span>
-            </div>
-            <div class="countdown-item">
-                <span class="countdown-number">${minutes}</span>
-                <span class="countdown-label">Min</span>
-            </div>
-            <div class="countdown-item">
-                <span class="countdown-number">${seconds}</span>
-                <span class="countdown-label">Seg</span>
-            </div>
-        `;
-    }, 1000);
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    element.innerHTML = `
+        <div class="countdown-item">
+            <span class="countdown-number">${days}</span>
+            <span class="countdown-label">Dias</span>
+        </div>
+        <div class="countdown-item">
+            <span class="countdown-number">${hours}</span>
+            <span class="countdown-label">Horas</span>
+        </div>
+        <div class="countdown-item">
+            <span class="countdown-number">${minutes}</span>
+            <span class="countdown-label">Min</span>
+        </div>
+        <div class="countdown-item">
+            <span class="countdown-number">${seconds}</span>
+            <span class="countdown-label">Seg</span>
+        </div>
+    `;
 }
 
 // ===== LAZY LOADING DE IMAGENS =====
@@ -1021,13 +1046,6 @@ function throttle(func, limit) {
             setTimeout(() => inThrottle = false, limit);
         }
     };
-}
-
-/**
- * Gera ID único
- */
-function generateUniqueId() {
-    return 'id_' + Math.random().toString(36).substr(2, 9);
 }
 
 /**
@@ -1213,23 +1231,6 @@ function closePacoteModal() {
 }
 
 /**
- * Adiciona efeito de hover aos cards dos pacotes
- */
-function addPacoteHoverEffects() {
-    const pacoteCards = document.querySelectorAll('.pacote-card');
-
-    pacoteCards.forEach(card => {
-        card.addEventListener('mouseenter', function () {
-            this.style.transform = 'translateY(-10px)';
-        });
-
-        card.addEventListener('mouseleave', function () {
-            this.style.transform = 'translateY(0)';
-        });
-    });
-}
-
-/**
  * Adiciona efeito de zoom progressivo em 3 etapas aos cards dos pacotes
  */
 function initPacoteZoomEffect() {
@@ -1277,65 +1278,77 @@ function initTypewriter() {
 
     if (!textElement) return;
 
-    // Remover o cursor separado do HTML - vamos incorporá-lo ao texto
     if (cursorElement) {
         cursorElement.remove();
     }
 
+    const textNode = document.createTextNode('');
+    const cursorSpan = document.createElement('span');
+    cursorSpan.className = 'cursor-inline';
+    cursorSpan.textContent = '|';
+    textElement.textContent = '';
+    textElement.appendChild(textNode);
+    textElement.appendChild(cursorSpan);
+
     const sentences = [
         "O LUGAR É SEU.",
         "A PAIXÃO É SUA.",
-
     ];
 
     let currentSentenceIndex = 0;
     let currentCharIndex = 0;
     let isTyping = true;
+    let typewriterTimeout = null;
 
-    // Agora você pode usar qualquer valor para as pausas
     const typingSpeed = 40;
     const deletingSpeed = 30;
-    const pauseBetweenSentences = 1000; // Ex: 2 segundos
-    const pauseBeforeDeleting = 2000;    // Ex: 2 segundos
+    const pauseBetweenSentences = 1000;
+    const pauseBeforeDeleting = 2000;
+
+    const visibilityObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (!typewriterTimeout) typewriter();
+            } else {
+                if (typewriterTimeout) {
+                    clearTimeout(typewriterTimeout);
+                    typewriterTimeout = null;
+                }
+            }
+        });
+    });
+    visibilityObserver.observe(textElement);
 
     function typewriter() {
         const currentSentence = sentences[currentSentenceIndex];
 
         if (isTyping) {
-            // Se ainda não terminou de digitar a frase
             if (currentCharIndex < currentSentence.length) {
-                const currentText = currentSentence.substring(0, currentCharIndex + 1);
-                textElement.innerHTML = currentText + '<span class="cursor-inline">|</span>';
+                textNode.textContent = currentSentence.substring(0, currentCharIndex + 1);
+                cursorSpan.className = 'cursor-inline';
                 currentCharIndex++;
-                setTimeout(typewriter, typingSpeed);
-            }
-            // Se terminou de digitar, inicia a pausa antes de apagar
-            else {
+                typewriterTimeout = setTimeout(typewriter, typingSpeed);
+            } else {
                 isTyping = false;
-                // Deixa o texto completo com o cursor piscando
-                textElement.innerHTML = currentSentence + '<span class="cursor-inline blinking">|</span>';
-                setTimeout(typewriter, pauseBeforeDeleting);
+                cursorSpan.className = 'cursor-inline blinking';
+                typewriterTimeout = setTimeout(typewriter, pauseBeforeDeleting);
             }
-        } else { // Apagando
-            // Se ainda não terminou de apagar
+        } else {
             if (currentCharIndex > 0) {
-                const currentText = currentSentence.substring(0, currentCharIndex - 1);
-                textElement.innerHTML = currentText + '<span class="cursor-inline">|</span>';
+                textNode.textContent = currentSentence.substring(0, currentCharIndex - 1);
+                cursorSpan.className = 'cursor-inline';
                 currentCharIndex--;
-                setTimeout(typewriter, deletingSpeed);
-            }
-            // Se terminou de apagar, inicia a pausa antes da próxima frase
-            else {
+                typewriterTimeout = setTimeout(typewriter, deletingSpeed);
+            } else {
                 isTyping = true;
                 currentSentenceIndex = (currentSentenceIndex + 1) % sentences.length;
-                // Deixa apenas o cursor piscando
-                textElement.innerHTML = '<span class="cursor-inline blinking">|</span>';
-                setTimeout(typewriter, pauseBetweenSentences);
+                textNode.textContent = '';
+                cursorSpan.className = 'cursor-inline blinking';
+                typewriterTimeout = setTimeout(typewriter, pauseBetweenSentences);
             }
         }
     }
 
-    // Iniciar o efeito
     typewriter();
 }
 

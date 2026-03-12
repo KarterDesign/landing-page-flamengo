@@ -1,6 +1,4 @@
-/* Importação das fontes */
-@import url('https://fonts.cdnfonts.com/css/soulcraft');
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800;900&display=swap');
+/* Fontes carregadas via <link> no HTML para evitar bloqueio de renderização */
 
 /* Correção para fontes variáveis - Safari iOS */
 * {
@@ -2046,7 +2044,7 @@ img.lazy.loaded {
     font-family: 'Soulcraft', sans-serif;
     font-size: 2rem;
     font-weight: 900;
-    color: va(--cor-vermelho-principal);
+    color: var(--cor-vermelho-principal);
     text-transform: uppercase;
     letter-spacing: 1px;
     line-height: 1.1;

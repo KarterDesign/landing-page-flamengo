@@ -3,14 +3,29 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ABSOLUT Sport Brasil - Agência credenciada ao Flamengo. Pacotes oficiais para jogos no Maracanã com ingressos, transfer e suporte dedicado.">
     <title>ABSOLUT Sport Brasil - Agência Credenciada ao Flamengo</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Preconnect para fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Preload de recursos críticos -->
+    <link rel="preload" href="img/flamengo-absolut-sport-logo-oficial-parceria.png" as="image">
+
+    <!-- Fontes -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/soulcraft">
+
+    <!-- Bootstrap CSS (carregamento assíncrono) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"></noscript>
+
+    <!-- Font Awesome (carregamento assíncrono) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src="https://stape.absolut-sport.com.br/7besbphaous.js?"+i;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','36pq=GhFSJjw9TzhGODsvPio1VQVIXU9ZVgYdThQNEgccFwdeBh8OGgRMEBwYQQMa');</script>
@@ -19,7 +34,6 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="rd-form-styles.css">
-    <script src="conteudoDinamico.js"></script>
 </head>
 
 <body id="top" style="overflow-x: hidden;">
@@ -29,7 +43,7 @@
         <!-- Preloader com logo e loading -->
         <div id="preloader" class="preloader">
             <div class="preloader-content">
-                <img src="img/flamengo-absolut-sport-logo-oficial-parceria.png" alt="Flamengo Logo" class="preloader-logo">
+                <img src="img/flamengo-absolut-sport-logo-oficial-parceria.png" alt="Flamengo Logo" class="preloader-logo" width="200" height="80">
                 <div class="loader"></div>
                 <p class="preloader-text">Carregando...</p>
             </div>
@@ -37,7 +51,7 @@
 
         <!-- Vídeo de Introdução -->
         <div id="intro-video-container" class="intro-video-container" style="display: none;">
-            <video id="intro-video" class="intro-video" autoplay muted playsinline>
+            <video id="intro-video" class="intro-video" autoplay muted playsinline preload="auto">
                 <source src="vid/vinheta-intro.mp4" type="video/mp4">
             </video>
             <button id="skip-intro" class="skip-intro-btn">PULAR INTRO →</button>
@@ -89,7 +103,7 @@
     <!-- Hero Banner -->
     <section class="hero-banner">
         <div class="hero-video-container">
-            <video id="hero-video" class="hero-video" autoplay muted loop playsinline>
+            <video id="hero-video" class="hero-video" autoplay muted loop playsinline preload="metadata" poster="vid/videofallback.png">
                 <source src="" type="video/mp4">
             </video>
             <div class="hero-overlay"></div>
@@ -141,7 +155,7 @@
     <!-- Seção Agência Oficial da Nação -->
     <section class="agencia-oficial-secao">
         <div class="agencia-oficial-img">
-            <img id="agencia-img" src="" alt="">
+                    <img id="agencia-img" src="" alt="" loading="lazy" decoding="async">
         </div>
         <div class="container">
             <div class="row align-items-center">
@@ -192,7 +206,7 @@
             <div class="pacotes-grid">
                 <div class="pacote-card" data-pacote="oeste-inferior" tabindex="0" role="button">
                     <div class="pacote-image">
-                        <img id="pacote-1-img" src="" alt="">
+                        <img id="pacote-1-img" src="" alt="" loading="lazy" decoding="async">
                     </div>
                     <div class="pacote-content">
                         <h3 id="pacote-1-title" class="pacote-title"></h3>
@@ -202,7 +216,7 @@
 
                 <div class="pacote-card" data-pacote="espaco-fla" tabindex="0" role="button">
                     <div class="pacote-image">
-                        <img id="pacote-2-img" src="" alt="">
+                        <img id="pacote-2-img" src="" alt="" loading="lazy" decoding="async">
                     </div>
                     <div class="pacote-content">
                         <h3 id="pacote-2-title" class="pacote-title"></h3>
@@ -212,7 +226,7 @@
 
                 <div class="pacote-card" data-pacote="camarote" tabindex="0" role="button">
                     <div class="pacote-image">
-                        <img id="pacote-3-img" src="" alt="">
+                        <img id="pacote-3-img" src="" alt="" loading="lazy" decoding="async">
                     </div>
                     <div class="pacote-content">
                         <h3 id="pacote-3-title" class="pacote-title"></h3>
@@ -251,7 +265,7 @@
             <div class="beneficios-grid" >
                 <div class="beneficio-card">
                     <div class="beneficio-icon">
-                        <img src="img/icones/ingressos-oficiais.png" alt="Ícone de Ingressos Oficiais">
+                        <img src="img/icones/ingressos-oficiais.png" alt="Ícone de Ingressos Oficiais" loading="lazy" decoding="async" width="48" height="48">
                     </div>
                     <div class="beneficio-text">
                         <h4 id="beneficio-1-text"></h4>
@@ -259,7 +273,7 @@
                 </div>
                 <div class="beneficio-card">
                     <div class="beneficio-icon">
-                        <img src="img/icones/transfer-oficiais.png" alt="Ícone de Melhores Acomodações">
+                        <img src="img/icones/transfer-oficiais.png" alt="Ícone de Melhores Acomodações" loading="lazy" decoding="async" width="48" height="48">
                     </div>
                     <div class="beneficio-text">
                         <h4 id="beneficio-2-text"></h4>
@@ -267,7 +281,7 @@
                 </div>
                 <div class="beneficio-card">
                     <div class="beneficio-icon">
-                        <img src="img/icones/equipe-dedicada.png" alt="Ícone de Transfer Oficiais">
+                        <img src="img/icones/equipe-dedicada.png" alt="Ícone de Transfer Oficiais" loading="lazy" decoding="async" width="48" height="48">
                     </div>
                     <div class="beneficio-text">
                         <h4 id="beneficio-3-text"></h4>
@@ -317,7 +331,7 @@
         <div class="modal-content">
             <button class="modal-close" aria-label="Fechar modal">&times;</button>
             <div class="modal-left">
-                <img id="modalImage" src="" alt="Imagem do pacote" class="modal-image">
+                <img id="modalImage" src="" alt="Imagem do pacote" class="modal-image" decoding="async">
             </div>
             <div class="modal-right">
                 <div class="modal-body">
@@ -347,7 +361,7 @@
                 </div>
 
                 <div class="newsletter-image">
-                    <img id="newsletter-img" src="" alt="" class="players-image">
+                    <img id="newsletter-img" src="" alt="" class="players-image" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
@@ -383,7 +397,7 @@
             <div class="beneficios-grid">
                 <div class="beneficio-card">
                     <div class="beneficio-icon">
-                        <img src="img/icones/ingressos-oficiais.png" alt="Ícone de Ingressos Oficiais">
+                        <img src="img/icones/ingressos-oficiais.png" alt="Ícone de Ingressos Oficiais" loading="lazy" decoding="async" width="48" height="48">
                     </div>
                     <div class="beneficio-text">
                         <h4 id="absolut-beneficio-6-text"></h4>
@@ -391,7 +405,7 @@
                 </div>
                 <div class="beneficio-card">
                     <div class="beneficio-icon">
-                        <img src="img/icones/melhores-acomodacoes.png" alt="Ícone de Melhores Acomodações">
+                        <img src="img/icones/melhores-acomodacoes.png" alt="Ícone de Melhores Acomodações" loading="lazy" decoding="async" width="48" height="48">
                     </div>
                     <div class="beneficio-text">
                         <h4 id="absolut-beneficio-3-text"></h4>
@@ -399,7 +413,7 @@
                 </div>
                 <div class="beneficio-card">
                     <div class="beneficio-icon">
-                        <img src="img/icones/transfer-oficiais.png" alt="Ícone de Transfer Oficiais">
+                        <img src="img/icones/transfer-oficiais.png" alt="Ícone de Transfer Oficiais" loading="lazy" decoding="async" width="48" height="48">
                     </div>
                     <div class="beneficio-text">
                         <h4 id="absolut-beneficio-4-text"></h4>
@@ -407,7 +421,7 @@
                 </div>
                 <div class="beneficio-card">
                     <div class="beneficio-icon">
-                        <img src="img/icones/equipe-dedicada.png" alt="Ícone de Equipe Dedicada">
+                        <img src="img/icones/equipe-dedicada.png" alt="Ícone de Equipe Dedicada" loading="lazy" decoding="async" width="48" height="48">
                     </div>
                     <div class="beneficio-text">
                         <h4 id="absolut-beneficio-1-text"></h4>
@@ -457,7 +471,7 @@
     </section> 
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 
     <!-- Footer -->
     <footer class="ec-footer">
@@ -523,16 +537,16 @@
                         <div class="ec-footer-certificates">
                             <img class="ec-footer-certificate"
                                 src="//absolut-sport.com.br/cdn/shop/files/Group_2299.png?v=1747403513&amp;width=100"
-                                alt="Certificado 1" width="65%" height="65%">
+                                alt="Certificado 1" width="65" height="65" loading="lazy" decoding="async">
                             <img class="ec-footer-certificate"
                                 src="//absolut-sport.com.br/cdn/shop/files/Mask_group_1.png?v=1747403522&amp;width=100"
-                                alt="Certificado 2" width="65%" height="65%">
+                                alt="Certificado 2" width="65" height="65" loading="lazy" decoding="async">
                             <img class="ec-footer-certificate"
                                 src="//absolut-sport.com.br/cdn/shop/files/Group_2298.png?v=1747403519&amp;width=100"
-                                alt="Certificado 1" width="65%" height="65%">
+                                alt="Certificado 1" width="65" height="65" loading="lazy" decoding="async">
                             <img class="ec-footer-certificate"
                                 src="//absolut-sport.com.br/cdn/shop/files/Mask_group_2.png?v=1747403525&amp;width=100"
-                                alt="Certificado 2" width="65%" height="65%">
+                                alt="Certificado 2" width="65" height="65" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -558,9 +572,10 @@
     </footer>
 
     <!-- Custom JS -->
-    <script src="script.js"></script>
-    <script src="cardsJogos.js"></script>
-    <script src="cardsJogosForaCasa.js"></script>
+    <script src="conteudoDinamico.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="cardsJogos.js" defer></script>
+    <script src="cardsJogosForaCasa.js" defer></script>
     
     <!-- Script do Preloader -->
     <script>

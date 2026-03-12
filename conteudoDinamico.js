@@ -315,36 +315,9 @@ function recarregarConteudo() {
     carregarConteudoDinamico();
 }
 
-/**
- * Função para aplicar efeito typewriter ao título hero
- */
-function iniciarTypewriter() {
-    const elemento = document.getElementById('typewriter-text');
-    if (!elemento) return;
-    
-    const texto = elemento.textContent || elemento.innerHTML;
-    if (!texto) return;
-    
-    elemento.textContent = '';
-    let i = 0;
-    
-    const typewriter = setInterval(() => {
-        if (i < texto.length) {
-            elemento.textContent += texto.charAt(i);
-            i++;
-        } else {
-            clearInterval(typewriter);
-        }
-    }, 100);
-}
-
 // Inicializar quando o DOM estiver pronto
 document.addEventListener('DOMContentLoaded', function() {
-    // Carregar conteúdo imediatamente
-    carregarConteudoDinamico().then(() => {
-        // Iniciar typewriter após carregar o conteúdo
-        setTimeout(iniciarTypewriter, 1000);
-    });
+    carregarConteudoDinamico();
 });
 
 // Exportar funções para uso global
