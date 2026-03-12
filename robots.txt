@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /tmp/
+
+Sitemap: https://flamengo.absolut-sport.com.br/sitemap.xml
